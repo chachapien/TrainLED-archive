@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>会社一覧 - 行先表示の広場</title>
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <!-- 共通CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         上部バー
+         ========================= -->
+
+    <header>
+
+        <h1>
+            行先表示の広場
+        </h1>
+
+
+        <div class="header-right">
+
+            <span class="admin-name">
+
+                管理者:chachapien
+
+            </span>
+
+
+            <a
+                href="https://x.com/chachapien0405"
+                class="admin-x"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                管理者X
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         メイン
+         ========================= -->
+
+    <main>
+
+
+        <a
+            href="index.html"
+            class="back-button"
+        >
+
+            ← トップページへ戻る
+
+        </a>
+
+
+        <h2>
+
+            会社一覧
+
+        </h2>
+
+
+        <div
+            id="company-list"
+            class="company-list"
+        >
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         フッター
+         ========================= -->
+
+    <footer>
+
+        2026 行先表示の広場
+
+    </footer>
+
+
+    <!-- =========================
+         データ読み込み
+         ========================= -->
+
+    <script>
+
+        fetch("data/displays.json")
+
+            .then(function(response) {
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "データを読み込めませんでした。"
+                    );
+
+                }
+
+                return response.json();
+
+            })
+
+
+            .then(function(data) {
+
+                const list =
+                    document.getElementById(
+                        "company-list"
+                    );
+
+
+                data.companies.forEach(
+                    function(company) {
+
+                        /*
+                         * =========================
+                         * 会社ボタン
+                         * =========================
+                         */
+
+                        const link =
+                            document.createElement(
+                                "a"
+                            );
+
+
+                        link.className =
+                            "company-item";
+
+
+                        link.href =
+                            "type.html?company=" +
+                            encodeURIComponent(
+                                company.id
+                            );
+
+
+                        /*
+                         * =========================
+                         * 会社名
+                         * =========================
+                         */
+
+                        const name =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        name.className =
+                            "company-name";
+
+
+                        name.textContent =
+                            company.name;
+
+
+                        link.appendChild(
+                            name
+                        );
+
+
+                        /*
+                         * =========================
+                         * 会社色
+                         *
+                         * JSON:
+                         *
+                         * "color": "#20b2aa"
+                         *
+                         * =========================
+                         */
+
+                        const color =
+                            document.createElement(
+                                "div"
+                            );
+
+
+                        color.className =
+                            "company-color";
+
+
+                        color.style.backgroundColor =
+                            company.color ||
+                            "#999999";
+
+
+                        link.appendChild(
+                            color
+                        );
+
+
+                        /*
+                         * =========================
+                         * 一覧へ追加
+                         * =========================
+                         */
+
+                        list.appendChild(
+                            link
+                        );
+
+                    }
+                );
+
+            })
+
+
+            .catch(function(error) {
+
+                console.error(error);
+
+
+                document.getElementById(
+                    "company-list"
+                ).innerHTML = `
+
+                    <p>
+                        データを読み込めませんでした。
+                    </p>
+
+                `;
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
+

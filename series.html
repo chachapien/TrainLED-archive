@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>番台一覧 - 行先表示の広場</title>
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        行先表示の広場
+    </h1>
+
+    <div class="header-right">
+
+        <span class="admin-name">
+            管理者:chachapien
+        </span>
+
+        <a
+            href="https://x.com/chachapien0405" 
+            class="admin-x" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+        > 
+            管理者X 
+        </a> 
+ 
+    </div> 
+ 
+</header> 
+ 
+ 
+<main> 
+ 
+    <a 
+        id="back-button" 
+        href="#" 
+        class="back-button" 
+    > 
+        ← 形式選択画面へ戻る 
+    </a> 
+ 
+ 
+    <h2 id="page-title"> 
+        番台一覧 
+    </h2> 
+ 
+ 
+    <div 
+        id="series-list" 
+        class="series-list" 
+    > 
+    </div> 
+ 
+</main> 
+ 
+ 
+<footer> 
+    2026 行先表示の広場 
+</footer> 
+ 
+ 
+<script> 
+ 
+/* ================================================== 
+   URLパラメータ 
+   ================================================== */ 
+ 
+const params = 
+    new URLSearchParams( 
+        window.location.search 
+    ); 
+ 
+const companyId = 
+    params.get("company"); 
+ 
+const typeId = 
+    params.get("type"); 
+ 
+ 
+/* ================================================== 
+   戻るボタン 
+   ================================================== */ 
+ 
+const backButton = 
+    document.getElementById( 
+        "back-button" 
+    ); 
+ 
+ 
+if (companyId) { 
+ 
+    backButton.href = 
+        "type.html?company=" + 
+        encodeURIComponent( 
+            companyId 
+        ); 
+ 
+} 
+else { 
+ 
+    backButton.href = 
+        "type.html"; 
+ 
+} 
+ 
+ 
+/* ================================================== 
+   JSON読み込み 
+   ================================================== */ 
+ 
+fetch("data/displays.json") 
+ 
+.then(function(response) { 
+ 
+    if (!response.ok) { 
+ 
+        throw new Error( 
+            "データを読み込めませんでした。" 
+        ); 
+ 
+    } 
+ 
+    return response.json(); 
+ 
+}) 
+ 
+ 
+.then(function(data) { 
+ 
+ 
+    /* ================================================== 
+       会社 
+       ================================================== */ 
+ 
+    const company = 
+        data.companies.find( 
+            function(item) { 
+ 
+                return item.id === companyId; 
+ 
+            } 
+        ); 
+ 
+ 
+    if (!company) { 
+ 
+        document.getElementById( 
+            "page-title" 
+        ).textContent = 
+            "会社が見つかりません"; 
+ 
+        return; 
+ 
+    } 
+ 
+ 
+    /* ================================================== 
+       形式 
+       ================================================== */ 
+ 
+    const type = 
+        company.types.find( 
+            function(item) { 
+ 
+                return item.id === typeId; 
+ 
+            } 
+        ); 
+ 
+ 
+    if (!type) { 
+ 
+        document.getElementById( 
+            "page-title" 
+        ).textContent = 
+            "形式が見つかりません"; 
+ 
+        return; 
+ 
+    } 
+ 
+ 
+    /* ================================================== 
+       番台区別なし判定 
+        
+       series が1つだけで、 
+       そのseriesに noSeriesSelect: true 
+       が設定されている場合、 
+       番台選択をスキップします。 
+       ================================================== */ 
+ 
+    if ( 
+        type.noSeriesSelect === true && 
+        type.series && 
+        type.series.length > 0 
+    ) { 
+ 
+        const series = 
+            type.series[0]; 
+ 
+        window.location.href = 
+            "display.html?company=" + 
+            encodeURIComponent( 
+                company.id 
+            ) + 
+            "&type=" + 
+            encodeURIComponent( 
+                type.id 
+            ); 
+ 
+        return; 
+ 
+    } 
+ 
+ 
+    /* ================================================== 
+       タイトル 
+       ================================================== */ 
+ 
+    document.getElementById( 
+        "page-title" 
+    ).textContent = 
+        company.name + 
+        " " + 
+        type.name + 
+        " - 番台一覧"; 
+ 
+ 
+    /* ================================================== 
+       番台一覧 
+       ================================================== */ 
+ 
+    const list = 
+        document.getElementById( 
+            "series-list" 
+        ); 
+ 
+ 
+    if ( 
+        !Array.isArray(type.series) || 
+        type.series.length === 0 
+    ) { 
+ 
+        list.innerHTML = ` 
+            <div class="error-message"> 
+                <h3>番台データがありません</h3> 
+                <p>この形式には番台データが登録されていません。</p> 
+            </div> 
+        `; 
+ 
+        return; 
+ 
+    } 
+ 
+ 
+    type.series.forEach( 
+        function(series) { 
+ 
+ 
+            /* ================================================== 
+               番台リンク 
+               ================================================== */ 
+ 
+            const link = 
+                document.createElement( 
+                    "a" 
+                ); 
+ 
+ 
+            link.className = 
+                "series-item"; 
+ 
+ 
+            link.href = 
+                "display.html?company=" + 
+                encodeURIComponent( 
+                    company.id 
+                ) + 
+                "&type=" + 
+                encodeURIComponent( 
+                    type.id 
+                ) + 
+                "&series=" + 
+                encodeURIComponent( 
+                    series.id 
+                ); 
+ 
+ 
+            /* ================================================== 
+               画像エリア 
+               ================================================== */ 
+ 
+            const imageArea = 
+                document.createElement( 
+                    "div" 
+                ); 
+ 
+ 
+            imageArea.className = 
+                "series-image-area"; 
+ 
+ 
+            if ( 
+                series.image && 
+                series.image.trim() !== "" 
+            ) { 
+ 
+                const image = 
+                    document.createElement( 
+                        "img" 
+                    ); 
+ 
+ 
+                image.className = 
+                    "series-image"; 
+ 
+ 
+                image.src = 
+                    series.image; 
+ 
+ 
+                image.alt = 
+                    series.name; 
+ 
+ 
+                image.onerror = 
+                    function() { 
+ 
+                        image.remove(); 
+ 
+                    }; 
+ 
+ 
+                imageArea.appendChild( 
+                    image 
+                ); 
+ 
+            } 
+ 
+ 
+            link.appendChild( 
+                imageArea 
+            ); 
+ 
+ 
+            /* ================================================== 
+               番台名 
+               ================================================== */ 
+ 
+            const name = 
+                document.createElement( 
+                    "div" 
+                ); 
+ 
+ 
+            name.className = 
+                "series-name"; 
+ 
+ 
+            name.textContent = 
+                series.name; 
+ 
+ 
+            link.appendChild( 
+                name 
+            ); 
+ 
+ 
+            /* ================================================== 
+               路線名 
+               ================================================== */ 
+ 
+            const line = 
+                document.createElement( 
+                    "div" 
+                ); 
+ 
+ 
+            line.className = 
+                "series-line"; 
+ 
+ 
+            line.textContent = 
+                series.line || ""; 
+ 
+ 
+            link.appendChild( 
+                line 
+            ); 
+ 
+ 
+            /* ================================================== 
+               色バー 
+               ================================================== */ 
+ 
+            const color = 
+                document.createElement( 
+                    "div" 
+                ); 
+ 
+ 
+            color.className = 
+                "series-color"; 
+ 
+ 
+            color.style.backgroundColor = 
+                series.color || 
+                "#20b2aa"; 
+ 
+ 
+            link.appendChild( 
+                color 
+            ); 
+ 
+ 
+            /* ================================================== 
+               一覧へ追加 
+               ================================================== */ 
+ 
+            list.appendChild( 
+                link 
+            ); 
+ 
+        } 
+    ); 
+ 
+}) 
+ 
+ 
+.catch(function(error) { 
+ 
+    console.error( 
+        error 
+    ); 
+ 
+ 
+    document.getElementById( 
+        "series-list" 
+    ).innerHTML = ` 
+ 
+        <div class="error-message"> 
+ 
+            <h3> 
+                データを読み込めませんでした 
+            </h3> 
+ 
+            <p> 
+                ${error.message} 
+            </p> 
+ 
+        </div> 
+ 
+    `; 
+ 
+}); 
+ 
+</script> 
+ 
+</body> 
+</html> 
+ 

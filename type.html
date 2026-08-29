@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>形式一覧 - 行先表示の広場</title>
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        行先表示の広場
+    </h1>
+
+    <div class="header-right">
+
+        <span class="admin-name">
+            管理者:chachapien
+        </span>
+
+        <a
+            href="https://x.com/chachapien0405"
+            class="admin-x"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            管理者X
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<a
+    id="back-button"
+    href="#"
+    class="back-button"
+>
+    ← 会社選択画面へ戻る
+</a>
+
+
+<h2 id="page-title">
+    形式一覧
+</h2>
+
+
+<div
+    id="type-list"
+    class="type-list"
+>
+</div>
+
+
+</main>
+
+
+<footer>
+
+    行先表示の広場
+
+</footer>
+
+
+<script>
+
+
+/* ==================================================
+   URLパラメータ
+   ================================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const companyId =
+    params.get("company");
+
+
+/* ==================================================
+   戻るボタン
+   ================================================== */
+
+const backButton =
+    document.getElementById(
+        "back-button"
+    );
+
+
+if (companyId) {
+
+    backButton.href =
+        "company.html";
+
+}
+else {
+
+    backButton.href =
+        "company.html";
+
+}
+
+
+/* ==================================================
+   JSON読み込み
+   ================================================== */
+
+fetch("data/displays.json")
+
+
+.then(function(response) {
+
+    if (!response.ok) {
+
+        throw new Error(
+            "データを読み込めませんでした。"
+        );
+
+    }
+
+    return response.json();
+
+})
+
+
+.then(function(data) {
+
+
+    /* ==================================================
+       会社検索
+       ================================================== */
+
+    const company =
+        data.companies.find(
+            function(item) {
+
+                return item.id === companyId;
+
+            }
+        );
+
+
+    if (!company) {
+
+        document.getElementById(
+            "page-title"
+        ).textContent =
+            "会社が見つかりません";
+
+        return;
+
+    }
+
+
+    /* ==================================================
+       タイトル
+       ================================================== */
+
+    document.getElementById(
+        "page-title"
+    ).textContent =
+        company.name +
+        " - 形式一覧";
+
+
+    /* ==================================================
+       形式一覧
+       ================================================== */
+
+    const list =
+        document.getElementById(
+            "type-list"
+        );
+
+
+    if (
+        !Array.isArray(
+            company.types
+        ) ||
+        company.types.length === 0
+    ) {
+
+        list.innerHTML = `
+
+            <div class="error-message">
+
+                <h3>
+                    形式データがありません
+                </h3>
+
+                <p>
+                    この会社には形式データが登録されていません。
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /* ==================================================
+       各形式
+       ================================================== */
+
+    company.types.forEach(
+        function(type) {
+
+
+            /* ==================================================
+               形式リンク
+               ================================================== */
+
+            const link =
+                document.createElement(
+                    "a"
+                );
+
+
+            link.className =
+                "type-item";
+
+
+            /* ==================================================
+               リンク先
+               ================================================== */
+
+            if (
+                type.noSeriesSelect === true
+            ) {
+
+                /*
+                 * 番台区別なし
+                 *
+                 * 形式 → 直接方向幕ページ
+                 */
+
+                link.href =
+                    "display.html?company=" +
+                    encodeURIComponent(
+                        company.id
+                    ) +
+                    "&type=" +
+                    encodeURIComponent(
+                        type.id
+                    );
+
+            }
+            else {
+
+                /*
+                 * 番台区別あり
+                 *
+                 * 形式 → 番台選択ページ
+                 */
+
+                link.href =
+                    "series.html?company=" +
+                    encodeURIComponent(
+                        company.id
+                    ) +
+                    "&type=" +
+                    encodeURIComponent(
+                        type.id
+                    );
+
+            }
+
+
+            /* ==================================================
+               画像エリア
+               ================================================== */
+
+            const imageArea =
+                document.createElement(
+                    "div"
+                );
+
+
+            imageArea.className =
+                "type-image-area";
+
+
+            if (
+                type.image &&
+                type.image.trim() !== ""
+            ) {
+
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                image.className =
+                    "type-image";
+
+
+                image.src =
+                    type.image;
+
+
+                image.alt =
+                    type.name;
+
+
+                image.onerror =
+                    function() {
+
+                        image.remove();
+
+                    };
+
+
+                imageArea.appendChild(
+                    image
+                );
+
+            }
+
+
+            link.appendChild(
+                imageArea
+            );
+
+
+            /* ==================================================
+               形式名
+               ================================================== */
+
+            const name =
+                document.createElement(
+                    "div"
+                );
+
+
+            name.className =
+                "type-name";
+
+
+            name.textContent =
+                type.name;
+
+
+            link.appendChild(
+                name
+            );
+
+
+            /* ==================================================
+               路線名
+               ================================================== */
+
+            let lineName = "";
+
+
+            /*
+             * type.line があれば優先
+             */
+
+            if (
+                type.line &&
+                typeof type.line === "string"
+            ) {
+
+                lineName =
+                    type.line;
+
+            }
+
+
+            /*
+             * type.line がない場合
+             *
+             * series[0].line を使用
+             *
+             * 番台区別なし車両でも
+             * ここから路線名を取得できる
+             */
+
+            else if (
+                Array.isArray(
+                    type.series
+                ) &&
+                type.series.length > 0
+            ) {
+
+                lineName =
+                    type.series[0].line ||
+                    "";
+
+            }
+
+
+            /*
+             * 路線名表示
+             */
+
+            const line =
+                document.createElement(
+                    "div"
+                );
+
+
+            line.className =
+                "type-line";
+
+
+            line.textContent =
+                lineName;
+
+
+            link.appendChild(
+                line
+            );
+
+
+            /* ==================================================
+               形式色
+               ================================================== */
+
+            const color =
+                document.createElement(
+                    "div"
+                );
+
+
+            color.className =
+                "type-color";
+
+
+            color.style.backgroundColor =
+                type.color ||
+                "#20b2aa";
+
+
+            link.appendChild(
+                color
+            );
+
+
+            /* ==================================================
+               一覧へ追加
+               ================================================== */
+
+            list.appendChild(
+                link
+            );
+
+        }
+    );
+
+})
+
+
+.catch(function(error) {
+
+
+    console.error(
+        error
+    );
+
+
+    document.getElementById(
+        "type-list"
+    ).innerHTML = `
+
+        <div class="error-message">
+
+            <h3>
+                データを読み込めませんでした
+            </h3>
+
+            <p>
+                ${error.message}
+            </p>
+
+        </div>
+
+    `;
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

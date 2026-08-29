@@ -1,0 +1,2192 @@
+{
+    "companies": [
+        {
+            "id": "jreast",
+            "name": "JR東日本",
+            "color":"#008000",
+            "types": [
+                {
+                    "id": "209",
+                    "name": "209系",
+                    "series": [
+                        {
+                            "id": "0",
+                            "name": "500番台",
+                            "image": "images/209/500JE/series.png",
+                            "color": "#20b2aa",
+                            "categoryColors": {
+                                "普通": "#20b2aa",
+                                "快速": "#ff9800",
+                                "特急": "#e53935"
+                            },
+                            "displays": [
+                            ]
+                        },
+                        {
+                            "id": "500",
+                            "name": "500番台",
+                            "image": "images/209/500JM/series.png",
+                            "color": "#4682b4",
+                            "categoryColors": {
+                                "普通": "#20b2aa",
+                                "快速": "#ff9800",
+                                "特急": "#e53935"
+                            },
+                            "displays": []
+                        }
+                    ]
+                },
+                {
+                    "id": "e231",
+                    "name": "E231系",
+                    "series": [
+                        {
+                            "id": "0",
+                            "name": "0番台",
+                            "image": "images/e231/0/series.png",
+                            "color": "#20b2aa",
+                            "categoryColors": {
+                                "普通": "#20b2aa",
+                                "快速": "#ff9800",
+                                "特急": "#e53935"
+                            },
+                            "displays": []
+                        }
+                    ]
+                },
+                {
+                    "id": "e233",
+                    "name": "E233系",
+                    "line":"中央線・青梅線・京浜東北線",
+                    "series": [
+                        {
+                            "id": "0S",
+                            "name": "0番台側面",
+                            "line":"中央快速線",
+                            "image": "images/e233/0s/series.png",
+                            "color": "#ff8c00",
+                            "categoryColors": {
+                                "行先以外": "#a9a9a9",
+                                "行先単体": "#a9a9a9",
+                                "各駅停車": "#ffff00",
+                                "快速": "#ff8c00",
+                                "中央特快": "#0055ff",
+                                "青梅特快": "#3cb371",
+                                "通勤快速": "#8a2be2",
+                                "通勤特快": "#ff1493",
+                                "ホリデー快速おくたま": "#00d5ff"
+                            },
+                            "displays": [
+                                {
+                                    "name": "回送",
+                                    "ledsize":"128×32",
+                                    "category": "行先以外",
+                                    "image": "images/e233/0s/0100.png",
+                                    "station": "立川駅"
+                                },
+                                {
+                                    "name": "臨時",
+                                    "ledsize":"128×32",
+                                    "category": "行先以外",
+                                    "image": "images/e233/0s/0200.png",
+                                    "station": "奥多摩駅"
+                                },
+                                {
+                                    "name": "東京",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0001.png",
+                                    "station": "東京駅"
+                                },
+                                {
+                                    "name": "東京行 次は東京",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0001-2.png",
+                                            "station": "神田駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0001-3.png",
+                                            "station": "神田駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "武蔵小金井行 次は武蔵小金井",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0008-2.png",
+                                            "station": "東小金井駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0008-3.png",
+                                            "station": "東小金井駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "立川",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0012.png",
+                                    "station": "青梅駅"
+                                },
+                                {
+                                    "name": "立川行 次は西荻窪",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0012-2.png",
+                                            "station": "荻窪駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0012-3.png",
+                                            "station": "荻窪駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "豊田行 次は西国分寺",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0014-2.png",
+                                            "station": "国分寺駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0014-3.png",
+                                            "station": "国分寺駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "八王子行 次は国立",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0015-2.png",
+                                            "station": "西国分寺駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0015-3.png",
+                                            "station": "西国分寺駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "高尾",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0016.png",
+                                    "station": "高尾駅"
+                                },
+                                {
+                                    "name": "高尾行 次は西八王子",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0016-2.png",
+                                            "station": "八王子駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0016-3.png",
+                                            "station": "八王子駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "小淵沢",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0024.png",
+                                    "station": "松本駅"
+                                },
+                                {
+                                    "name": "岡谷",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0030.png",
+                                    "station": "岡谷駅"
+                                },
+                                {
+                                    "name": "松本",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0032.png",
+                                    "station": "岡谷駅"
+                                },
+                                {
+                                    "name": "河辺",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0038.png",
+                                    "station": "立川駅"
+                                },
+                                {
+                                    "name": "河辺行",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "layout": "row",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0038-2.png",
+                                            "station": "立川駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0038-3.png",
+                                            "station": "立川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "青梅",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0039.png",
+                                    "station": "青梅駅"
+                                },
+                                {
+                                    "name": "青梅行 次は西立川",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0039-2.png",
+                                            "station": "立川駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0039-3.png",
+                                            "station": "立川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "奥多摩",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0041.png",
+                                    "station": "奥多摩駅"
+                                },
+                                {
+                                    "name": "武蔵五日市",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "image": "images/e233/0s/0042.png",
+                                    "station": "立川駅"
+                                },
+                                {
+                                    "name": "武蔵五日市行 次は熊川",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0042-2.png",
+                                            "station": "拝島駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0042-3.png",
+                                            "station": "拝島駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "河口湖行 次は日野",
+                                    "ledsize":"128×32",
+                                    "category": "行先単体",
+                                    "images": [
+                                        {
+                                            "image": "images/e233/0s/0059-2.png",
+                                            "station": "立川駅"
+                                        },
+                                        {
+                                            "image": "images/e233/0s/0059-3.png",
+                                            "station": "立川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "各駅停車東京",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0601.png",
+                                    "station": "豊田車両ベース武蔵小金井派出所"
+                                },
+                                {
+                                    "name": "各駅停車高尾",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0616.png",
+                                    "station": "高尾駅"
+                                },
+                                {
+                                    "name": "各駅停車相模湖",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0617.png",
+                                    "station": "高尾駅"
+                                },
+                                {
+                                    "name": "各駅停車四方津",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0618.png",
+                                    "station": "四方津駅"
+                                },
+                                {
+                                    "name": "各駅停車甲府",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0621.png",
+                                    "station": "岡谷駅"
+                                },
+                                {
+                                    "name": "各駅停車富士見",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0625.png",
+                                    "station": "岡谷駅"
+                                },
+                                {
+                                    "name": "各駅停車茅野",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0627.png",
+                                    "station": "岡谷駅"
+                                },
+                                {
+                                    "name": "各駅停車松本",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0632.png",
+                                    "station": "塩尻駅"
+                                },
+                                {
+                                    "name": "各駅停車青梅",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0639.png",
+                                    "station": "青梅駅"
+                                },
+                                {
+                                    "name": "各駅停車奥多摩",
+                                    "ledsize":"128×32",
+                                    "category": "各駅停車",
+                                    "image": "images/e233/0s/0641.png",
+                                    "station": "青梅駅"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1000",
+                            "name": "1000番台",
+                            "line":"京浜東北・根岸線",
+                            "image": "images/e233/1000/series.png",
+                            "color": "#00bfff",
+                            "categoryColors": {
+                                "前面": "#a9a9a9",
+                                "非営業": "#a9a9a9",
+                                "単体幕": "#a9a9a9",
+                                "快速":"#ff1493",
+                                "各駅停車":"#00bfff",
+                                "次駅表示":"#ffff00"
+                            },
+                            "displays": [
+                                {
+                                    "name":"試運転",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/1000/0300-f.png",
+                                    "station":"蒲田駅"
+                                },
+                                {
+                                    "name":"各駅停車京浜東北線",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/1000/LocalKeihin-f.png",
+                                    "station":"上野駅"
+                                },
+                                {
+                                    "name":"各駅停車品川",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/1000/0808-f.png",
+                                    "station":"大宮駅"
+                                },
+                                {
+                                    "name":"各駅停車大船",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/1000/0814-f.png",
+                                    "station":"上野駅"
+                                },
+                                {
+                                    "name":"回送",
+                                    "ledsize":"128×32",
+                                    "category":"非営業",
+                                    "image":"images/e233/1000/0100.png",
+                                    "station":"磯子駅"
+                                },
+                                {
+                                    "name":"試運転",
+                                    "ledsize":"128×32",
+                                    "category":"非営業",
+                                    "image":"images/e233/1000/0300.png",
+                                    "station":"蒲田駅"
+                                },
+                                {
+                                    "name":"京浜東北線",
+                                    "ledsize":"128×32",
+                                    "category":"単体幕",
+                                    "image":"images/e233/1000/0500.png",
+                                    "station":"高輪ゲートウェイ駅"
+                                },
+                                {
+                                    "name":"品川",
+                                    "ledsize":"128×32",
+                                    "category":"単体幕",
+                                    "image":"images/e233/1000/0008.png",
+                                    "station":"高輪ゲートウェイ駅"
+                                },
+                                {
+                                    "name":"快速京浜東北線 次は田町",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "image":"images/e233/1000/RapidKeihinNJK22",
+                                    "station":"高輪ゲートウェイ駅"
+                                },
+                                {
+                                    "name":"快速大宮行 次は大宮",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0701-2.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0701-3.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"快速南浦和",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "image":"images/e233/1000/0702.png",
+                                    "station":"磯子駅"
+                                },
+                                {
+                                    "name":"快速蒲田行 次は神田",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0709-2.png",
+                                            "station":"秋葉原駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0709-3.png",
+                                            "station":"秋葉原駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車京浜東北線",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/LocalKeihin.png",
+                                    "station":"大宮駅"
+                                },
+                                {
+                                    "name":"各駅停車京浜東北線 次は浜松町",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/LocalKeihinNJK23.png",
+                                    "station":"新橋駅"
+                                },
+                                {
+                                    "name":"各駅停車京浜東北・根岸線",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/LocalNegishi.png",
+                                    "station":"大船駅"
+                                },
+                                {
+                                    "name":"各駅停車南浦和",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/0802.png",
+                                    "station":"品川駅"
+                                },
+                                {
+                                    "name":"各駅停車南浦和行 次は本郷台",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0802-2.png",
+                                            "station":"大船駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0802-3.png",
+                                            "station":"大船駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車赤羽行 次は鶯谷",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0803-2.png",
+                                            "station":"上野駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0803-3.png",
+                                            "station":"上野駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車東十条",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/0804.png",
+                                    "station":"東十条駅"
+                                },
+                                {
+                                    "name":"各駅停車東十条行 次は神田",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0804-2.png",
+                                            "station":"東京駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0804-3.png",
+                                            "station":"東京駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車品川",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/1000/0808.png",
+                                    "station":"大宮駅"
+                                },
+                                {
+                                    "name":"各駅停車品川行 次はさいたま新都心",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0808-2.png",
+                                            "station":"大宮駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0808-3.png",
+                                            "station":"大宮駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車蒲田行 次は川崎",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0809-2.png",
+                                            "station":"鶴見駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0809-3.png",
+                                            "station":"鶴見駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車鶴見行 次は浜松町",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0810-2.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0810-3.png",
+                                            "station":"新橋駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車桜木町行 次はさいたま新都心",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0812-2.png",
+                                            "station":"大宮駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0812-3.png",
+                                            "station":"大宮駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車磯子行 次は浜松町",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0813-2.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0813-3.png",
+                                            "station":"新橋駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車大船行 次は大井町",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0814-2.png",
+                                            "station":"品川駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0814-3.png",
+                                            "station":"品川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は本郷台",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0802-2.png",
+                                            "station":"大船駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0802-3.png",
+                                            "station":"大船駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は大井町",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0814-2.png",
+                                            "station":"品川駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0814-3.png",
+                                            "station":"品川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は品川",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/NJK20-1.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/NJK20-2.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は田町",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0701-2.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0701-3.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は浜松町",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0813-2.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0813-3.png",
+                                            "station":"新橋駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は神田",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0804-2.png",
+                                            "station":"東京駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0804-3.png",
+                                            "station":"東京駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は鶯谷",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0803-2.png",
+                                            "station":"上野駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0803-3.png",
+                                            "station":"上野駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次はさいたま新都心",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/1000/0812-2.png",
+                                            "station":"大宮駅"
+                                        },
+                                        {
+                                            "image":"images/e233/1000/0812-3.png",
+                                            "station":"大宮駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8000",
+                            "name": "8000番台",
+                            "line":"南武線",
+                            "image": "images/e233/8000/series.png",
+                            "color": "#ffd700",
+                            "categoryColors": {
+                                "前面":"#a9a9a9",
+                                "非営業": "#a9a9a9",
+                                "行先単体": "#a9a9a9",
+                                "各駅停車":"#ffd700",
+                                "快速":"#ff00d5"
+                            },
+                            "displays": [
+                                {
+                                    "name":"各駅停車南武線",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/LocalNambu-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"各駅停車稲城長沼",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/0603-f.png",
+                                    "station":"尻手駅"
+                                },
+                                {
+                                    "name":"各駅停車川崎",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/0607-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"快速南武線",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/RapidNambu-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"快速府中本町",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/0702-f.png",
+                                    "station":"鎌倉車両ベース(中原)"
+                                },
+                                {
+                                    "name":"快速川崎",
+                                    "ledsize":"160×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8000/0707-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"回送",
+                                    "ledsize":"128×32",
+                                    "category":"非営業",
+                                    "image":"images/e233/8000/0100.png",
+                                    "station":"登戸駅"
+                                },
+                                {
+                                    "name":"各駅停車南武線",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8000/LocalNambu.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"各駅停車南武線 次は矢向",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8000/LocalNambuNJN03.png",
+                                    "station":"尻手駅"
+                                },
+                                {
+                                    "name":"各駅停車立川",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8000/0601.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"各駅停車立川行 次は矢向",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/8000/0601-2.png",
+                                            "station":"尻手駅"
+                                        },
+                                        {
+                                            "image":"images/e233/8000/0601-3.png",
+                                            "station":"尻手駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車稲城長沼行 次は矢向",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/8000/0603-2.png",
+                                            "station":"尻手駅"
+                                        },
+                                        {
+                                            "image":"images/e233/8000/0603-3.png",
+                                            "station":"尻手駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"各駅停車登戸",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8000/0604.png",
+                                    "station":"登戸駅"
+                                },
+                                {
+                                    "name":"各駅停車川崎",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8000/0607.png",
+                                    "station":"登戸駅"
+                                },
+                                {
+                                    "name":"各駅停車川崎行 次は西国立",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/8000/0607-2.png",
+                                            "station":"立川駅"
+                                        },
+                                        {
+                                            "image":"images/e233/8000/0607-3.png",
+                                            "station":"立川駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"快速南武線 次は武蔵中原",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "image":"images/e233/8000/RapidNambuNJN08.png",
+                                    "station":"武蔵小杉駅"
+                                },
+                                {
+                                    "name":"快速立川行 次は武蔵中原",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/8000/0701-2.png",
+                                            "station":"武蔵小杉駅"
+                                        },
+                                        {
+                                            "image":"images/e233/8000/0701-3.png",
+                                            "station":"武蔵小杉駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"快速川崎",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "image":"images/e233/8000/0707.png",
+                                    "station":"立川駅"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8500",
+                            "name": "8500番台",
+                            "line":"南武線",
+                            "image": "images/e233/8500/series.png",
+                            "color": "#ffd700",
+                            "categoryColors": {
+                                "前面":"#a9a9a9",
+                                "非営業": "#a9a9a9",
+                                "行先単体": "#a9a9a9",
+                                "各駅停車":"#ffd700",
+                                "快速":"#ff00d5"
+                            },
+                            "displays": [
+                                {
+                                    "name":"1449F 快速南武線",
+                                    "ledsize":"192×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8500/1449F-RapidNambu-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"1449F 快速川崎",
+                                    "ledsize":"192×32",
+                                    "category":"前面",
+                                    "image":"images/e233/8500/1449F-0707-f.png",
+                                    "station":"立川駅"
+                                },
+                                {
+                                    "name":"各駅停車南武線 次は南多摩",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "image":"images/e233/8500/LocalNambuNJN19.png",
+                                    "station":"府中本町駅"
+                                },
+                                {
+                                    "name":"各駅停車川崎行 次は南多摩",
+                                    "ledsize":"128×32",
+                                    "category":"各駅停車",
+                                    "images":[
+                                        {
+                                            "image":"images/e233/8500/0607-2.png",
+                                            "station":"府中本町駅"
+                                        },
+                                        {
+                                            "image":"images/e233/8500/0607-3.png",
+                                            "station":"府中本町駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"快速川崎",
+                                    "ledsize":"128×32",
+                                    "category":"快速",
+                                    "image":"images/e233/8500/0707.png",
+                                    "station":"立川駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                {
+                    "id": "e261",
+                    "name": "E261系",
+                    "noSeriesSelect": true,
+                    "series": [
+                        {
+                            "id": "e261",
+                            "name": "E261系",
+                            "color": "#20b2aa",
+                            "categoryColors": {
+                                "非営業": "#a9a9a9",
+                                "サフィール踊り子": "#008b8b",
+                                "次駅表示": "#ffff00"
+                            },
+                            "displays": [
+                                {
+                                    "name":"1 特急サフィール踊り子 1号 指定席 伊豆急下田",
+                                    "ledsize":"128×32",
+                                    "category":"サフィール踊り子",
+                                    "images":[
+                                        {
+                                            "image":"images/e261/1LtdSaphirODORIKO1RESERVEDIzukyu-Shimoda-JP.png",
+                                            "station":"横浜駅"
+                                        },
+                                        {
+                                            "image":"images/e261/1LtdSaphirODORIKO1RESERVEDIzukyu-Shimoda-EN.png",
+                                            "station":"横浜駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は熱海",
+                                    "ledsize":"128×32",
+                                    "category":"次駅表示",
+                                    "image":"images/e261/NJT21.png",
+                                    "station":"横浜駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "JRCentral",
+            "name": "JR東海",
+            "color":"#ff8c00",
+            "types": [
+                {
+                    "id": "313",
+                    "name": "313系",
+                    "noSeriesSelect":true,
+                    "series": [
+                        {
+                            "id": "313",
+                            "name": "313系",
+                            "color": "#20b2aa",
+                            "categoryColors": {
+                                "非営業": "#a9a9a9",
+                                "普通": "#a9a9a9",
+                                "快速": "#002bff",
+                                "区間快速":"#00ff00",
+                                "新快速":"#ff8c00",
+                                "特別快速":"#ffff00"
+                            },
+                            "displays": []
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": "JRWest",
+            "name": "JR西日本",
+            "color":"#1f8fff",
+            "types": [
+                {
+                    "id":"103",
+                    "name":"103系",
+                    "line":"播但線・加古川線",
+                    "image":"images/JRWest/103/type.png",
+                    "color":"#b22222",
+                    "series":[
+                        {
+                            "id":"3500",
+                            "name":"3500番台",
+                            "line":"播但線",
+                            "color":"#b22222",
+                            "image":"images/JRWest/103/3500/series.png",
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "ワンマン":"#009900",
+                                "ワンマン快速":"#ff8000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"ワンマン寺前",
+                                    "category":"前面",
+                                    "image":"images/JRWest/103/3500/ConductorlessTeramae.png",
+                                    "station":"姫路駅"
+                                },
+                                {
+                                    "name":"ワンマン快速寺前",
+                                    "category":"前面",
+                                    "image":"images/JRWest/103/3500/ConductorlessRapidTeramae.png",
+                                    "station":"姫路駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"201",
+                    "name":"201系",
+                    "image":"images/JRWest/201/type.png",
+                    "color":"#7BAB4F",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"201",
+                            "name":"201系",
+                            "line":"大和路線",
+                            "color":"#7BAB4F",
+                            "categoryColors":{
+                                "[Q]大和路線":"#3cb371"
+                            },
+                            "displays":[
+                                {
+                                    "name":"Q JR難波",
+                                    "category":"[Q]大和路線",
+                                    "image":"images/JRWest/201/26.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"Q 王寺",
+                                    "category":"[Q]大和路線",
+                                    "image":"images/JRWest/201/30.png",
+                                    "station":"JR難波駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"223",
+                    "name":"223系",
+                    "line":"京阪神エリア・快速ﾏﾘﾝﾗｲﾅｰ",
+                    "image":"images/JRWest/223/type.png",
+                    "color":"#1f8fff",
+                    "series":[
+                        {
+                            "id":"0",
+                            "name":"0番台",
+                            "line":"阪和線・関西空港線・大阪環状線・紀勢本線(きのくに線)",
+                            "color":"#0080ff",
+                            "image":"images/JRWest/223/0/series.png",
+                            "categoryColors":{
+                                "側面種別・行先":"#a9a9a9",
+                                "側面種別":"#a9a9a9",
+                                "側面行先":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"O普通 大阪環状線 8",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/223/0/OLocal-OsakaLoop8.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"R紀州路快速 和歌山 7",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/223/0/RKishuji-Wakayama7.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"O普通",
+                                    "ledsize":"75×32",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/223/0/OLocal.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"R紀州路快速",
+                                    "ledsize":"75×32",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/223/0/RKishuji.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"大阪環状線 8",
+                                    "ledsize":"112×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/223/0/OsakaLoop8.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"和歌山 7",
+                                    "ledsize":"112×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/223/0/Wakayama7.png",
+                                    "station":"天王寺駅"
+                                }
+                            ]
+                        },
+                        {
+                            "id":"1000",
+                            "name":"1000/2000番台",
+                            "line":"東海道線(琵琶湖,京都,神戸線)・山陽本線・湖西線・赤穂線",
+                            "color":"#998568",
+                            "image":"images/JRWest/223/1000/series.png",
+                            "categoryColors":{
+                                "非営業": "#a9a9a9",
+                                "A普通": "#0055ff",
+                                "B普通": "#00d5ff",
+                                "A快速": "#0055ff",
+                                "A新快速": "#0055ff",
+                                "B新快速": "#00d5ff"
+                            },
+                            "displays":[
+                                {
+
+                                }
+                            ]
+                        },
+                        {
+                            "id":"2500",
+                            "name":"2500番台",
+                            "line":"阪和線・関西空港線・大阪環状線・紀勢本線(きのくに線)",
+                            "color":"#0080ff",
+                            "image":"images/JRWest/223/2500/series.png",
+                            "categoryColors":{
+                                "側面種別・行先":"#a9a9a9",
+                                "側面種別":"#a9a9a9",
+                                "側面行先":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"S関空快速 関西空港 1",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/223/2500/SKanku-KansaiAirport1.png",
+                                    "station":"大阪駅"
+                                },
+                                {
+                                    "name":"S関空快速",
+                                    "ledsize":"75×32",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/223/2500/Skanku.png",
+                                    "station":"大阪駅"
+                                },
+                                {
+                                    "name":"関西空港 1",
+                                    "ledsize":"112×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/223/2500/KansaiAirport1.png",
+                                    "station":"大阪駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "225",
+                    "name": "225系",
+                    "line":"京阪神エリア",
+                    "image":"images/JRWest/225/type.png",
+                    "color":"#1f8fff",
+                    "series": [
+                        {
+                            "id": "0",
+                            "name": "0番台",
+                            "line":"東海道線(琵琶湖,京都,神戸線)・山陽本線・湖西線・赤穂線",
+                            "color": "#998568",
+                            "categoryColors": {
+                                "非営業": "#a9a9a9",
+                                "A普通": "#0055ff",
+                                "快速": "#ff8000",
+                                "新快速": "#00aaff"
+                            },
+                            "displays": []
+                        },
+                        {
+                            "id": "100",
+                            "name": "100番台",
+                            "line":"東海道線(琵琶湖,京都,神戸線)・山陽本線・湖西線・赤穂線",
+                            "color": "#998568",
+                            "image":"images/JRWest/225/100/series.png",
+                            "categoryColors": {
+                                "非営業": "#a9a9a9",
+                                "A普通": "#0055ff",
+                                "B普通": "#00d5ff",
+                                "A快速": "#0055ff",
+                                "A新快速": "#0055ff",
+                                "B新快速": "#00d5ff"
+                            },
+                            "displays": [
+                                {
+                                    "name":"回送 1",
+                                    "ledsize":"160×32",
+                                    "category":"非営業",
+                                    "image":"images/JRWest/225/100/Out-of-Service1.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"A普通姫路 7",
+                                    "ledsize":"160×32",
+                                    "category":"A普通",
+                                    "image":"images/JRWest/225/100/ALocalHimeji7.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"B普通姫路 6",
+                                    "ledsize":"160×32",
+                                    "category":"B普通",
+                                    "image":"images/JRWest/225/100/BLocalHimeji6.png",
+                                    "station":"相生駅"
+                                },
+                                {
+                                    "name":"A快速米原 1",
+                                    "ledsize":"160×32",
+                                    "category":"A快速",
+                                    "image":"images/JRWest/225/100/ARapidMaibara1.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
+                                    "name":"A快速野洲 米原方面 6",
+                                    "ledsize":"160×32",
+                                    "category":"A快速",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/225/100/ARapidMaibara,Yasu6-JP.png",
+                                            "station":"新大阪駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/225/100/ARapidMaibara,Yasu6-EN.png",
+                                            "station":"新大阪駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"A快速加古川 神戸方面 6",
+                                    "ledsize":"160×32",
+                                    "category":"A快速",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/225/100/ARapidKobe,Kakogawa6-JP.png",
+                                            "station":"新大阪駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/225/100/ARapidKobe,Kakogawa6-EN.png",
+                                            "station":"新大阪駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"A新快速野洲 神戸方面 8",
+                                    "ledsize":"160×32",
+                                    "category":"A新快速",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/225/100/ANewRKyoto,Yasu8-JP.png",
+                                            "station":"姫路駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/225/100/ANewRKyoto,Yasu8-EN.png",
+                                            "station":"姫路駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"A新快速姫路 9",
+                                    "ledsize":"160×32",
+                                    "category":"A新快速",
+                                    "image":"images/JRWest/225/100/ANewRHimeji9.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"A新快速上郡 姫路方面 5",
+                                    "ledsize":"160×32",
+                                    "category":"A新快速",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/225/100/ANewRHimeji,Kamigori5-JP.png",
+                                            "station":"大阪駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/225/100/ANewRHimeji,Kamigori5-EN.png",
+                                            "station":"大阪駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"B新快速近江今津 京都方面 8",
+                                    "ledsize":"160×32",
+                                    "category":"B新快速",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/225/100/BNewRKyoto,Omi-Imazu8-JP.png",
+                                            "station":"姫路駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/225/100/BNewRKyoto,Omi-Imazu8-EN.png",
+                                            "station":"姫路駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5100",
+                            "name": "5100番台",
+                            "line":"阪和線・関西空港線・大阪環状線・紀勢本線(きのくに線)",
+                            "color": "#0080ff",
+                            "categoryColors": {
+                                "前面行先": "#a9a9a9",
+                                "非営業": "#a9a9a9",
+                                "普通": "#ffa500",
+                                "快速": "#ff8000",
+                                "関空快速": "#0000ff",
+                                "紀州路快速": "#ff8000"
+                            },
+                            "displays": [
+                                {
+                                    "name": "関空・御坊",
+                                    "ledsize":"96×32",
+                                    "category": "前面行先",
+                                    "image": "images/JRWest/225/5100/KansaiAiport-Gobo.png",
+                                    "station": "天王寺駅"
+                                },
+                                {
+                                    "name": "R普通熊取 3",
+                                    "ledsize":"160×32",
+                                    "category": "普通",
+                                    "image": "images/JRWest/225/5100/RLocalKumatori3.png",
+                                    "station": "天王寺駅"
+                                },
+                                {
+                                    "name": "R普通日根野 4",
+                                    "ledsize":"160×32",
+                                    "category": "普通",
+                                    "image": "images/JRWest/225/5100/RLocalHineno4.png",
+                                    "station": "天王寺駅"
+                                },
+                                {
+                                    "name": "R快速東岸和田 2",
+                                    "ledsize":"160×32",
+                                    "category": "快速",
+                                    "image": "images/JRWest/225/5100/RRapidHigashi-Kishiwada2.png",
+                                    "station": "天王寺駅"
+                                },
+                                {
+                                    "name": "O関空快速大阪環状線 5",
+                                    "ledsize":"160×32",
+                                    "category": "関空快速",
+                                    "image": "images/JRWest/225/5100/OKankuOLoop5.png",
+                                    "station": "関西空港駅"
+                                },
+                                {
+                                    "name": "S関空快速関西空港 4",
+                                    "ledsize":"160×32",
+                                    "category": "関空快速",
+                                    "image": "images/JRWest/225/5100/SKankuKansaiAiport4.png",
+                                    "station": "大阪駅"
+                                },
+                                {
+                                    "name": "R紀州路快速和歌山 5",
+                                    "ledsize":"160×32",
+                                    "category": "紀州路快速",
+                                    "image": "images/JRwest/225/5100/RKishujiWakayama5.png",
+                                    "station": "大阪駅"
+                                },
+                                {
+                                    "name": "R紀州路快速御坊 和歌山方面 8",
+                                    "ledsize":"160×32",
+                                    "category": "紀州路快速",
+                                    "images": [
+                                        {
+                                            "image": "images/JRWest/225/5100/RKishujiWakayama,Gobo8-JP.png",
+                                            "station": "天王寺駅"
+                                        },
+                                        {
+                                            "image": "images/JRWest/225/5100/RKishujiWakayama,Gobo8-EN.png",
+                                            "station": "天王寺駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"227",
+                    "name":"227系",
+                    "line":" ",
+                    "image":"images/JRWest/227/type.png",
+                    "color":"#ffb6c1",
+                    "series":[
+                        {
+                            "id":"500",
+                            "name":"500番台Urara",
+                            "line":"山陽本線･赤穂線･山陰本線･伯備線･宇野みなと線･瀬戸大橋線",
+                            "image":"images/JRWest/227/500Urara/series.png",
+                            "color":"#ffb6c1",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "L普通":"#87ceeb"
+                            },
+                            "displays":[
+                                {
+                                    "name":"試運転 1",
+                                    "ledsize":"160×32",
+                                    "category":"非営業",
+                                    "image":"images/JRWest/227/500Urara/Test-run1.png",
+                                    "station":"岡山駅"
+                                },
+                                {
+                                    "name":"L普通宇野 3",
+                                    "ledsize":"160×32",
+                                    "category":"L普通",
+                                    "image":"images/JRWest/227/500Urara/LLocalUno3.png",
+                                    "station":"岡山駅"
+                                },
+                                {
+                                    "name":"Lワンマン宇野 3",
+                                    "ledsize":"160×32",
+                                    "category":"L普通",
+                                    "image":"images/JRWest/227/500Urara/LConductorlessUno3.png",
+                                    "station":"岡山駅"
+                                }
+                            ]
+                        },
+                        {
+                            "id":"1000",
+                            "name":"1000番台",
+                            "line":"和歌山線･桜井線(万葉まほろば線)･紀勢本線",
+                            "image":"images/JRWest/227/1000/series.png",
+                            "color":"#3cb371",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "W普通":"#00ced1"
+                            },
+                            "displays":[
+                                {
+                                    "name":"W普通御坊 3",
+                                    "ledsize":"160×32",
+                                    "category":"W普通",
+                                    "image":"images/JRWest/227/1000/WLocalGobo3.png",
+                                    "station":"初島駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"323",
+                    "name":"323系",
+                    "line":"大阪環状線",
+                    "image":"images/JRWest/323/type.png",
+                    "color":"#ff7300",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"323",
+                            "name":"323系",
+                            "color":"#ff7300",
+                            "categoryColors":{
+                                "前面種別":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "O普通":"#ff0000",
+                                "P普通":"#0000cd",
+                                "エキスポライナー":"#0066cc"
+                            },
+                            "displays":[
+                                {
+                                    "name":"エキスポライナー",
+                                    "category":"前面種別",
+                                    "image":"images/JRWest/323/ExpoLiner-f.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
+                                    "name":"回送 3",
+                                    "ledsize":"160×32",
+                                    "category":"非営業",
+                                    "image":"images/JRWest/323/Out-of-Service3.png",
+                                    "station":"京橋駅"
+                                },
+                                {
+                                    "name":"O普通大阪環状線 6",
+                                    "ledsize":"160×32",
+                                    "category":"O普通",
+                                    "image":"images/JRWest/323/OsakaLoopLine6.png",
+                                    "station":"天王寺駅"
+                                },
+                                {
+                                    "name":"O普通大阪環状線 新今宮・西九条方面 6",
+                                    "ledsize":"160×32",
+                                    "category":"O普通",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/323/OsakaLoopForShin-Imamiya,Nishikujo6-JP.png",
+                                            "station":"天王寺駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/323/OsakaLoopForShin-Imamiya,Nishikujo6-EN.png",
+                                            "station":"天王寺駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"O普通京橋 3",
+                                    "ledsize":"160×32",
+                                    "category":"O普通",
+                                    "image":"images/JRWest/323/OLocalKyobashi3.png",
+                                    "station":"京橋駅"
+                                },
+                                {
+                                    "name":"O普通大阪 3",
+                                    "ledsize":"160×32",
+                                    "category":"O普通",
+                                    "image":"images/JRWest/323/OLocalOsaka3.png",
+                                    "station":"寺田町駅"
+                                },
+                                {
+                                    "name":"P普通西九条 2",
+                                    "ledsize":"160×32",
+                                    "category":"P普通",
+                                    "image":"images/JRWest/323/PLocalNishikujo2.png",
+                                    "station":"桜島駅"
+                                },
+                                {
+                                    "name":"P普通ユニバーサルシティ・桜島 1",
+                                    "ledsize":"160×32",
+                                    "category":"P普通",
+                                    "image":"images/JRWest/323/PLocalUniversal-city,Sakurajima1.png",
+                                    "station":"大阪駅"
+                                },
+                                {
+                                    "name":"P普通ユニバーサルシティ・桜島 西九条・ユニバーサルシティ方面 1",
+                                    "ledsize":"160×32",
+                                    "category":"P普通",
+                                    "images":[
+                                        {
+                                            "image":"images/JRWest/323/PLocalUniversal-city,Sakurajima-ForNishikujo,Universal-city1-JP.png",
+                                            "station":"大阪駅"
+                                        },
+                                        {
+                                            "image":"images/JRWest/323/PLocalUniversal-city,Sakurajima-ForNishikujo,Universal-city1-EN.png",
+                                            "station":"大阪駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"エキスポライナー新大阪 2",
+                                    "ledsize":"160×32",
+                                    "category":"エキスポライナー",
+                                    "image":"images/JRWest/323/ExpoLinerShin-Osaka2.png",
+                                    "station":"桜島駅"
+                                },
+                                {
+                                    "name":"エキスポライナーユニバーサルシティ・桜島 7",
+                                    "ledsize":"160×32",
+                                    "category":"エキスポライナー",
+                                    "image":"images/JRWest/323/ExpoLinerUniversal-city,Sakurajima7.png",
+                                    "station":"新大阪駅"
+                                }
+                            ]
+                        }
+                    ]
+                    
+                },
+                {
+                    "id":"521",
+                    "name":"521系",
+                    "line":"北陸本線・七尾線",
+                    "image":"images/JRWest/521/type.png",
+                    "color":"#0000cd",
+                    "series":[
+                        {
+                            "id":"0",
+                            "name":"0番台",
+                            "line":"北陸本線",
+                            "color":"#0000cd",
+                            "image":"images/JRWest/521/0/series.png",
+                            "categoryColors":{
+                                "側面種別・行先":"#a9a9a9",
+                                "側面種別":"#a9a9a9",
+                                "側面行先":"#ffa500"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通  1 金沢",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/521/0/Local-1Kanazawa.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"普通  2 小松",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/521/0/Local-2Komatsu.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"普通  1 福井",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/521/0/Local-1Fukui.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"普通  2 敦賀",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/521/0/Local-2Tsuruga.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"ワンマン普通  1 芦原温泉",
+                                    "category":"側面種別・行先",
+                                    "image":"images/JRWest/521/0/ConductorlessLocal-1Awaraonsen.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"普通",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/521/0/Local.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"ワンマン普通",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/521/0/ConductorlessLocal.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"1 金沢",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/521/0/1Kanazawa.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"2 小松",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/521/0/2Komatsu.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"1 芦原温泉",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/521/0/1Awaraonsen.png",
+                                    "station":"福井駅"
+                                },
+                                {
+                                    "name":"1 福井",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/521/0/1Fukui.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"2 敦賀",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "category":"側面行先",
+                                    "image":"images/JRWest/521/0/2Tsuruga.png",
+                                    "station":"福井駅"
+                                }
+                            ]
+                        },
+                        {
+                            "id":"100",
+                            "name":"100番台",
+                            "line":"七尾線",
+                            "color":"#8b0000",
+                            "image":"images/JRWest/521/100/series.png",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"回送 4",
+                                    "ledsize":"160×32",
+                                    "category":"非営業",
+                                    "image":"images/JRWest/521/100/Out-of-Service4.png",
+                                    "station":"金沢駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"Keio",
+            "name":"京王電鉄",
+            "color":"#C8006B",
+            "types":[
+                {
+                    "id":"2000",
+                    "name":"2000系",
+                    "image":"images/Keio/2000/type.png",
+                    "color":"#C8006B",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"2000",
+                            "name":"2000系",
+                            "color":"#C8006B",
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "特急":"#ff33a0"
+                            },
+                            "displays":[
+                                {
+                                    "name":"特急新宿",
+                                    "category":"前面",
+                                    "image":"images/Keio/2000/S.ExpShinjuku-f.png",
+                                    "station":"笹塚駅"
+                                },
+                                {
+                                    "name":"特急新宿 次は新宿",
+                                    "ledsize":"144×32",
+                                    "category":"特急",
+                                    "images":[
+                                        {
+                                            "image":"images/Keio/2000/S.ExpShinjukuNKO01-JP.png",
+                                            "station":"笹塚駅"
+                                        },
+                                        {
+                                            "image":"images/Keio/2000/S.ExpShinjukuNKO01-EN.png",
+                                            "station":"笹塚駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"Keisei",
+            "name":"京成電鉄",
+            "color":"#015BAB",
+            "types":[
+                {
+                    "id":"AE",
+                    "name":"AE形",
+                    "image":"images/Keisei/AE/type.png",
+                    "color":"#000080",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"AE",
+                            "name":"AE形",
+                            "color":"#000080",
+                            "categoryColors":{
+                                "行先以外":"#a9a9a9",
+                                "スカイライナー":"#000080"
+                            },
+                            "displays":[
+                                {
+                                    "name":"全席指定",
+                                    "category":"行先以外",
+                                    "image":"images/Keisei/AE/AllReserved.png",
+                                    "station":"京成上野駅"
+                                },
+                                {
+                                    "name":"スカイライナー成田空港",
+                                    "category":"スカイライナー",
+                                    "layout":"row",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/AE/SkyNaritaAirport-JP.png",
+                                            "station":"京成上野駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/AE/SkyNaritaAirport-EN.png",
+                                            "station":"京成上野駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"Keisei3100",
+                    "name":"3100形",
+                    "image":"images/Keisei/3100/type.png",
+                    "color":"#ff8000",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"Keisei3100",
+                            "name":"3100形",
+                            "color":"#0080ff",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "快速":"#ff66e6",
+                                "急行":"#3355ff",
+                                "特急":"#ff0000",
+                                "快速特急":"#00b31e",
+                                "アクセス特急":"#ff8000",
+                                "エアポート快特":"#ff8000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通 A01 西馬込",
+                                    "ledsize":"192×48",
+                                    "category":"普通",
+                                    "layout":"big-small",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/3100/LocalA01Nishi-Magome-JP,EN.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/LocalA01Nishi-Magome-JP,KR.png"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/LocalA01Nishi-Magome-JP,CN.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"急行 KS10 京成高砂",
+                                    "ledsize":"192×48",
+                                    "category":"急行",
+                                    "layout":"big-small",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/3100/ExpKS10Takasago-JP,EN.png",
+                                            "station":"京急蒲田駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/ExpKS10Takasago-JP,KR.png"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/ExpKS10Takasago-JP,CN.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"アクセス特急成田スカイアクセス線経由",
+                                    "ledsize":"192×48",
+                                    "category":"アクセス特急",
+                                    "image":"images/Keisei/3100/AccessViaNaritaSkyAccess.png",
+                                    "station":"京成高砂駅"
+                                },
+                                {
+                                    "name":"アクセス特急 KS41 KS42 成田空港",
+                                    "ledsize":"192×48",
+                                    "category":"アクセス特急",
+                                    "layout":"big-small",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/3100/AccessKS41,42NaritaAirport-JP,EN.png",
+                                            "station":"京成高砂駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AccessKS41,42NaritaAirport-JP,KR.png"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AccessKS41,42NaritaAirport-JP,CN.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"アクセス特急 KK16 KK17 羽田空港",
+                                    "ledsize":"192×48",
+                                    "category":"アクセス特急",
+                                    "layout":"big-small",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/3100/AccessKK16,17Haneda-JP,EN.png",
+                                            "station":"千葉ニュータウン中央駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AccessKK16,17Haneda-JP,KR.png"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AccessKK16,17Haneda-JP,CN.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"エアポート快特 KK16 KK17 羽田空港",
+                                    "ledsize":"192×48",
+                                    "category":"エアポート快特",
+                                    "layout":"big-small",
+                                    "images":[
+                                        {
+                                            "image":"images/Keisei/3100/AirKaitokuKK16,17Haneda-JP,EN.png",
+                                            "station":"浅草駅"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AirKaitokuKK16,17Haneda-JP,KR.png"
+                                        },
+                                        {
+                                            "image":"images/Keisei/3100/AirKaitokuKK16,17Haneda-JP,CN.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"Shinano",
+            "name":"しなの鉄道",
+            "color":"#4682b4",
+            "types":[
+                {
+                    "id":"SR1",
+                    "name":"SR1系",
+                    "image":"images/Shinano/SR1/type.png",
+                    "color":"#0000cd",
+                    "series":[
+                        {
+                            "id":"100",
+                            "name":"100番台",
+                            "image":"images/Shinano/SR1/100/series.png",
+                            "color":"#0000cd",
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "特別快速":"#ff0000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"特別快速軽井沢",
+                                    "ledsize":"96×32",
+                                    "category":"前面",
+                                    "images":[
+                                        {
+                                            "image":"images/Shinano/SR1/100/71-JP-f.png",
+                                            "station":"長野駅"
+                                        },
+                                        {
+                                            "image":"images/Shinano/SR1/100/71-EN-f.png",
+                                            "station":"長野駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"特別快速軽井沢行 次は戸倉",
+                                    "ledsize":"128×32",
+                                    "category":"特別快速",
+                                    "images":[
+                                        {
+                                            "image":"images/Shinano/SR1/100/71-2.png",
+                                            "station":"長野駅"
+                                        },
+                                        {
+                                            "image":"images/Shinano/SR1/100/71-3.png",
+                                            "station":"長野駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id":"200",
+                            "name":"200/300番台",
+                            "image":"images/Shinano/SR1/200/series.png",
+                            "color":"#cc2929",
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "ワンマン":"#32cd32"
+                            },
+                            "displays":[
+                                {
+                                    "name":"ワンマン小諸",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "image":"images/Shinano/SR1/200/38.png",
+                                    "station":"長野駅"
+                                },
+                                {
+                                    "name":"ワンマン小諸行",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "images":[
+                                        {
+                                            "image":"images/Shinano/SR1/200/38-2.png",
+                                            "station":"長野駅"
+                                        },
+                                        {
+                                            "image":"images/Shinano/SR1/200/38-3.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"ワンマン長野",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "image":"images/Shinano/SR1/200/44.png",
+                                    "station":"長野駅"
+                                },
+                                {
+                                    "name":"ワンマン豊野",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "image":"images/Shinano/SR1/200/46.png",
+                                    "station":"長野駅"
+                                },
+                                {
+                                    "name":"ワンマン豊野行",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "images":[
+                                        {
+                                            "image":"images/Shinano/SR1/200/46-2.png",
+                                            "station":"長野駅"
+                                        },
+                                        {
+                                            "image":"images/Shinano/SR1/200/46-3.png",
+                                            "station":"長野駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"ワンマン妙高高原 次は三才",
+                                    "ledsize":"128×32",
+                                    "category":"ワンマン",
+                                    "images":[
+                                        {
+                                            "image":"images/Shinano/SR1/200/48-2.png",
+                                            "station":"長野駅"
+                                        },
+                                        {
+                                            "image":"images/Shinano/SR1/200/48-3.png",
+                                            "station":"長野駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

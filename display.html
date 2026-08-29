@@ -1,0 +1,2473 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+<title>方向幕 - 行先表示の広場</title>
+
+<link
+    rel="icon"
+    href="favicon.png"
+    type="image/png"
+>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222222;
+    font-family:
+        "Yu Gothic",
+        "游ゴシック",
+        Arial,
+        sans-serif;
+}
+
+
+/* ==================================================
+   ヘッダー
+   ================================================== */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #20b2aa;
+    color: white;
+}
+
+.header-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.header-right {
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-size: 13px;
+}
+
+.admin-name {
+    white-space: nowrap;
+}
+
+.admin-x {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.admin-x:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   メイン
+   ================================================== */
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+/* ==================================================
+   戻るボタン
+   ================================================== */
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 18px;
+    background-color: #20b2aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.back-button:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+    filter:
+        brightness(0.92);
+}
+
+.back-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+    filter:
+        brightness(0.86);
+}
+
+
+/* ==================================================
+   タイトル
+   ================================================== */
+
+#page-title {
+    margin:
+        0 0 30px 0;
+    font-size: 28px;
+}
+
+
+/* ==================================================
+   ページレイアウト
+   ================================================== */
+
+.page-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+
+/* ==================================================
+   左側カテゴリ
+   ================================================== */
+
+.category-sidebar {
+    width: 190px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    z-index: 20;
+}
+
+
+/* ==================================================
+   種別開閉ボタン
+   ================================================== */
+
+.category-toggle-button {
+    display: block;
+    width: 50%;
+    min-width: 90px;
+    margin:
+        0 0 10px 0;
+    padding:
+        9px
+        10px;
+    background-color: #20b2aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.category-toggle-button:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+    filter:
+        brightness(0.92);
+}
+
+.category-toggle-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+    filter:
+        brightness(0.86);
+}
+
+
+/* ==================================================
+   種別タイトル
+   ================================================== */
+
+.category-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   カテゴリボタン一覧
+   ================================================== */
+
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* ==================================================
+   カテゴリボタン
+   ================================================== */
+
+.category-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 58px;
+    padding:
+        12px
+        14px
+        18px
+        14px;
+    background-color: white;
+    border:
+        1px solid #dddddd;
+    border-radius: 8px;
+    color: #222222;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.category-button:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+    filter:
+        brightness(0.92);
+    box-shadow:
+        0 3px 9px
+        rgba(0, 0, 0, 0.12);
+}
+
+.category-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+    filter:
+        brightness(0.86);
+}
+
+.category-button.active {
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.16);
+}
+
+.category-color {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #999999;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   右側コンテンツ
+   ================================================== */
+
+.display-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* ==================================================
+   方向幕一覧
+   ================================================== */
+
+.display-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ==================================================
+   方向幕カード
+   ================================================== */
+
+.display-item {
+    position: relative;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.08);
+    text-align: center;
+    scroll-margin-top: 20px;
+}
+
+
+/* ==================================================
+   カテゴリ表示
+   ================================================== */
+
+.display-category {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #333333;
+    text-align: left;
+    z-index: 3;
+}
+
+.display-category-color {
+    width: 52px;
+    height: 7px;
+    margin-top: 5px;
+    border-radius: 4px;
+    background-color: #999999;
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==================================================
+   方向幕名
+   ================================================== */
+
+.display-name {
+    margin:
+        0.5 0 20px 0;
+    font-size: 24px;
+}
+
+
+/* ==================================================
+   画像グリッド
+   ================================================== */
+
+.image-grid {
+    display: grid;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-grid.row-1 {
+    grid-template-columns:
+        1fr;
+}
+
+.image-grid.row-2 {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.image-grid.row-3 {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+.image-grid.row-many {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+/* ==================================================
+   big-small
+   ================================================== */
+
+.image-grid.big-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-image-wrapper {
+    width: 100%;
+    max-width: 800px;
+}
+
+.small-image-row {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 620px;
+}
+
+
+/* ==================================================
+   画像
+   ================================================== */
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.display-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:
+        opacity 0.2s ease;
+}
+
+.display-image:hover {
+    opacity: 0.85;
+}
+
+
+/* ==================================================
+   LEDサイズ
+   画像の下
+   ================================================== */
+
+.display-led-size {
+    display: block;
+    width: 100%;
+    margin:
+        8px 0 0 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.3;
+    color: #777777;
+    white-space: nowrap;
+    text-align: left;
+}
+
+
+/* ==================================================
+   撮影駅
+   ================================================== */
+
+.image-station {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    padding:
+        3px 7px;
+    background:
+        rgba(0, 0, 0, 0.65);
+    color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 1.3;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+
+/* ==================================================
+   エラー
+   ================================================== */
+
+.error-message {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+/* ==================================================
+   フッター
+   ================================================== */
+
+footer {
+    padding: 30px;
+    color: #777777;
+    text-align: center;
+}
+
+
+/* ==================================================
+   スマートフォン
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        height: 70px;
+    }
+
+    .header-left {
+        font-size: 18px;
+    }
+
+    .header-right {
+        right: 15px;
+        bottom: 7px;
+        font-size: 11px;
+    }
+
+    .admin-name {
+        font-size: 11px;
+    }
+
+    .admin-x {
+        font-size: 11px;
+    }
+
+    main {
+        margin:
+            20px auto;
+        padding: 10px;
+    }
+
+
+    /* ----------------------------------------------
+       ページレイアウト
+       ---------------------------------------------- */
+
+    .page-layout {
+        flex-direction: column;
+    }
+
+
+    /* ----------------------------------------------
+       スマホ用 種別欄
+       ---------------------------------------------- */
+
+    .category-sidebar {
+        width: 50%;
+        min-width: 0;
+        padding: 10px;
+        background-color: white;
+        border:
+            1px solid #dddddd;
+        border-radius: 10px;
+        box-shadow:
+            0 2px 8px
+            rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 10px;
+    }
+
+
+    /* ----------------------------------------------
+       種別開閉ボタン
+       ---------------------------------------------- */
+
+    .category-toggle-button {
+        width: 100%;
+        min-width: 0;
+        margin:
+            0;
+        padding:
+            9px
+            8px;
+        font-size: 13px;
+    }
+
+
+    /* ----------------------------------------------
+       種別タイトル
+       ---------------------------------------------- */
+
+    .category-title {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+
+    /* ----------------------------------------------
+       種別ボタン一覧
+       ---------------------------------------------- */
+
+    .category-buttons {
+        display: grid;
+        grid-template-columns:
+            1fr;
+        gap: 8px;
+    }
+
+
+    /* ----------------------------------------------
+       種別ボタン
+       ---------------------------------------------- */
+
+    .category-button {
+        min-height: 52px;
+        padding:
+            10px
+            10px
+            16px
+            10px;
+        font-size: 13px;
+    }
+
+
+    /* ----------------------------------------------
+       方向幕
+       ---------------------------------------------- */
+
+    .display-item {
+        padding: 15px;
+    }
+
+    .display-name {
+        font-size: 20px;
+    }
+
+    .display-led-size {
+        font-size: 9px;
+        margin:
+            8px 0 0 0;
+        text-align: left;
+    }
+
+    .display-category {
+        top: 8px;
+        left: 10px;
+        font-size: 12px;
+    }
+
+    .display-category-color {
+        height: 6px;
+        width: 48px;
+    }
+
+
+    /* ----------------------------------------------
+       画像
+       ---------------------------------------------- */
+
+    .image-grid.row-2,
+    .image-grid.row-3,
+    .image-grid.row-many {
+        grid-template-columns:
+            1fr;
+    }
+
+    .small-image-row {
+        grid-template-columns:
+            1fr;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ==================================================
+     ヘッダー
+     ================================================== -->
+
+<header>
+
+
+<div class="header-left">
+    行先表示の広場
+</div>
+
+<div class="header-right">
+
+    <span class="admin-name">
+        管理者:chachapien
+    </span>
+
+    <a
+        href="https://x.com/chachapien0405"
+        class="admin-x"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        管理者X
+    </a>
+
+</div>
+
+
+</header>
+
+<!-- ==================================================
+     メイン
+     ================================================== -->
+
+<main>
+
+
+<!-- 戻るボタン -->
+
+<a
+    id="back-button"
+    href="#"
+    class="back-button"
+>
+    ← 車両選択に戻る
+</a>
+
+
+<!-- タイトル -->
+
+<h2 id="page-title">
+    方向幕
+</h2>
+
+
+<!-- ページレイアウト -->
+
+<div class="page-layout">
+
+
+    <!-- ==================================================
+         左側
+         ================================================== -->
+
+    <aside class="category-sidebar">
+
+        <div class="category-title">
+            種別
+        </div>
+
+        <div
+            id="category-buttons"
+            class="category-buttons"
+        ></div>
+
+    </aside>
+
+
+    <!-- ==================================================
+         右側
+         ================================================== -->
+
+    <section class="display-content">
+
+        <div
+            id="display-list"
+            class="display-list"
+        ></div>
+
+    </section>
+
+</div>
+
+
+</main>
+
+<!-- ==================================================
+     フッター
+     ================================================== -->
+
+<footer>
+    行先表示の広場
+</footer>
+
+<script>
+
+
+/* ==================================================
+   URLパラメータ
+   ================================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const companyId =
+    params.get("company");
+
+const typeId =
+    params.get("type");
+
+const seriesId =
+    params.get("series");
+
+
+/* ==================================================
+   戻るボタン
+   ================================================== */
+
+const backButton =
+    document.getElementById(
+        "back-button"
+    );
+
+if (
+    companyId &&
+    typeId &&
+    seriesId
+) {
+
+    backButton.href =
+        "series.html?company=" +
+        encodeURIComponent(
+            companyId
+        ) +
+        "&type=" +
+        encodeURIComponent(
+            typeId
+        );
+
+}
+
+else if (
+    companyId &&
+    typeId
+) {
+
+    backButton.href =
+        "type.html?company=" +
+        encodeURIComponent(
+            companyId
+        );
+
+}
+
+else {
+
+    backButton.href =
+        "index.html";
+
+}
+
+
+/* ==================================================
+   JSON読み込み
+   ================================================== */
+
+fetch("data/displays.json")
+
+    .then(function(response) {
+
+        if (!response.ok) {
+
+            throw new Error(
+                "displays.jsonを読み込めませんでした。"
+            );
+
+        }
+
+        return response.json();
+
+    })
+
+    .then(function(data) {
+
+
+        /* ==================================================
+           会社
+           ================================================== */
+
+        const company =
+            data.companies.find(
+                function(item) {
+                    return item.id === companyId;
+                }
+            );
+
+        if (!company) {
+
+            showError(
+                "会社が見つかりません。"
+            );
+
+            return;
+        }
+
+
+        /* ==================================================
+           形式
+           ================================================== */
+
+        const type =
+            company.types.find(
+                function(item) {
+                    return item.id === typeId;
+                }
+            );
+
+        if (!type) {
+
+            showError(
+                "形式が見つかりません。"
+            );
+
+            return;
+        }
+
+
+        /* ==================================================
+           番台
+           ================================================== */
+
+        let series;
+
+        if (seriesId) {
+
+            if (
+                !Array.isArray(
+                    type.series
+                )
+            ) {
+
+                showError(
+                    "この形式には番台データがありません。"
+                );
+
+                return;
+            }
+
+            series =
+                type.series.find(
+                    function(item) {
+                        return item.id === seriesId;
+                    }
+                );
+
+            if (!series) {
+
+                showError(
+                    "番台が見つかりません。"
+                );
+
+                return;
+            }
+
+        }
+
+        else {
+
+            if (
+                type.noSeriesSelect !== true
+            ) {
+
+                showError(
+                    "番台が指定されていません。"
+                );
+
+                return;
+            }
+
+            if (
+                !Array.isArray(
+                    type.series
+                ) ||
+                type.series.length === 0
+            ) {
+
+                showError(
+                    "方向幕データがありません。"
+                );
+
+                return;
+            }
+
+            series =
+                type.series[0];
+
+        }
+
+
+        /* ==================================================
+           タイトル
+           ================================================== */
+
+        document.getElementById(
+            "page-title"
+        ).textContent =
+            company.name +
+            " " +
+            type.name +
+            (
+                type.noSeriesSelect === true
+                    ? ""
+                    : " " + series.name
+            );
+
+
+        const list =
+            document.getElementById(
+                "display-list"
+            );
+
+
+        /* ==================================================
+           方向幕データ確認
+           ================================================== */
+
+        if (
+            !Array.isArray(
+                series.displays
+            ) ||
+            series.displays.length === 0
+        ) {
+
+            showError(
+                "この車両にはまだ方向幕データがありません。"
+            );
+
+            return;
+        }
+
+
+        /* ==================================================
+           カテゴリ色
+           ================================================== */
+
+        const categoryColors =
+            series.categoryColors || {};
+
+        function getCategoryColor(category) {
+
+            return (
+                categoryColors[category] ||
+                "#999999"
+            );
+
+        }
+
+
+        /* ==================================================
+           カテゴリ取得
+           ================================================== */
+
+        const categories = [];
+
+        series.displays.forEach(
+            function(display) {
+
+                const category =
+                    display.category ||
+                    "その他";
+
+                if (
+                    !categories.includes(
+                        category
+                    )
+                ) {
+
+                    categories.push(
+                        category
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ==================================================
+           種別サイドバー
+           ================================================== */
+
+        const sidebar =
+            document.querySelector(
+                ".category-sidebar"
+            );
+
+        const categoryTitle =
+            sidebar.querySelector(
+                ".category-title"
+            );
+
+        const categoryButtons =
+            document.getElementById(
+                "category-buttons"
+            );
+
+
+        /* ==================================================
+           種別開閉ボタン
+           ================================================== */
+
+        const toggleButton =
+            document.createElement(
+                "button"
+            );
+
+        toggleButton.type =
+            "button";
+
+        toggleButton.className =
+            "category-toggle-button";
+
+        let categoryOpen = true;
+
+
+        function updateCategoryState() {
+
+            if (
+                categoryOpen
+            ) {
+
+                categoryButtons.style.display =
+                    "";
+
+                categoryTitle.style.display =
+                    "";
+
+                toggleButton.textContent =
+                    "種別 ▲";
+
+            }
+
+            else {
+
+                categoryButtons.style.display =
+                    "none";
+
+                categoryTitle.style.display =
+                    "none";
+
+                toggleButton.textContent =
+                    "種別 ▼";
+
+            }
+
+        }
+
+
+        toggleButton.addEventListener(
+            "click",
+            function() {
+
+                categoryOpen =
+                    !categoryOpen;
+
+                updateCategoryState();
+
+            }
+        );
+
+
+        sidebar.insertBefore(
+            toggleButton,
+            sidebar.firstChild
+        );
+
+
+        updateCategoryState();
+
+
+        /* ==================================================
+           カテゴリボタン
+           ================================================== */
+
+        categories.forEach(
+            function(category, index) {
+
+                const button =
+                    document.createElement(
+                        "button"
+                    );
+
+                button.type =
+                    "button";
+
+                button.className =
+                    "category-button";
+
+
+                const text =
+                    document.createElement(
+                        "span"
+                    );
+
+                text.textContent =
+                    category;
+
+                button.appendChild(
+                    text
+                );
+
+
+                const color =
+                    document.createElement(
+                        "div"
+                    );
+
+                color.className =
+                    "category-color";
+
+                color.style.backgroundColor =
+                    getCategoryColor(
+                        category
+                    );
+
+                button.appendChild(
+                    color
+                );
+
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        const target =
+                            document.querySelector(
+                                '[data-category="' +
+                                CSS.escape(
+                                    category
+                                ) +
+                                '"]'
+                            );
+
+                        if (
+                            !target
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        /* ==================================================
+                           カテゴリ移動
+                           現在位置を基準にせず、
+                           対象要素そのもののページ上の位置へ移動する
+                           ================================================== */
+
+                        const targetDocumentTop =
+                            target.getBoundingClientRect().top +
+                            window.scrollY;
+
+                        const finalScroll =
+                            Math.max(
+                                0,
+                                targetDocumentTop - 20
+                            );
+
+
+                        window.scrollTo({
+
+                            top:
+                                finalScroll,
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+
+                        document
+                            .querySelectorAll(
+                                ".category-button"
+                            )
+                            .forEach(
+                                function(item) {
+
+                                    item.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                categoryButtons.appendChild(
+                    button
+                );
+
+
+                if (
+                    index === 0
+                ) {
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ==================================================
+           方向幕表示
+           ================================================== */
+
+        series.displays.forEach(
+            function(display) {
+
+                const item =
+                    document.createElement(
+                        "div"
+                    );
+
+                item.className =
+                    "display-item";
+
+
+                const category =
+                    display.category ||
+                    "その他";
+
+                item.dataset.category =
+                    category;
+
+
+                /* ==================================================
+                   カテゴリバッジ
+                   ================================================== */
+
+                const categoryBadge =
+                    document.createElement(
+                        "div"
+                    );
+
+                categoryBadge.className =
+                    "display-category";
+
+
+                const categoryText =
+                    document.createElement(
+                        "span"
+                    );
+
+                categoryText.textContent =
+                    category;
+
+                categoryBadge.appendChild(
+                    categoryText
+                );
+
+
+                const categoryColor =
+                    document.createElement(
+                        "div"
+                    );
+
+                categoryColor.className =
+                    "display-category-color";
+
+                categoryColor.style.backgroundColor =
+                    getCategoryColor(
+                        category
+                    );
+
+                categoryBadge.appendChild(
+                    categoryColor
+                );
+
+
+                item.appendChild(
+                    categoryBadge
+                );
+
+
+                /* ==================================================
+                   方向幕名
+                   ================================================== */
+
+                const name =
+                    document.createElement(
+                        "h3"
+                    );
+
+                name.className =
+                    "display-name";
+
+                name.textContent =
+                    display.name ||
+                    "名称未設定";
+
+                item.appendChild(
+                    name
+                );
+
+
+                /* ==================================================
+                   画像データ
+                   ================================================== */
+
+                let images = [];
+
+
+                if (
+                    Array.isArray(
+                        display.images
+                    )
+                ) {
+
+                    images =
+                        display.images
+                            .map(
+                                function(value) {
+
+                                    if (
+                                        typeof value ===
+                                        "string"
+                                    ) {
+
+                                        return {
+
+                                            image:
+                                                value,
+
+                                            station:
+                                                display.station ||
+                                                ""
+
+                                        };
+
+                                    }
+
+
+                                    if (
+                                        value &&
+                                        typeof value ===
+                                        "object"
+                                    ) {
+
+                                        return {
+
+                                            image:
+                                                value.image,
+
+                                            station:
+                                                value.station ||
+                                                display.station ||
+                                                ""
+
+                                        };
+
+                                    }
+
+
+                                    return null;
+
+                                }
+                            )
+                            .filter(
+                                function(value) {
+
+                                    return (
+                                        value &&
+                                        value.image
+                                    );
+
+                                }
+                            );
+
+                }
+
+                else if (
+                    display.image
+                ) {
+
+                    images = [
+
+                        {
+
+                            image:
+                                display.image,
+
+                            station:
+                                display.station ||
+                                ""
+
+                        }
+
+                    ];
+
+                }
+
+
+                /* ==================================================
+                   画像なし
+                   ================================================== */
+
+                if (
+                    images.length === 0
+                ) {
+
+                    const noImage =
+                        document.createElement(
+                            "p"
+                        );
+
+                    noImage.textContent =
+                        "画像が登録されていません。";
+
+                    item.appendChild(
+                        noImage
+                    );
+
+                }
+
+                else {
+
+                    const grid =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    /* ==================================================
+                       big-small
+                       ================================================== */
+
+                    if (
+                        display.layout ===
+                        "big-small" &&
+                        images.length >= 3
+                    ) {
+
+                        grid.className =
+                            "image-grid big-small";
+
+
+                        const bigWrapper =
+                            document.createElement(
+                                "div"
+                            );
+
+                        bigWrapper.className =
+                            "big-image-wrapper";
+
+
+                        createImage(
+                            images[0],
+                            display.name,
+                            bigWrapper
+                        );
+
+
+                        grid.appendChild(
+                            bigWrapper
+                        );
+
+
+                        const smallRow =
+                            document.createElement(
+                                "div"
+                            );
+
+                        smallRow.className =
+                            "small-image-row";
+
+
+                        for (
+                            let i = 1;
+                            i < images.length;
+                            i++
+                        ) {
+
+                            const wrapper =
+                                document.createElement(
+                                    "div"
+                                );
+
+                            wrapper.className =
+                                "image-wrapper";
+
+
+                            createImage(
+                                images[i],
+                                display.name,
+                                wrapper
+                            );
+
+
+                            smallRow.appendChild(
+                                wrapper
+                            );
+
+                        }
+
+
+                        grid.appendChild(
+                            smallRow
+                        );
+
+                    }
+
+
+                    /* ==================================================
+                       通常
+                       ================================================== */
+
+                    else {
+
+                        let gridCount =
+                            images.length;
+
+                        if (
+                            gridCount > 3
+                        ) {
+
+                            gridCount = 3;
+
+                        }
+
+
+                        grid.className =
+                            "image-grid row-" +
+                            gridCount;
+
+
+                        images.forEach(
+                            function(imageData) {
+
+                                const wrapper =
+                                    document.createElement(
+                                        "div"
+                                    );
+
+                                wrapper.className =
+                                    "image-wrapper";
+
+
+                                createImage(
+                                    imageData,
+                                    display.name,
+                                    wrapper
+                                );
+
+
+                                grid.appendChild(
+                                    wrapper
+                                );
+
+                            }
+                        );
+
+                    }
+
+
+                    item.appendChild(
+                        grid
+                    );
+
+
+                    /* ==================================================
+                       LEDサイズ
+                       画像の下
+                       ================================================== */
+
+                    const ledSizeValue =
+                        display.ledSize ??
+                        display.ledsize ??
+                        display.LEDSize ??
+                        display.led_size ??
+                        display["LEDサイズ"] ??
+                        "";
+
+
+                    if (
+                        String(
+                            ledSizeValue
+                        ).trim() !== ""
+                    ) {
+
+                        const ledSize =
+                            document.createElement(
+                                "div"
+                            );
+
+                        ledSize.className =
+                            "display-led-size";
+
+                        ledSize.textContent =
+                            "LEDサイズ：" +
+                            ledSizeValue;
+
+                        item.appendChild(
+                            ledSize
+                        );
+
+                    }
+
+                }
+
+
+                list.appendChild(
+                    item
+                );
+
+            }
+        );
+
+    })
+
+    .catch(function(error) {
+
+        console.error(error);
+
+        showError(
+            error.message
+        );
+
+    });
+
+
+/* ==================================================
+   画像URL補正
+   ================================================== */
+
+function normalizeImagePath(path) {
+
+    if (
+        typeof path !==
+        "string"
+    ) {
+
+        return "";
+
+    }
+
+
+    path =
+        path.trim();
+
+
+    if (!path) {
+
+        return "";
+
+    }
+
+
+    if (
+        /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(
+            path
+        )
+    ) {
+
+        return path;
+
+    }
+
+
+    return path + ".png";
+
+}
+
+
+/* ==================================================
+   画像作成
+   ================================================== */
+
+function createImage(
+    imageData,
+    imageName,
+    wrapper
+) {
+
+    if (
+        !imageData ||
+        !imageData.image
+    ) {
+
+        wrapper.remove();
+
+        return;
+
+    }
+
+
+    const image =
+        document.createElement(
+            "img"
+        );
+
+    image.className =
+        "display-image";
+
+
+    image.src =
+        normalizeImagePath(
+            imageData.image
+        );
+
+
+    image.alt =
+        imageName ||
+        "";
+
+
+    image.onerror =
+        function() {
+
+            console.error(
+                "画像を読み込めませんでした:",
+                image.src
+            );
+
+            wrapper.remove();
+
+        };
+
+
+    const stationName =
+        imageData.station ||
+        "";
+
+
+    if (
+        stationName
+    ) {
+
+        const station =
+            document.createElement(
+                "div"
+            );
+
+        station.className =
+            "image-station";
+
+        station.textContent =
+            "撮影：" +
+            stationName;
+
+
+        wrapper.appendChild(
+            station
+        );
+
+    }
+
+
+    wrapper.appendChild(
+        image
+    );
+
+
+    image.addEventListener(
+        "click",
+        function() {
+
+            openImageViewer(
+                image.src,
+                imageName,
+                stationName
+            );
+
+        }
+    );
+
+}
+
+
+/* ==================================================
+   エラー表示
+   ================================================== */
+
+function showError(message) {
+
+    document.getElementById(
+        "display-list"
+    ).innerHTML = `
+
+        <div class="error-message">
+
+            <h3>
+                データを読み込めませんでした
+            </h3>
+
+            <p>
+                ${escapeHtml(message)}
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* ==================================================
+   HTMLエスケープ
+   ================================================== */
+
+function escapeHtml(value) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+    div.textContent =
+        value;
+
+    return div.innerHTML;
+
+}
+
+
+/* ==================================================
+   画像ビューア
+   ================================================== */
+
+function openImageViewer(
+    imageUrl,
+    imageName,
+    stationName
+) {
+
+    const newWindow =
+        window.open(
+            "",
+            "_blank"
+        );
+
+
+    if (!newWindow) {
+
+        alert(
+            "新しいタブを開けませんでした。"
+        );
+
+        return;
+
+    }
+
+
+    newWindow.document.title =
+        imageName +
+        " - 行先表示の広場";
+
+
+    const style =
+        newWindow.document.createElement(
+            "style"
+        );
+
+
+    style.textContent = `
+
+        html,
+        body {
+
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #111111;
+
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+        }
+
+        #viewer-image {
+
+            max-width: 95vw;
+            max-height: 95vh;
+            width: auto;
+            height: auto;
+            cursor: zoom-in;
+            transition:
+                transform 0.1s ease;
+            user-select: none;
+            -webkit-user-drag: none;
+
+        }
+
+        #title {
+
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform:
+                translateX(-50%);
+            color: white;
+            background:
+                rgba(0, 0, 0, 0.6);
+            padding:
+                8px 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            z-index: 10;
+            pointer-events: none;
+
+        }
+
+        #station {
+
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            color: white;
+            background:
+                rgba(0, 0, 0, 0.6);
+            padding:
+                6px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            z-index: 10;
+            pointer-events: none;
+
+        }
+
+        #help {
+
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform:
+                translateX(-50%);
+            color: white;
+            background:
+                rgba(0, 0, 0, 0.6);
+            padding:
+                8px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            z-index: 10;
+            pointer-events: none;
+
+        }
+
+    `;
+
+
+    newWindow.document.head.appendChild(
+        style
+    );
+
+
+    const title =
+        newWindow.document.createElement(
+            "div"
+        );
+
+    title.id =
+        "title";
+
+    title.textContent =
+        imageName;
+
+
+    const image =
+        newWindow.document.createElement(
+            "img"
+        );
+
+    image.id =
+        "viewer-image";
+
+    image.src =
+        imageUrl;
+
+    image.alt =
+        imageName;
+
+
+    const station =
+        newWindow.document.createElement(
+            "div"
+        );
+
+    station.id =
+        "station";
+
+    station.textContent =
+        stationName
+            ? "撮影：" + stationName
+            : "";
+
+
+    const help =
+        newWindow.document.createElement(
+            "div"
+        );
+
+    help.id =
+        "help";
+
+    help.textContent =
+        "クリック：拡大・縮小　｜　長押し＋ドラッグ：画像移動　｜　ホイール：ズーム";
+
+
+    newWindow.document.body.appendChild(
+        title
+    );
+
+    newWindow.document.body.appendChild(
+        image
+    );
+
+
+    if (
+        stationName
+    ) {
+
+        newWindow.document.body.appendChild(
+            station
+        );
+
+    }
+
+
+    newWindow.document.body.appendChild(
+        help
+    );
+
+
+    /* ==================================================
+       ズーム
+       ================================================== */
+
+    let zoom = 1;
+    let positionX = 0;
+    let positionY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let moved = false;
+
+
+    function updateImage() {
+
+        image.style.transform =
+            "translate(" +
+            positionX +
+            "px, " +
+            positionY +
+            "px) scale(" +
+            zoom +
+            ")";
+
+    }
+
+
+    /* ==================================================
+       クリックズーム
+       ================================================== */
+
+    image.addEventListener(
+        "click",
+        function() {
+
+            if (
+                moved
+            ) {
+
+                moved = false;
+
+                return;
+
+            }
+
+
+            if (
+                zoom === 1
+            ) {
+
+                zoom = 1.5;
+
+            }
+
+            else if (
+                zoom === 1.5
+            ) {
+
+                zoom = 2;
+
+            }
+
+            else if (
+                zoom === 2
+            ) {
+
+                zoom = 3;
+
+            }
+
+            else {
+
+                zoom = 1;
+                positionX = 0;
+                positionY = 0;
+
+            }
+
+
+            updateImage();
+
+
+            image.style.cursor =
+                zoom === 1
+                    ? "zoom-in"
+                    : "grab";
+
+        }
+    );
+
+
+    /* ==================================================
+       ドラッグ開始
+       ================================================== */
+
+    image.addEventListener(
+        "mousedown",
+        function(event) {
+
+            if (
+                event.button !== 0
+            ) {
+
+                return;
+
+            }
+
+
+            isDragging = true;
+            moved = false;
+
+
+            startX =
+                event.clientX -
+                positionX;
+
+            startY =
+                event.clientY -
+                positionY;
+
+
+            image.style.cursor =
+                "grabbing";
+
+
+            event.preventDefault();
+
+        }
+    );
+
+
+    /* ==================================================
+       ドラッグ
+       ================================================== */
+
+    newWindow.document.addEventListener(
+        "mousemove",
+        function(event) {
+
+            if (
+                !isDragging
+            ) {
+
+                return;
+
+            }
+
+
+            const newX =
+                event.clientX -
+                startX;
+
+            const newY =
+                event.clientY -
+                startY;
+
+
+            if (
+                Math.abs(
+                    newX -
+                    positionX
+                ) > 3 ||
+                Math.abs(
+                    newY -
+                    positionY
+                ) > 3
+            ) {
+
+                moved = true;
+
+            }
+
+
+            positionX =
+                newX;
+
+            positionY =
+                newY;
+
+
+            updateImage();
+
+        }
+    );
+
+
+    /* ==================================================
+       ドラッグ終了
+       ================================================== */
+
+    newWindow.document.addEventListener(
+        "mouseup",
+        function() {
+
+            if (
+                !isDragging
+            ) {
+
+                return;
+
+            }
+
+
+            isDragging = false;
+
+
+            image.style.cursor =
+                zoom === 1
+                    ? "zoom-in"
+                    : "grab";
+
+        }
+    );
+
+
+    /* ==================================================
+       ホイールズーム
+       ================================================== */
+
+    image.addEventListener(
+        "wheel",
+        function(event) {
+
+            event.preventDefault();
+
+
+            if (
+                event.deltaY < 0
+            ) {
+
+                zoom += 0.25;
+
+            }
+
+            else {
+
+                zoom -= 0.25;
+
+            }
+
+
+            if (
+                zoom < 0.5
+            ) {
+
+                zoom = 0.5;
+
+            }
+
+
+            if (
+                zoom > 5
+            ) {
+
+                zoom = 5;
+
+            }
+
+
+            if (
+                zoom === 1
+            ) {
+
+                positionX = 0;
+                positionY = 0;
+
+            }
+
+
+            updateImage();
+
+
+            image.style.cursor =
+                zoom > 1
+                    ? "grab"
+                    : "zoom-in";
+
+        },
+        {
+            passive: false
+        }
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>

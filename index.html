@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>行先表示の広場</title>
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        行先表示の広場
+    </h1>
+
+
+    <div class="header-right">
+
+        <span class="admin-name">
+            管理者:chachapien
+        </span>
+
+
+        <a
+            href="https://x.com/chachapien0405"
+            class="admin-x"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            管理者X
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- ==================================================
+         お知らせ
+         ================================================== -->
+
+    <section class="announcement-section">
+
+        <div class="announcement-label">
+            お知らせ
+        </div>
+
+
+        <div
+            class="announcement-window"
+            id="announcement-window"
+        >
+
+            <div
+                class="announcement-track"
+                id="announcement-track"
+            >
+
+                <span id="announcement-text">
+                    お知らせを読み込んでいます...
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ようこそ
+         ================================================== -->
+
+    <section class="welcome">
+
+        <h2>
+            行先表示の広場へようこそ
+        </h2>
+
+
+        <img
+            src="images/top.png"
+            class="welcome-image"
+            alt="行先表示の広場"
+        >
+
+
+        <!--
+            説明文
+            長い場合は横方向にスクロールします
+        -->
+
+        <div class="welcome-description-window">
+
+            <p class="welcome-description">
+
+                行先表示の広場へようこそ！<br>
+                このサイトではさまざまな鉄道車両の行先表示を見ることができます！<br>
+                このサイトに記載されている画像を幕再現に使用していただけるのは大歓迎です！<br>
+                <strong>画像の使用などにつきましては下にありますルールをご覧ください。</strong><br>
+                更新情報などは当サイト更新履歴と管理者Xにて情報を出しています。<br>
+                もし不具合などございましたら管理者までご連絡ください。<br>
+                ※リクエストなどのご連絡は現時点ではお控えください。<br>
+                今後どんどん行先表示や機能を増やす予定です。<br>
+                まだまだお問い合わせ欄など足りない機能などがありますので実装までお待ちください。<br>
+                <br>
+                <span class="welcome-description-large">画像使用についてのルール</span></strong><br>
+                現状当サイトで公開している画像を<strong>無断で使用することは認められていません。</strong><br>
+                もし画像をネット投稿目的で使用したい場合には、お問い合わせシステム完成までお手数をお掛けしますが、管理者Xまでご連絡ください。<br>
+                なお、幕再現に使いたい場合や、<strong>ネットに公開しない使い方であれば</strong>ご自由にお使いください。<br>
+                一部画像幕再現をするには画質が悪い、もしくは暗いなどがございますのでその場合はダウンロードして加工して再現してもらっても構いません。<br>
+                以上のルールを守っていただくようお願いいたします。
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="company.html"
+            class="company-button"
+        >
+            会社から探す
+        </a>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         更新履歴
+         ================================================== -->
+
+    <section class="update-history">
+
+        <h2 class="update-history-title">
+            更新履歴
+        </h2>
+
+
+        <div
+            id="update-history-list"
+            class="update-history-list"
+        >
+
+            <div class="update-loading">
+                更新履歴を読み込んでいます...
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    2026 行先表示の広場
+
+</footer>
+
+
+
+
+<script>
+
+
+/* ==================================================
+   お知らせ
+   ================================================== */
+
+const announcementText =
+    document.getElementById(
+        "announcement-text"
+    );
+
+
+const announcementTrack =
+    document.getElementById(
+        "announcement-track"
+    );
+
+
+const announcementWindow =
+    document.getElementById(
+        "announcement-window"
+    );
+
+
+let currentAnnouncement = "";
+
+
+
+/* ==================================================
+   お知らせを表示
+   ================================================== */
+
+function showAnnouncement(text) {
+
+    currentAnnouncement = text;
+
+    announcementText.textContent = text;
+
+
+    announcementTrack.classList.remove(
+        "announcement-scroll"
+    );
+
+
+    announcementTrack.style.animationDuration = "";
+
+
+    announcementTrack.style.transform =
+        "translateX(100%)";
+
+
+    void announcementTrack.offsetWidth;
+
+
+    const textWidth =
+        announcementText.offsetWidth;
+
+
+    const windowWidth =
+        announcementWindow.clientWidth;
+
+
+    if (textWidth <= windowWidth) {
+
+        announcementTrack.style.transform =
+            "translateX(0)";
+
+        return;
+
+    }
+
+
+    const scrollDistance =
+        textWidth + windowWidth;
+
+
+    const scrollSpeed = 80;
+
+
+    const scrollTime =
+        scrollDistance / scrollSpeed;
+
+
+    announcementTrack.style.setProperty(
+        "--announcement-duration",
+        scrollTime + "s"
+    );
+
+
+    announcementTrack.classList.add(
+        "announcement-scroll"
+    );
+
+}
+
+
+
+/* ==================================================
+   Discordからお知らせ取得
+   ================================================== */
+
+async function loadAnnouncement() {
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/announcement",
+                {
+                    method: "GET",
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "お知らせを取得できませんでした。"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !data ||
+            !data.success ||
+            !data.announcement
+        ) {
+
+            showAnnouncement(
+                "現在、お知らせはありません。"
+            );
+
+            return;
+
+        }
+
+
+        let content =
+            data.announcement.content;
+
+
+        if (
+            !content ||
+            !content.trim()
+        ) {
+
+            showAnnouncement(
+                "現在、お知らせはありません。"
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * お知らせは1行表示
+         */
+
+        content =
+            content
+                .replace(/\r?\n/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+
+
+        if (
+            content ===
+            currentAnnouncement
+        ) {
+
+            return;
+
+        }
+
+
+        showAnnouncement(content);
+
+
+    }
+    catch (error) {
+
+        console.error(
+            "お知らせ取得エラー:",
+            error
+        );
+
+
+        showAnnouncement(
+            "お知らせを取得できませんでした。"
+        );
+
+    }
+
+}
+
+
+
+/* ==================================================
+   更新履歴
+   ================================================== */
+
+const updateHistoryList =
+    document.getElementById(
+        "update-history-list"
+    );
+
+
+
+/* ==================================================
+   日付を正規化
+   ================================================== */
+
+function normalizeDate(date) {
+
+    if (
+        date === null ||
+        date === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    return String(date)
+        .trim()
+        .replace(/\//g, "-");
+
+}
+
+
+
+/* ==================================================
+   月キー取得
+   ================================================== */
+
+function getMonthKey(date) {
+
+    const normalizedDate =
+        normalizeDate(date);
+
+
+    const match =
+        normalizedDate.match(
+            /^(\d{4})-(\d{1,2})-(\d{1,2})/
+        );
+
+
+    if (!match) {
+
+        return "その他";
+
+    }
+
+
+    const year =
+        match[1];
+
+
+    const month =
+        String(
+            Number(match[2])
+        ).padStart(
+            2,
+            "0"
+        );
+
+
+    return (
+        year +
+        "-" +
+        month
+    );
+
+}
+
+
+
+/* ==================================================
+   月表示
+   ================================================== */
+
+function formatMonth(monthKey) {
+
+    const match =
+        String(monthKey)
+            .match(
+                /^(\d{4})-(\d{1,2})$/
+            );
+
+
+    if (!match) {
+
+        return "その他";
+
+    }
+
+
+    const year =
+        Number(match[1]);
+
+
+    const month =
+        Number(match[2]);
+
+
+    return (
+        year +
+        "年" +
+        month +
+        "月"
+    );
+
+}
+
+
+
+/* ==================================================
+   日付表示
+   ================================================== */
+
+function formatDate(date) {
+
+    const normalizedDate =
+        normalizeDate(date);
+
+
+    const match =
+        normalizedDate.match(
+            /^(\d{4})-(\d{1,2})-(\d{1,2})/
+        );
+
+
+    if (!match) {
+
+        return normalizedDate;
+
+    }
+
+
+    return (
+        match[1] +
+        "年" +
+        Number(match[2]) +
+        "月" +
+        Number(match[3]) +
+        "日"
+    );
+
+}
+
+
+
+/* ==================================================
+   時刻表示
+   ================================================== */
+
+function formatTime(time) {
+
+    if (
+        time === null ||
+        time === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    const normalizedTime =
+        String(time).trim();
+
+
+    if (!normalizedTime) {
+
+        return "";
+
+    }
+
+
+    const match =
+        normalizedTime.match(
+            /^(\d{1,2}):(\d{1,2})/
+        );
+
+
+    if (!match) {
+
+        return normalizedTime;
+
+    }
+
+
+    return (
+        String(
+            Number(match[1])
+        ).padStart(2, "0") +
+        ":" +
+        String(
+            Number(match[2])
+        ).padStart(2, "0")
+    );
+
+}
+
+
+
+/* ==================================================
+   日時を取得
+   ================================================== */
+
+function getUpdateDateTime(update) {
+
+    const date =
+        normalizeDate(
+            update.date
+        );
+
+
+    const time =
+        update.time
+            ? String(update.time).trim()
+            : "00:00";
+
+
+    const dateTime =
+        new Date(
+            date +
+            "T" +
+            time
+        );
+
+
+    if (
+        Number.isNaN(
+            dateTime.getTime()
+        )
+    ) {
+
+        return new Date(
+            "9999-12-31T23:59:59"
+        );
+
+    }
+
+
+    return dateTime;
+
+}
+
+
+
+/* ==================================================
+   詳細文章を取得
+   ================================================== */
+
+function getUpdateDetail(update) {
+
+    const detail =
+        update.detail ??
+        update.description ??
+        update.text ??
+        "";
+
+
+    if (
+        detail === null ||
+        detail === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    return String(detail);
+
+}
+
+
+
+/* ==================================================
+   更新履歴を表示
+   ================================================== */
+
+function renderUpdateHistory(updates) {
+
+    updateHistoryList.innerHTML = "";
+
+
+    if (
+        !Array.isArray(updates) ||
+        updates.length === 0
+    ) {
+
+        updateHistoryList.innerHTML =
+            '<div class="update-empty">' +
+            '更新履歴はありません。' +
+            '</div>';
+
+        return;
+
+    }
+
+
+    /*
+     * 月ごとに分類
+     */
+
+    const monthlyUpdates = {};
+
+
+    updates.forEach(
+        function(update) {
+
+            if (
+                !update ||
+                typeof update !== "object"
+            ) {
+
+                return;
+
+            }
+
+
+            const monthKey =
+                getMonthKey(
+                    update.date
+                );
+
+
+            if (
+                !monthlyUpdates[monthKey]
+            ) {
+
+                monthlyUpdates[monthKey] = [];
+
+            }
+
+
+            monthlyUpdates[monthKey].push(
+                update
+            );
+
+        }
+    );
+
+
+
+    /*
+     * 月を新しい順にする
+     */
+
+    const months =
+        Object.keys(monthlyUpdates)
+            .sort(
+                function(a, b) {
+
+                    /*
+                     * 「その他」は最後
+                     */
+
+                    if (a === "その他") {
+
+                        return 1;
+
+                    }
+
+
+                    if (b === "その他") {
+
+                        return -1;
+
+                    }
+
+
+                    return b.localeCompare(a);
+
+                }
+            );
+
+
+
+    months.forEach(
+        function(monthKey) {
+
+            const monthBox =
+                document.createElement(
+                    "div"
+                );
+
+
+            monthBox.className =
+                "update-month";
+
+
+
+            /*
+             * 月ボタン
+             */
+
+            const monthButton =
+                document.createElement(
+                    "button"
+                );
+
+
+            monthButton.className =
+                "update-month-button";
+
+
+            monthButton.type =
+                "button";
+
+
+            monthButton.innerHTML =
+                '<span class="update-month-name">' +
+                escapeHtml(
+                    formatMonth(monthKey)
+                ) +
+                '</span>' +
+                '<span class="update-month-arrow">' +
+                '▼' +
+                '</span>';
+
+
+
+            /*
+             * 更新一覧
+             */
+
+            const updateItems =
+                document.createElement(
+                    "div"
+                );
+
+
+            updateItems.className =
+                "update-items";
+
+
+
+            /*
+             * 新しい更新を上
+             */
+
+            monthlyUpdates[monthKey].sort(
+                function(a, b) {
+
+                    return (
+                        getUpdateDateTime(b) -
+                        getUpdateDateTime(a)
+                    );
+
+                }
+            );
+
+
+
+            monthlyUpdates[monthKey].forEach(
+                function(update) {
+
+                    /*
+                     * 更新ボタン
+                     */
+
+                    const updateButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    updateButton.className =
+                        "update-item";
+
+
+                    updateButton.type =
+                        "button";
+
+
+
+                    /*
+                     * 日付
+                     */
+
+                    let dateText =
+                        formatDate(
+                            update.date
+                        );
+
+
+                    if (update.time) {
+
+                        dateText +=
+                            " " +
+                            formatTime(
+                                update.time
+                            );
+
+                    }
+
+
+
+                    /*
+                     * 日付要素
+                     */
+
+                    const dateElement =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    dateElement.className =
+                        "update-date";
+
+
+                    dateElement.textContent =
+                        dateText;
+
+
+
+                    /*
+                     * タイトル
+                     */
+
+                    const titleElement =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    titleElement.className =
+                        "update-title";
+
+
+                    titleElement.textContent =
+                        update.title ||
+                        "タイトル未設定";
+
+
+
+                    updateButton.appendChild(
+                        dateElement
+                    );
+
+
+                    updateButton.appendChild(
+                        titleElement
+                    );
+
+
+
+                    /*
+                     * 詳細を開く
+                     */
+
+                    updateButton.addEventListener(
+                        "click",
+                        function() {
+
+                            showUpdateDetail(
+                                update
+                            );
+
+                        }
+                    );
+
+
+                    updateItems.appendChild(
+                        updateButton
+                    );
+
+                }
+            );
+
+
+
+            /*
+             * 月の開閉
+             */
+
+            monthButton.addEventListener(
+                "click",
+                function() {
+
+                    monthBox.classList.toggle(
+                        "open"
+                    );
+
+                }
+            );
+
+
+
+            monthBox.appendChild(
+                monthButton
+            );
+
+
+            monthBox.appendChild(
+                updateItems
+            );
+
+
+            updateHistoryList.appendChild(
+                monthBox
+            );
+
+        }
+    );
+
+}
+
+
+
+/* ==================================================
+   HTMLエスケープ
+   ================================================== */
+
+function escapeHtml(text) {
+
+    if (
+        text === null ||
+        text === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    return String(text)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* ==================================================
+   更新詳細を表示
+   ================================================== */
+
+function showUpdateDetail(update) {
+
+    /*
+     * 既存の詳細を削除
+     */
+
+    const oldDetail =
+        document.querySelector(
+            ".update-detail-overlay"
+        );
+
+
+    if (oldDetail) {
+
+        oldDetail.remove();
+
+    }
+
+
+
+    /*
+     * 背景
+     */
+
+    const overlay =
+        document.createElement(
+            "div"
+        );
+
+
+    overlay.className =
+        "update-detail-overlay";
+
+
+
+    /*
+     * 詳細ボックス
+     */
+
+    const detail =
+        document.createElement(
+            "div"
+        );
+
+
+    detail.className =
+        "update-detail";
+
+
+
+    /*
+     * 日付・時刻
+     */
+
+    const date =
+        document.createElement(
+            "div"
+        );
+
+
+    date.className =
+        "update-detail-date";
+
+
+    let dateText =
+        formatDate(
+            update.date
+        );
+
+
+    if (update.time) {
+
+        dateText +=
+            " " +
+            formatTime(
+                update.time
+            );
+
+    }
+
+
+    date.textContent =
+        dateText;
+
+
+
+    /*
+     * タイトル
+     */
+
+    const title =
+        document.createElement(
+            "h3"
+        );
+
+
+    title.className =
+        "update-detail-title";
+
+
+    title.textContent =
+        update.title ||
+        "タイトル未設定";
+
+
+
+    /*
+     * 詳細本文
+     */
+
+    const text =
+        document.createElement(
+            "p"
+        );
+
+
+    text.className =
+        "update-detail-text";
+
+
+    const detailText =
+        getUpdateDetail(
+            update
+        );
+
+
+    if (
+        detailText.trim()
+    ) {
+
+        text.textContent =
+            detailText;
+
+    }
+    else {
+
+        text.textContent =
+            "詳細はありません。";
+
+    }
+
+
+
+    /*
+     * 改行をそのまま表示
+     */
+
+    text.style.whiteSpace =
+        "pre-wrap";
+
+
+
+    /*
+     * ページへ移動
+     */
+
+    const pageButton =
+        document.createElement(
+            "a"
+        );
+
+
+    pageButton.className =
+        "update-detail-page";
+
+
+    pageButton.textContent =
+        "ページへ移動";
+
+
+    pageButton.href =
+        update.url || "#";
+
+
+
+    /*
+     * URLがない場合
+     */
+
+    if (!update.url) {
+
+        pageButton.style.display =
+            "none";
+
+    }
+
+
+
+    /*
+     * 別タブで開く
+     */
+
+    if (update.url) {
+
+        pageButton.target =
+            "_blank";
+
+
+        pageButton.rel =
+            "noopener noreferrer";
+
+    }
+
+
+
+    /*
+     * 閉じるボタン
+     */
+
+    const closeButton =
+        document.createElement(
+            "button"
+        );
+
+
+    closeButton.className =
+        "update-detail-close";
+
+
+    closeButton.type =
+        "button";
+
+
+    closeButton.textContent =
+        "閉じる";
+
+
+    closeButton.addEventListener(
+        "click",
+        function() {
+
+            overlay.remove();
+
+        }
+    );
+
+
+
+    /*
+     * 背景クリックで閉じる
+     */
+
+    overlay.addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === overlay
+            ) {
+
+                overlay.remove();
+
+            }
+
+        }
+    );
+
+
+
+    /*
+     * 詳細を組み立てる
+     */
+
+    detail.appendChild(
+        date
+    );
+
+
+    detail.appendChild(
+        title
+    );
+
+
+    detail.appendChild(
+        text
+    );
+
+
+    detail.appendChild(
+        pageButton
+    );
+
+
+    detail.appendChild(
+        closeButton
+    );
+
+
+    overlay.appendChild(
+        detail
+    );
+
+
+    document.body.appendChild(
+        overlay
+    );
+
+}
+
+
+
+/* ==================================================
+   updates.json読み込み
+   ================================================== */
+
+async function loadUpdateHistory() {
+
+    try {
+
+        const response =
+            await fetch(
+                "data/updates.json",
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "updates.jsonを読み込めませんでした。"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+
+        /*
+         * JSON形式確認
+         */
+
+        if (
+            !data ||
+            !Array.isArray(
+                data.updates
+            )
+        ) {
+
+            throw new Error(
+                "updates.jsonの形式が正しくありません。"
+            );
+
+        }
+
+
+        renderUpdateHistory(
+            data.updates
+        );
+
+
+    }
+    catch (error) {
+
+        console.error(
+            "更新履歴読み込みエラー:",
+            error
+        );
+
+
+        updateHistoryList.innerHTML =
+            '<div class="update-error">' +
+            '更新履歴を読み込めませんでした。' +
+            '</div>';
+
+    }
+
+}
+
+
+
+/* ==================================================
+   トップ説明文のスクロール
+   ================================================== */
+
+function setupWelcomeDescription() {
+
+    const windowElement =
+        document.querySelector(
+            ".welcome-description-window"
+        );
+
+
+    const textElement =
+        document.querySelector(
+            ".welcome-description"
+        );
+
+
+    if (
+        !windowElement ||
+        !textElement
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+     * 一度スクロール状態を解除
+     */
+
+    textElement.classList.remove(
+        "welcome-description-scroll"
+    );
+
+
+    textElement.style.animationDuration =
+        "";
+
+
+    textElement.style.transform =
+        "translateX(0)";
+
+
+    /*
+     * サイズを再計算
+     */
+
+    void textElement.offsetWidth;
+
+
+    const textWidth =
+        textElement.scrollWidth;
+
+
+    const windowWidth =
+        windowElement.clientWidth;
+
+
+    /*
+     * 枠内に収まる場合は
+     * スクロールしない
+     */
+
+    if (
+        textWidth <= windowWidth
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+     * 文字が長い場合だけ
+     * 横方向にスクロール
+     */
+
+    const scrollDistance =
+        textWidth + windowWidth;
+
+
+    /*
+     * スクロール速度
+     * 数値を小さくすると遅くなります
+     */
+
+    const scrollSpeed = 60;
+
+
+    const scrollTime =
+        scrollDistance / scrollSpeed;
+
+
+    textElement.style.setProperty(
+        "--welcome-description-duration",
+        scrollTime + "s"
+    );
+
+
+    textElement.classList.add(
+        "welcome-description-scroll"
+    );
+
+}
+
+
+
+/* ==================================================
+   初回読み込み
+   ================================================== */
+
+loadAnnouncement();
+
+loadUpdateHistory();
+
+setupWelcomeDescription();
+
+
+
+/* ==================================================
+   15秒ごとにお知らせ更新
+   ================================================== */
+
+setInterval(
+    loadAnnouncement,
+    15000
+);
+
+
+
+/* ==================================================
+   画面サイズ変更
+   ================================================== */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        if (currentAnnouncement) {
+
+            showAnnouncement(
+                currentAnnouncement
+            );
+
+        }
+
+
+        setupWelcomeDescription();
+
+    }
+);
+
+
+</script>
+
+
+
+</body>
+
+</html>

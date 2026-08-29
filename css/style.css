@@ -1,0 +1,2151 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222222;
+    font-family:
+        "Yu Gothic",
+        "游ゴシック",
+        Arial,
+        sans-serif;
+}
+
+
+/* ==================================================
+   ヘッダー
+   ================================================== */
+
+header {
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #20b2aa;
+
+    color: white;
+}
+
+header h1 {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin: 0;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 24px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   display.html ヘッダー左
+   ================================================== */
+
+.header-left {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   ヘッダー右
+   ================================================== */
+
+.header-right {
+    position: absolute;
+
+    right: 20px;
+    bottom: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 2px;
+
+    font-size: 13px;
+}
+
+.admin-name {
+    white-space: nowrap;
+}
+
+.admin-x {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.admin-x:hover {
+    opacity: 0.7;
+
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   メイン
+   ================================================== */
+
+main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+
+/* ==================================================
+   display.html メイン
+   ================================================== */
+
+.display-main {
+    width: 100%;
+
+    max-width: none;
+}
+
+
+/* ==================================================
+   お知らせ
+   ================================================== */
+
+.announcement-section {
+    display: flex;
+
+    width: 100%;
+    height: 42px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    background-color: white;
+
+    border-radius:
+        6px 6px 0 0;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+}
+
+.announcement-label {
+    display: flex;
+
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 42px;
+
+    background-color: #20b2aa;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.announcement-window {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 42px;
+
+    overflow: hidden;
+
+    background-color: #555555;
+}
+
+.announcement-track {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+
+    width: max-content;
+    height: 42px;
+
+    white-space: nowrap;
+
+    transform:
+        translateX(100%);
+}
+
+.announcement-track span {
+    display: inline-block;
+
+    padding-left: 20px;
+    padding-right: 100px;
+
+    color: white;
+
+    line-height: 42px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   お知らせスクロール
+   ================================================== */
+
+.announcement-scroll {
+    animation-name:
+        announcementScroll;
+
+    animation-timing-function:
+        linear;
+
+    animation-iteration-count:
+        infinite;
+
+    animation-duration:
+        var(--announcement-duration);
+}
+
+@keyframes announcementScroll {
+
+    from {
+        transform:
+            translateX(100%);
+    }
+
+    to {
+        transform:
+            translateX(-100%);
+    }
+
+}
+
+
+/* ==================================================
+   ようこそ
+   ================================================== */
+
+.welcome {
+    width: 100%;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius:
+        0 0 12px 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    margin:
+        0 0 20px 0;
+
+    font-size: 28px;
+}
+
+.welcome p {
+    margin: 20px 0;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   トップ画像
+   ================================================== */
+
+.welcome-image {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 0;
+}
+
+
+/* ==================================================
+   ようこそ説明文
+   ================================================== */
+
+/*
+ * 説明文が長くなっても
+ * welcome全体を縦に伸ばさず、
+ * この部分だけスクロールする。
+ */
+
+.welcome-description {
+    width: 100%;
+
+    max-height: 120px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding:
+        5px
+        10px;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    scrollbar-width: thin;
+}
+
+
+/* ==================================================
+   説明文の一部を大きくする
+   ================================================== */
+
+.welcome-description-large {
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   会社から探す
+   ================================================== */
+
+.company-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding:
+        14px 30px;
+
+    background-color: #20b2aa;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.company-button:hover {
+    background-color: #178f89;
+
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.92);
+}
+
+.company-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.86);
+}
+
+
+/* ==================================================
+   会社一覧
+   ================================================== */
+
+.company-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 15px;
+}
+
+
+/* ==================================================
+   会社選択ボタン
+   ================================================== */
+
+.company-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    overflow: hidden;
+
+    padding:
+        25px
+        20px
+        20px
+        20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-name {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.company-color {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 8px;
+
+    pointer-events: none;
+}
+
+.company-item:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.96);
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+.company-item:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.90);
+}
+
+
+/* ==================================================
+   形式一覧
+   ================================================== */
+
+.type-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 15px;
+}
+
+
+/* ==================================================
+   形式カード
+   ================================================== */
+
+.type-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.type-item:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.96);
+}
+
+.type-item:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.90);
+}
+
+
+/* ==================================================
+   形式画像エリア
+   ================================================== */
+
+.type-image-area {
+    width: 100%;
+
+    height: 140px;
+
+    overflow: hidden;
+
+    background-color: #eeeeee;
+
+    border-radius:
+        12px 12px 0 0;
+}
+
+
+/* ==================================================
+   形式画像
+   ================================================== */
+
+.type-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* ==================================================
+   形式名
+   ================================================== */
+
+.type-name {
+    width: 100%;
+
+    padding:
+        15px
+        10px
+        5px
+        10px;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   形式の路線名
+   ================================================== */
+
+.type-line {
+    width: 100%;
+
+    padding:
+        0
+        10px
+        12px
+        10px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    color: #777777;
+}
+
+
+/* ==================================================
+   形式色ライン
+   ================================================== */
+
+.type-color {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 8px;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   番台一覧
+   ================================================== */
+
+.series-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ==================================================
+   番台カード
+   ================================================== */
+
+.series-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.series-item:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.96);
+}
+
+.series-item:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.90);
+}
+
+
+/* ==================================================
+   番台画像エリア
+   ================================================== */
+
+.series-image-area {
+    width: 100%;
+
+    height: 140px;
+
+    overflow: hidden;
+
+    background-color: #eeeeee;
+
+    border-radius:
+        12px 12px 0 0;
+}
+
+
+/* ==================================================
+   番台画像
+   ================================================== */
+
+.series-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* ==================================================
+   番台名
+   ================================================== */
+
+.series-name {
+    width: 100%;
+
+    padding:
+        15px
+        0
+        5px
+        0;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   番台路線名
+   ================================================== */
+
+.series-line {
+    width: 100%;
+
+    padding-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #777777;
+}
+
+
+/* ==================================================
+   番台色
+   ================================================== */
+
+.series-color {
+    width: 90%;
+
+    height: 8px;
+
+    margin-bottom: 15px;
+
+    border-radius: 4px;
+}
+
+
+/* ==================================================
+   方向幕ページ
+   ================================================== */
+
+.display-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* ==================================================
+   display.html ページレイアウト
+   ================================================== */
+
+.page-layout {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 1px;
+}
+
+
+/* ==================================================
+   方向幕カテゴリサイドバー
+   ================================================== */
+
+.category-sidebar {
+    position: absolute;
+
+    top: 0;
+
+    left:
+        calc(
+            50% - 450px - 190px - 25px
+        );
+
+    width: 190px;
+
+    flex-shrink: 0;
+}
+
+.category-title {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.category-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* ==================================================
+   カテゴリボタン
+   ================================================== */
+
+.category-button {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding:
+        12px
+        14px
+        18px
+        14px;
+
+    background-color: white;
+
+    border:
+        1px solid #dddddd;
+
+    border-radius: 8px;
+
+    color: #222222;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+
+    overflow: hidden;
+}
+
+.category-button:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.92);
+
+    box-shadow:
+        0 3px 9px
+        rgba(0, 0, 0, 0.12);
+}
+
+.category-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.86);
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.10);
+}
+
+.category-button.active {
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.16);
+}
+
+.category-color {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 6px;
+
+    background-color: #999999;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   方向幕右側コンテンツ
+   ================================================== */
+
+.display-content {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin-left:
+        calc(50% - 450px);
+
+    min-width: 0;
+}
+
+
+/* ==================================================
+   方向幕カード
+   ================================================== */
+
+.display-item {
+    position: relative;
+
+    width: 100%;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.08);
+
+    scroll-margin-top: 20px;
+}
+
+
+/* ==================================================
+   方向幕カテゴリバッジ
+   ================================================== */
+
+.display-category {
+    position: absolute;
+
+    top: 12px;
+    left: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    color: #333333;
+
+    text-align: left;
+
+    z-index: 3;
+}
+
+
+/* ==================================================
+   方向幕カテゴリ色
+   ================================================== */
+
+.display-category-color {
+    width: 52px;
+
+    height: 7px;
+
+    margin-top: 5px;
+
+    border-radius: 4px;
+
+    background-color: #999999;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==================================================
+   LEDサイズ
+   ================================================== */
+
+/*
+ * 幕サイズ表記
+ *
+ * 画像の直上に配置されることを想定し、
+ * 上側を少し広げて下側を小さくする。
+ */
+
+.display-led-size {
+    display: block;
+
+    margin-top: 12px;
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+
+    color: #777777;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   方向幕名
+   ================================================== */
+
+.display-name {
+    margin:
+        0 0 20px 0;
+
+    font-size: 24px;
+}
+
+
+/* ==================================================
+   画像グリッド
+   ================================================== */
+
+.image-grid {
+    display: grid;
+
+    gap: 15px;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.image-grid.row-1 {
+    grid-template-columns:
+        1fr;
+}
+
+.image-grid.row-2 {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.image-grid.row-3 {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+.image-grid.row-many {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+/* ==================================================
+   big-small
+   ================================================== */
+
+.image-grid.big-small {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.big-image-wrapper {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+.small-image-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    width: 100%;
+
+    max-width: 700px;
+}
+
+
+/* ==================================================
+   画像
+   ================================================== */
+
+.image-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.display-image {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.display-image:hover {
+    opacity: 0.85;
+}
+
+
+/* ==================================================
+   撮影駅
+   ================================================== */
+
+.image-station {
+    position: absolute;
+
+    right: 7px;
+    bottom: 7px;
+
+    padding:
+        3px 7px;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+    z-index: 2;
+}
+
+
+/* ==================================================
+   方向幕画像ビューア用
+   ================================================== */
+
+.viewer-body {
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #111111;
+}
+
+
+/* ==================================================
+   更新履歴
+   ================================================== */
+
+.update-history {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================================================
+   更新履歴タイトル
+   ================================================== */
+
+.update-history-title {
+    margin:
+        0 0 20px 0;
+
+    font-size: 24px;
+
+    text-align: left;
+}
+
+
+/* ==================================================
+   更新履歴一覧
+   ================================================== */
+
+.update-history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ==================================================
+   月ごとのボックス
+   ================================================== */
+
+.update-month {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    border:
+        1px solid #dddddd;
+
+    background-color: white;
+}
+
+
+/* ==================================================
+   月ボタン
+   ================================================== */
+
+.update-month-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding:
+        12px
+        16px;
+
+    border: none;
+
+    background-color: #20b2aa;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        filter 0.2s ease;
+}
+
+.update-month-button:hover {
+    background-color: #178f89;
+
+    filter:
+        brightness(0.98);
+}
+
+
+/* ==================================================
+   月名
+   ================================================== */
+
+.update-month-name {
+    display: inline-block;
+}
+
+
+/* ==================================================
+   月の矢印
+   ================================================== */
+
+.update-month-arrow {
+    display: inline-block;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* ==================================================
+   開いているときの矢印
+   ================================================== */
+
+.update-month.open
+.update-month-arrow {
+    transform:
+        rotate(180deg);
+}
+
+
+/* ==================================================
+   更新項目一覧
+   ================================================== */
+
+.update-items {
+    display: none;
+
+    flex-direction: column;
+
+    background-color: white;
+}
+
+
+/* ==================================================
+   月を開いた状態
+   ================================================== */
+
+.update-month.open
+.update-items {
+    display: flex;
+}
+
+
+/* ==================================================
+   更新項目
+   ================================================== */
+
+.update-item {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding:
+        12px
+        15px;
+
+    border: none;
+
+    border-top:
+        1px solid #eeeeee;
+
+    background-color: white;
+
+    color: #222222;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease;
+}
+
+.update-item:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* ==================================================
+   更新日付
+   ================================================== */
+
+.update-date {
+    flex-shrink: 0;
+
+    width: 190px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   更新タイトル
+   ================================================== */
+
+.update-title {
+    min-width: 0;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   更新読み込み中
+   ================================================== */
+
+.update-loading {
+    padding: 20px;
+
+    color: #777777;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   更新なし
+   ================================================== */
+
+.update-empty {
+    padding: 20px;
+
+    color: #777777;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   更新エラー
+   ================================================== */
+
+.update-error {
+    padding: 20px;
+
+    color: #c0392b;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   更新詳細 背景
+   ================================================== */
+
+.update-detail-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color:
+        rgba(0, 0, 0, 0.55);
+}
+
+
+/* ==================================================
+   更新詳細ボックス
+   ================================================== */
+
+.update-detail {
+    width: 100%;
+
+    max-width: 650px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==================================================
+   更新詳細 日付
+   ================================================== */
+
+.update-detail-date {
+    margin-bottom: 8px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   更新詳細 タイトル
+   ================================================== */
+
+.update-detail-title {
+    margin:
+        0 0 20px 0;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   更新詳細 本文
+   ================================================== */
+
+.update-detail-text {
+    margin:
+        0 0 25px 0;
+
+    color: #333333;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   更新詳細 ページ移動
+   ================================================== */
+
+.update-detail-page {
+    display: inline-block;
+
+    margin-right: 10px;
+
+    padding:
+        10px
+        18px;
+
+    background-color: #20b2aa;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.update-detail-page:hover {
+    background-color: #178f89;
+}
+
+
+/* ==================================================
+   更新詳細 閉じる
+   ================================================== */
+
+.update-detail-close {
+    padding:
+        10px
+        18px;
+
+    border: none;
+
+    background-color: #777777;
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.update-detail-close:hover {
+    background-color: #555555;
+}
+
+
+/* ==================================================
+   エラー
+   ================================================== */
+
+.error-message {
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+
+/* ==================================================
+   戻るボタン
+   ================================================== */
+
+.back-button {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding:
+        10px
+        18px;
+
+    background-color: #20b2aa;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.back-button:hover {
+    transform:
+        translateY(2px)
+        scale(0.99);
+
+    filter:
+        brightness(0.92);
+}
+
+.back-button:active {
+    transform:
+        translateY(3px)
+        scale(0.98);
+
+    filter:
+        brightness(0.86);
+}
+
+
+/* ==================================================
+   フッター
+   ================================================== */
+
+footer {
+    padding: 30px;
+
+    color: #777777;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   スマートフォン
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        height: 70px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .header-left {
+        font-size: 18px;
+    }
+
+    .header-right {
+        right: 15px;
+
+        bottom: 6px;
+
+        font-size: 11px;
+    }
+
+    .admin-name {
+        font-size: 11px;
+    }
+
+    .admin-x {
+        font-size: 11px;
+    }
+
+    main {
+        margin:
+            20px auto;
+
+        padding: 10px;
+    }
+
+
+    /* ----------------------------------------------
+       display.html レイアウトをスマホ用に戻す
+       ---------------------------------------------- */
+
+    .display-main {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .page-layout {
+        position: static;
+
+        width: 100%;
+    }
+
+    .category-sidebar {
+        position: static;
+
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .display-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* ----------------------------------------------
+       お知らせ
+       ---------------------------------------------- */
+
+    .announcement-section {
+        height: 38px;
+
+        border-radius:
+            5px 5px 0 0;
+    }
+
+    .announcement-label {
+        width: 75px;
+
+        height: 38px;
+
+        font-size: 12px;
+    }
+
+    .announcement-window {
+        height: 38px;
+    }
+
+    .announcement-track {
+        height: 38px;
+    }
+
+    .announcement-track span {
+        padding-left: 15px;
+        padding-right: 80px;
+
+        color: white;
+
+        line-height: 38px;
+
+        font-size: 12px;
+    }
+
+
+    /* ----------------------------------------------
+       ようこそ
+       ---------------------------------------------- */
+
+    .welcome {
+        padding:
+            30px
+            20px;
+
+        border-radius:
+            0 0 10px 10px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .welcome-description {
+        max-height: 100px;
+
+        padding:
+            5px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .welcome-description-large {
+        font-size: 20px;
+    }
+
+
+    /* ----------------------------------------------
+       会社一覧
+       ---------------------------------------------- */
+
+    .company-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .company-item {
+        min-height: 70px;
+
+        padding:
+            20px
+            10px
+            15px
+            10px;
+
+        font-size: 16px;
+    }
+
+    .company-color {
+        height: 7px;
+    }
+
+
+    /* ----------------------------------------------
+       形式一覧
+       ---------------------------------------------- */
+
+    .type-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* ----------------------------------------------
+       形式画像
+       ---------------------------------------------- */
+
+    .type-image-area {
+        height: 110px;
+
+        border-radius:
+            10px 10px 0 0;
+    }
+
+    .type-name {
+        padding:
+            12px
+            5px
+            3px
+            5px;
+
+        font-size: 16px;
+    }
+
+    .type-line {
+        padding:
+            0
+            5px
+            10px
+            5px;
+
+        font-size: 12px;
+    }
+
+    .type-color {
+        height: 7px;
+    }
+
+
+    /* ----------------------------------------------
+       番台
+       ---------------------------------------------- */
+
+    .series-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .series-image-area {
+        height: 110px;
+
+        border-radius:
+            10px 10px 0 0;
+    }
+
+    .series-name {
+        padding:
+            12px
+            0
+            4px
+            0;
+
+        font-size: 16px;
+    }
+
+    .series-line {
+        padding-bottom: 10px;
+
+        font-size: 12px;
+    }
+
+    .series-color {
+        height: 7px;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* ----------------------------------------------
+       方向幕
+       ---------------------------------------------- */
+
+    .display-item {
+        padding: 15px;
+    }
+
+    .display-name {
+        font-size: 20px;
+    }
+
+    .display-led-size {
+        margin-top: 10px;
+        margin-bottom: 3px;
+
+        font-size: 9px;
+    }
+
+    .display-category {
+        top: 8px;
+        left: 10px;
+
+        font-size: 12px;
+    }
+
+    .display-category-color {
+        width: 48px;
+
+        height: 6px;
+    }
+
+    .image-grid.row-2,
+    .image-grid.row-3,
+    .image-grid.row-many {
+        grid-template-columns:
+            1fr;
+    }
+
+    .small-image-row {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* ----------------------------------------------
+       更新履歴
+       ---------------------------------------------- */
+
+    .update-history {
+        margin-top: 20px;
+
+        padding:
+            20px
+            15px;
+
+        border-radius: 10px;
+    }
+
+    .update-history-title {
+        margin-bottom: 15px;
+
+        font-size: 20px;
+    }
+
+    .update-month-button {
+        padding:
+            11px
+            13px;
+
+        font-size: 14px;
+    }
+
+    .update-item {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+
+        padding:
+            11px
+            12px;
+    }
+
+    .update-date {
+        width: 100%;
+
+        font-size: 11px;
+    }
+
+    .update-title {
+        width: 100%;
+
+        font-size: 13px;
+    }
+
+    .update-detail {
+        max-height: 90vh;
+
+        padding:
+            22px
+            18px;
+    }
+
+    .update-detail-title {
+        font-size: 20px;
+    }
+
+    .update-detail-text {
+        font-size: 14px;
+    }
+
+    .update-detail-page,
+    .update-detail-close {
+        font-size: 13px;
+    }
+
+}

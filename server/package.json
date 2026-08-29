@@ -1,0 +1,15 @@
+{
+    "name": "direction-display-archive-server",
+    "version": "1.0.0",
+    "description": "行先表示の広場 Discord お知らせサーバー",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "discord.js": "^14.27.0",
+        "dotenv": "^17.2.1",
+        "express": "^5.1.0"
+    }
+}
