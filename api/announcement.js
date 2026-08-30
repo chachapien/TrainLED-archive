@@ -1,6 +1,36 @@
 export default async function handler(request, response) {
 
     /*
+     * GitHub Pagesからのアクセスを許可
+     */
+    response.setHeader(
+        "Access-Control-Allow-Origin",
+        "https://chachapien.github.io"
+    );
+
+    response.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, OPTIONS"
+    );
+
+    response.setHeader(
+        "Access-Control-Allow-Headers",
+        "Content-Type"
+    );
+
+
+    /*
+     * CORS確認用リクエスト
+     */
+    if (request.method === "OPTIONS") {
+
+        response.status(204).end();
+
+        return;
+    }
+
+
+    /*
      * GET以外は受け付けない
      */
     if (request.method !== "GET") {
@@ -17,8 +47,7 @@ export default async function handler(request, response) {
     /*
      * 環境変数
      *
-     * これらはGitHubには保存しません。
-     * VercelのEnvironment Variablesに設定します。
+     * VercelのEnvironment Variablesから取得
      */
     const DISCORD_TOKEN =
         process.env.DISCORD_TOKEN;
@@ -211,4 +240,3 @@ export default async function handler(request, response) {
     }
 
 }
-
