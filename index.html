@@ -23,10 +23,120 @@
         href="css/style.css"
     >
 
+    <style>
+
+        /* ==================================================
+           メンテナンス画面
+           ================================================== */
+
+        #maintenance-overlay {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: #111111;
+
+            color: white;
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            z-index: 999999;
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+        }
+
+
+        .maintenance-box {
+
+            max-width: 700px;
+
+            width: 100%;
+
+        }
+
+
+        .maintenance-title {
+
+            font-size: 32px;
+
+            margin-bottom: 25px;
+
+            font-weight: bold;
+
+        }
+
+
+        .maintenance-message {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .maintenance-date {
+
+            margin-top: 25px;
+
+            font-size: 16px;
+
+            opacity: 0.8;
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
+
+
+<!-- ==================================================
+     メンテナンス画面
+     ================================================== -->
+
+<div
+    id="maintenance-overlay"
+>
+
+    <div class="maintenance-box">
+
+        <div class="maintenance-title">
+            メンテナンス中
+        </div>
+
+        <div class="maintenance-message">
+
+            現在、サイトのメンテナンスを行っています。<br>
+
+            メンテナンス終了までしばらくお待ちください。
+
+        </div>
+
+        <div class="maintenance-date">
+
+            2026年9月5日までメンテナンス予定
+
+        </div>
+
+    </div>
+
+</div>
 
 
 <header>
@@ -55,7 +165,6 @@
     </div>
 
 </header>
-
 
 
 <main>
@@ -93,7 +202,6 @@
     </section>
 
 
-
     <!-- ==================================================
          ようこそ
          ================================================== -->
@@ -112,30 +220,55 @@
         >
 
 
-        <!--
-            説明文
-            長い場合は横方向にスクロールします
-        -->
-
         <div class="welcome-description-window">
 
             <p class="welcome-description">
 
                 行先表示の広場へようこそ！<br>
+
                 このサイトではさまざまな鉄道車両の行先表示を見ることができます！<br>
+
                 このサイトに記載されている画像を幕再現に使用していただけるのは大歓迎です！<br>
-                <strong>画像の使用などにつきましては下にありますルールをご覧ください。</strong><br>
+
+                <strong>
+                    画像の使用などにつきましては下にありますルールをご覧ください。
+                </strong><br>
+
                 更新情報などは当サイト更新履歴と管理者Xにて情報を出しています。<br>
+
                 もし不具合などございましたら管理者までご連絡ください。<br>
+
                 ※リクエストなどのご連絡は現時点ではお控えください。<br>
+
                 今後どんどん行先表示や機能を増やす予定です。<br>
+
                 まだまだお問い合わせ欄など足りない機能などがありますので実装までお待ちください。<br>
+
                 <br>
-                <span class="welcome-description-large">画像使用についてのルール</span></strong><br>
-                現状当サイトで公開している画像を<strong>無断で使用することは認められていません。</strong><br>
-                もし画像をネット投稿目的で使用したい場合には、お問い合わせシステム完成までお手数をお掛けしますが、管理者Xまでご連絡ください。<br>
-                なお、幕再現に使いたい場合や、<strong>ネットに公開しない使い方であれば</strong>ご自由にお使いください。<br>
-                一部画像幕再現をするには画質が悪い、もしくは暗いなどがございますのでその場合はダウンロードして加工して再現してもらっても構いません。<br>
+
+                <span class="welcome-description-large">
+                    画像使用についてのルール
+                </span><br>
+
+                現状当サイトで公開している画像を
+                <strong>
+                    無断で使用することは認められていません。
+                </strong><br>
+
+                もし画像をネット投稿目的で使用したい場合には、
+                お問い合わせシステム完成までお手数をお掛けしますが、
+                管理者Xまでご連絡ください。<br>
+
+                なお、幕再現に使いたい場合や、
+                <strong>
+                    ネットに公開しない使い方であれば
+                </strong>
+                ご自由にお使いください。<br>
+
+                一部画像幕再現をするには画質が悪い、
+                もしくは暗いなどがございますのでその場合は
+                ダウンロードして加工して再現してもらっても構いません。<br>
+
                 以上のルールを守っていただくようお願いいたします。
 
             </p>
@@ -151,7 +284,6 @@
         </a>
 
     </section>
-
 
 
     <!-- ==================================================
@@ -182,7 +314,6 @@
 </main>
 
 
-
 <footer>
 
     2026 行先表示の広場
@@ -190,9 +321,108 @@
 </footer>
 
 
-
-
 <script>
+
+
+/* ==================================================
+   メンテナンス画面
+   ================================================== */
+
+(function () {
+
+    const maintenanceOverlay =
+        document.getElementById(
+            "maintenance-overlay"
+        );
+
+
+    if (!maintenanceOverlay) {
+        return;
+    }
+
+
+    /*
+     * 2026年9月5日 00:00:00
+     * 日本時間を基準にする
+     */
+
+    const maintenanceEnd =
+        new Date(
+            "2026-09-05T00:00:00+09:00"
+        );
+
+
+    const now =
+        new Date();
+
+
+    /*
+     * 9月5日になる前なら
+     * メンテナンス画面を表示
+     */
+
+    if (now < maintenanceEnd) {
+
+        maintenanceOverlay.style.display =
+            "flex";
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /*
+     * 9月5日になったら
+     * 自動的にメンテナンス画面を消す
+     */
+
+    function checkMaintenance() {
+
+        const currentTime =
+            new Date();
+
+
+        if (
+            currentTime >=
+            maintenanceEnd
+        ) {
+
+            maintenanceOverlay.style.display =
+                "none";
+
+            document.body.style.overflow =
+                "";
+
+            return;
+
+        }
+
+
+        /*
+         * まだメンテナンス中なら
+         * 画面を表示し続ける
+         */
+
+        maintenanceOverlay.style.display =
+            "flex";
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /*
+     * 1秒ごとに終了時刻を確認
+     */
+
+    setInterval(
+        checkMaintenance,
+        1000
+    );
+
+})();
 
 
 /* ==================================================
@@ -220,7 +450,6 @@ const announcementWindow =
 let currentAnnouncement = "";
 
 
-
 /* ==================================================
    お知らせを表示
    ================================================== */
@@ -229,7 +458,8 @@ function showAnnouncement(text) {
 
     currentAnnouncement = text;
 
-    announcementText.textContent = text;
+    announcementText.textContent =
+        text;
 
 
     announcementTrack.classList.remove(
@@ -237,7 +467,8 @@ function showAnnouncement(text) {
     );
 
 
-    announcementTrack.style.animationDuration = "";
+    announcementTrack.style.animationDuration =
+        "";
 
 
     announcementTrack.style.transform =
@@ -255,7 +486,9 @@ function showAnnouncement(text) {
         announcementWindow.clientWidth;
 
 
-    if (textWidth <= windowWidth) {
+    if (
+        textWidth <= windowWidth
+    ) {
 
         announcementTrack.style.transform =
             "translateX(0)";
@@ -269,11 +502,13 @@ function showAnnouncement(text) {
         textWidth + windowWidth;
 
 
-    const scrollSpeed = 80;
+    const scrollSpeed =
+        80;
 
 
     const scrollTime =
-        scrollDistance / scrollSpeed;
+        scrollDistance /
+        scrollSpeed;
 
 
     announcementTrack.style.setProperty(
@@ -289,9 +524,8 @@ function showAnnouncement(text) {
 }
 
 
-
 /* ==================================================
-   Discordからお知らせ取得
+   お知らせ取得
    ================================================== */
 
 async function loadAnnouncement() {
@@ -354,10 +588,6 @@ async function loadAnnouncement() {
         }
 
 
-        /*
-         * お知らせは1行表示
-         */
-
         content =
             content
                 .replace(/\r?\n/g, " ")
@@ -375,10 +605,12 @@ async function loadAnnouncement() {
         }
 
 
-        showAnnouncement(content);
-
+        showAnnouncement(
+            content
+        );
 
     }
+
     catch (error) {
 
         console.error(
@@ -396,7 +628,6 @@ async function loadAnnouncement() {
 }
 
 
-
 /* ==================================================
    更新履歴
    ================================================== */
@@ -405,7 +636,6 @@ const updateHistoryList =
     document.getElementById(
         "update-history-list"
     );
-
 
 
 /* ==================================================
@@ -431,7 +661,6 @@ function normalizeDate(date) {
 }
 
 
-
 /* ==================================================
    月キー取得
    ================================================== */
@@ -455,27 +684,15 @@ function getMonthKey(date) {
     }
 
 
-    const year =
-        match[1];
-
-
-    const month =
+    return (
+        match[1] +
+        "-" +
         String(
             Number(match[2])
-        ).padStart(
-            2,
-            "0"
-        );
-
-
-    return (
-        year +
-        "-" +
-        month
+        ).padStart(2, "0")
     );
 
 }
-
 
 
 /* ==================================================
@@ -498,23 +715,14 @@ function formatMonth(monthKey) {
     }
 
 
-    const year =
-        Number(match[1]);
-
-
-    const month =
-        Number(match[2]);
-
-
     return (
-        year +
+        Number(match[1]) +
         "年" +
-        month +
+        Number(match[2]) +
         "月"
     );
 
 }
-
 
 
 /* ==================================================
@@ -550,7 +758,6 @@ function formatDate(date) {
     );
 
 }
-
 
 
 /* ==================================================
@@ -606,7 +813,6 @@ function formatTime(time) {
 }
 
 
-
 /* ==================================================
    日時を取得
    ================================================== */
@@ -651,7 +857,6 @@ function getUpdateDateTime(update) {
 }
 
 
-
 /* ==================================================
    詳細文章を取得
    ================================================== */
@@ -680,7 +885,6 @@ function getUpdateDetail(update) {
 }
 
 
-
 /* ==================================================
    更新履歴を表示
    ================================================== */
@@ -704,10 +908,6 @@ function renderUpdateHistory(updates) {
 
     }
 
-
-    /*
-     * 月ごとに分類
-     */
 
     const monthlyUpdates = {};
 
@@ -735,7 +935,8 @@ function renderUpdateHistory(updates) {
                 !monthlyUpdates[monthKey]
             ) {
 
-                monthlyUpdates[monthKey] = [];
+                monthlyUpdates[monthKey] =
+                    [];
 
             }
 
@@ -748,28 +949,23 @@ function renderUpdateHistory(updates) {
     );
 
 
-
-    /*
-     * 月を新しい順にする
-     */
-
     const months =
         Object.keys(monthlyUpdates)
             .sort(
                 function(a, b) {
 
-                    /*
-                     * 「その他」は最後
-                     */
-
-                    if (a === "その他") {
+                    if (
+                        a === "その他"
+                    ) {
 
                         return 1;
 
                     }
 
 
-                    if (b === "その他") {
+                    if (
+                        b === "その他"
+                    ) {
 
                         return -1;
 
@@ -780,7 +976,6 @@ function renderUpdateHistory(updates) {
 
                 }
             );
-
 
 
     months.forEach(
@@ -795,11 +990,6 @@ function renderUpdateHistory(updates) {
             monthBox.className =
                 "update-month";
 
-
-
-            /*
-             * 月ボタン
-             */
 
             const monthButton =
                 document.createElement(
@@ -826,11 +1016,6 @@ function renderUpdateHistory(updates) {
                 '</span>';
 
 
-
-            /*
-             * 更新一覧
-             */
-
             const updateItems =
                 document.createElement(
                     "div"
@@ -840,11 +1025,6 @@ function renderUpdateHistory(updates) {
             updateItems.className =
                 "update-items";
 
-
-
-            /*
-             * 新しい更新を上
-             */
 
             monthlyUpdates[monthKey].sort(
                 function(a, b) {
@@ -858,13 +1038,8 @@ function renderUpdateHistory(updates) {
             );
 
 
-
             monthlyUpdates[monthKey].forEach(
                 function(update) {
-
-                    /*
-                     * 更新ボタン
-                     */
 
                     const updateButton =
                         document.createElement(
@@ -879,11 +1054,6 @@ function renderUpdateHistory(updates) {
                     updateButton.type =
                         "button";
 
-
-
-                    /*
-                     * 日付
-                     */
 
                     let dateText =
                         formatDate(
@@ -902,11 +1072,6 @@ function renderUpdateHistory(updates) {
                     }
 
 
-
-                    /*
-                     * 日付要素
-                     */
-
                     const dateElement =
                         document.createElement(
                             "span"
@@ -920,11 +1085,6 @@ function renderUpdateHistory(updates) {
                     dateElement.textContent =
                         dateText;
 
-
-
-                    /*
-                     * タイトル
-                     */
 
                     const titleElement =
                         document.createElement(
@@ -941,7 +1101,6 @@ function renderUpdateHistory(updates) {
                         "タイトル未設定";
 
 
-
                     updateButton.appendChild(
                         dateElement
                     );
@@ -951,11 +1110,6 @@ function renderUpdateHistory(updates) {
                         titleElement
                     );
 
-
-
-                    /*
-                     * 詳細を開く
-                     */
 
                     updateButton.addEventListener(
                         "click",
@@ -977,11 +1131,6 @@ function renderUpdateHistory(updates) {
             );
 
 
-
-            /*
-             * 月の開閉
-             */
-
             monthButton.addEventListener(
                 "click",
                 function() {
@@ -992,7 +1141,6 @@ function renderUpdateHistory(updates) {
 
                 }
             );
-
 
 
             monthBox.appendChild(
@@ -1015,7 +1163,6 @@ function renderUpdateHistory(updates) {
 }
 
 
-
 /* ==================================================
    HTMLエスケープ
    ================================================== */
@@ -1033,22 +1180,27 @@ function escapeHtml(text) {
 
 
     return String(text)
+
         .replace(
             /&/g,
             "&amp;"
         )
+
         .replace(
             /</g,
             "&lt;"
         )
+
         .replace(
             />/g,
             "&gt;"
         )
+
         .replace(
             /"/g,
             "&quot;"
         )
+
         .replace(
             /'/g,
             "&#039;"
@@ -1057,16 +1209,11 @@ function escapeHtml(text) {
 }
 
 
-
 /* ==================================================
    更新詳細を表示
    ================================================== */
 
 function showUpdateDetail(update) {
-
-    /*
-     * 既存の詳細を削除
-     */
 
     const oldDetail =
         document.querySelector(
@@ -1081,11 +1228,6 @@ function showUpdateDetail(update) {
     }
 
 
-
-    /*
-     * 背景
-     */
-
     const overlay =
         document.createElement(
             "div"
@@ -1096,11 +1238,6 @@ function showUpdateDetail(update) {
         "update-detail-overlay";
 
 
-
-    /*
-     * 詳細ボックス
-     */
-
     const detail =
         document.createElement(
             "div"
@@ -1110,11 +1247,6 @@ function showUpdateDetail(update) {
     detail.className =
         "update-detail";
 
-
-
-    /*
-     * 日付・時刻
-     */
 
     const date =
         document.createElement(
@@ -1147,11 +1279,6 @@ function showUpdateDetail(update) {
         dateText;
 
 
-
-    /*
-     * タイトル
-     */
-
     const title =
         document.createElement(
             "h3"
@@ -1166,11 +1293,6 @@ function showUpdateDetail(update) {
         update.title ||
         "タイトル未設定";
 
-
-
-    /*
-     * 詳細本文
-     */
 
     const text =
         document.createElement(
@@ -1188,35 +1310,15 @@ function showUpdateDetail(update) {
         );
 
 
-    if (
+    text.textContent =
         detailText.trim()
-    ) {
+            ? detailText
+            : "詳細はありません。";
 
-        text.textContent =
-            detailText;
-
-    }
-    else {
-
-        text.textContent =
-            "詳細はありません。";
-
-    }
-
-
-
-    /*
-     * 改行をそのまま表示
-     */
 
     text.style.whiteSpace =
         "pre-wrap";
 
-
-
-    /*
-     * ページへ移動
-     */
 
     const pageButton =
         document.createElement(
@@ -1236,11 +1338,6 @@ function showUpdateDetail(update) {
         update.url || "#";
 
 
-
-    /*
-     * URLがない場合
-     */
-
     if (!update.url) {
 
         pageButton.style.display =
@@ -1249,27 +1346,16 @@ function showUpdateDetail(update) {
     }
 
 
-
-    /*
-     * 別タブで開く
-     */
-
     if (update.url) {
 
         pageButton.target =
             "_blank";
-
 
         pageButton.rel =
             "noopener noreferrer";
 
     }
 
-
-
-    /*
-     * 閉じるボタン
-     */
 
     const closeButton =
         document.createElement(
@@ -1299,11 +1385,6 @@ function showUpdateDetail(update) {
     );
 
 
-
-    /*
-     * 背景クリックで閉じる
-     */
-
     overlay.addEventListener(
         "click",
         function(event) {
@@ -1319,11 +1400,6 @@ function showUpdateDetail(update) {
         }
     );
 
-
-
-    /*
-     * 詳細を組み立てる
-     */
 
     detail.appendChild(
         date
@@ -1362,7 +1438,6 @@ function showUpdateDetail(update) {
 }
 
 
-
 /* ==================================================
    updates.json読み込み
    ================================================== */
@@ -1393,11 +1468,6 @@ async function loadUpdateHistory() {
             await response.json();
 
 
-
-        /*
-         * JSON形式確認
-         */
-
         if (
             !data ||
             !Array.isArray(
@@ -1416,8 +1486,8 @@ async function loadUpdateHistory() {
             data.updates
         );
 
-
     }
+
     catch (error) {
 
         console.error(
@@ -1434,7 +1504,6 @@ async function loadUpdateHistory() {
     }
 
 }
-
 
 
 /* ==================================================
@@ -1465,10 +1534,6 @@ function setupWelcomeDescription() {
     }
 
 
-    /*
-     * 一度スクロール状態を解除
-     */
-
     textElement.classList.remove(
         "welcome-description-scroll"
     );
@@ -1482,10 +1547,6 @@ function setupWelcomeDescription() {
         "translateX(0)";
 
 
-    /*
-     * サイズを再計算
-     */
-
     void textElement.offsetWidth;
 
 
@@ -1497,11 +1558,6 @@ function setupWelcomeDescription() {
         windowElement.clientWidth;
 
 
-    /*
-     * 枠内に収まる場合は
-     * スクロールしない
-     */
-
     if (
         textWidth <= windowWidth
     ) {
@@ -1511,25 +1567,17 @@ function setupWelcomeDescription() {
     }
 
 
-    /*
-     * 文字が長い場合だけ
-     * 横方向にスクロール
-     */
-
     const scrollDistance =
         textWidth + windowWidth;
 
 
-    /*
-     * スクロール速度
-     * 数値を小さくすると遅くなります
-     */
-
-    const scrollSpeed = 60;
+    const scrollSpeed =
+        60;
 
 
     const scrollTime =
-        scrollDistance / scrollSpeed;
+        scrollDistance /
+        scrollSpeed;
 
 
     textElement.style.setProperty(
@@ -1545,7 +1593,6 @@ function setupWelcomeDescription() {
 }
 
 
-
 /* ==================================================
    初回読み込み
    ================================================== */
@@ -1557,7 +1604,6 @@ loadUpdateHistory();
 setupWelcomeDescription();
 
 
-
 /* ==================================================
    15秒ごとにお知らせ更新
    ================================================== */
@@ -1566,7 +1612,6 @@ setInterval(
     loadAnnouncement,
     15000
 );
-
 
 
 /* ==================================================
@@ -1591,9 +1636,7 @@ window.addEventListener(
     }
 );
 
-
 </script>
-
 
 
 </body>
