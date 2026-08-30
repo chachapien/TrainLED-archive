@@ -20,7 +20,7 @@ export default async function handler(request, response) {
 
 
     /*
-     * CORS確認用リクエスト
+     * OPTIONSリクエスト
      */
     if (request.method === "OPTIONS") {
 
@@ -47,7 +47,8 @@ export default async function handler(request, response) {
     /*
      * 環境変数
      *
-     * VercelのEnvironment Variablesから取得
+     * これらはGitHubには保存しません。
+     * VercelのEnvironment Variablesに設定します。
      */
     const DISCORD_TOKEN =
         process.env.DISCORD_TOKEN;
