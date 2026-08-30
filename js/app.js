@@ -319,6 +319,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     item
                 );
 
+
+                const image =
+                    item.querySelector(
+                        ".display-image"
+                    );
+
+
+                protectImage(
+                    image
+                );
+
             }
         );
 
@@ -511,6 +522,106 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         return path + ".png";
+
+    }
+
+
+    /*
+     * ==================================================
+     * 画像保護
+     *
+     * ブラウザ上での右クリック・画像ドラッグなどの
+     * 簡単な画像保存操作を抑制します。
+     *
+     * ※ブラウザに画像を表示する以上、
+     *   完全な取得防止はできません。
+     * ==================================================
+     */
+
+    function protectImage(
+        image
+    ) {
+
+        if (!image) {
+
+            return;
+
+        }
+
+
+        /*
+         * 画像のドラッグを無効化
+         */
+
+        image.draggable =
+            false;
+
+        image.setAttribute(
+            "draggable",
+            "false"
+        );
+
+
+        /*
+         * 画像上の右クリックを無効化
+         */
+
+        image.addEventListener(
+            "contextmenu",
+            function(event) {
+
+                event.preventDefault();
+
+            }
+        );
+
+
+        /*
+         * 画像ドラッグを無効化
+         */
+
+        image.addEventListener(
+            "dragstart",
+            function(event) {
+
+                event.preventDefault();
+
+            }
+        );
+
+
+        /*
+         * 画像選択を無効化
+         */
+
+        image.addEventListener(
+            "selectstart",
+            function(event) {
+
+                event.preventDefault();
+
+            }
+        );
+
+
+        /*
+         * 右クリック用マウス操作を無効化
+         */
+
+        image.addEventListener(
+            "mousedown",
+            function(event) {
+
+                if (
+                    event.button === 2
+                ) {
+
+                    event.preventDefault();
+
+                }
+
+            }
+        );
 
     }
 
