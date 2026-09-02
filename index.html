@@ -1,428 +1,224 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
 
-    <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta charset="UTF-8">
 
-    <title>行先表示の広場</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <link
-        rel="icon"
-        href="favicon.png"
-        type="image/png"
-    >
+<title>行先表示の広場</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+<link
+    rel="icon"
+    href="favicon.png"
+    type="image/png"
+>
 
-    <style>
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
 
-        /* ==================================================
-           メンテナンス画面
-           ================================================== */
-
-        #maintenance-overlay {
-
-            position: fixed;
-
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 100%;
-
-            background: #111111;
-
-            color: white;
-
-            display: none;
-
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            z-index: 999999;
-
-            padding: 20px;
-
-            box-sizing: border-box;
-
-        }
-
-
-        .maintenance-box {
-
-            max-width: 700px;
-
-            width: 100%;
-
-        }
-
-
-        .maintenance-title {
-
-            font-size: 32px;
-
-            margin-bottom: 25px;
-
-            font-weight: bold;
-
-        }
-
-
-        .maintenance-message {
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-        }
-
-
-        .maintenance-date {
-
-            margin-top: 25px;
-
-            font-size: 16px;
-
-            opacity: 0.8;
-
-        }
-
-    </style>
 
 </head>
 
-
 <body>
 
+<header>
 
-<!-- ==================================================
-     メンテナンス画面
-     ================================================== -->
 
-<div
-    id="maintenance-overlay"
->
+<h1>
+    行先表示の広場
+</h1>
 
-    <div class="maintenance-box">
 
-        <div class="maintenance-title">
-            メンテナンス中
-        </div>
+<div class="header-right">
 
-        <div class="maintenance-message">
+    <span class="admin-name">
+        管理者:chachapien
+    </span>
 
-            現在、サイトのメンテナンスを行っています。<br>
 
-            メンテナンス終了までしばらくお待ちください。
-
-        </div>
-
-        <div class="maintenance-date">
-
-            2026年9月5日までメンテナンス予定
-
-        </div>
-
-    </div>
+    <a
+        href="https://x.com/chachapien0405"
+        class="admin-x"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        管理者X
+    </a>
 
 </div>
 
 
-<header>
-
-    <h1>
-        行先表示の広場
-    </h1>
-
-
-    <div class="header-right">
-
-        <span class="admin-name">
-            管理者:chachapien
-        </span>
-
-
-        <a
-            href="https://x.com/chachapien0405"
-            class="admin-x"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            管理者X
-        </a>
-
-    </div>
-
 </header>
-
 
 <main>
 
 
-    <!-- ==================================================
-         お知らせ
-         ================================================== -->
+<!-- ==================================================
+     お知らせ
+     ================================================== -->
 
-    <section class="announcement-section">
+<section class="announcement-section">
 
-        <div class="announcement-label">
-            お知らせ
-        </div>
-
-
-        <div
-            class="announcement-window"
-            id="announcement-window"
-        >
-
-            <div
-                class="announcement-track"
-                id="announcement-track"
-            >
-
-                <span id="announcement-text">
-                    お知らせを読み込んでいます...
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
+    <div class="announcement-label">
+        お知らせ
+    </div>
 
 
-    <!-- ==================================================
-         ようこそ
-         ================================================== -->
-
-    <section class="welcome">
-
-        <h2>
-            行先表示の広場へようこそ
-        </h2>
-
-
-        <img
-            src="images/top.png"
-            class="welcome-image"
-            alt="行先表示の広場"
-        >
-
-
-        <div class="welcome-description-window">
-
-            <p class="welcome-description">
-
-                行先表示の広場へようこそ！<br>
-
-                このサイトではさまざまな鉄道車両の行先表示を見ることができます！<br>
-
-                このサイトに記載されている画像を幕再現に使用していただけるのは大歓迎です！<br>
-
-                <strong>
-                    画像の使用などにつきましては下にありますルールをご覧ください。
-                </strong><br>
-
-                更新情報などは当サイト更新履歴と管理者Xにて情報を出しています。<br>
-
-                もし不具合などございましたら管理者までご連絡ください。<br>
-
-                ※リクエストなどのご連絡は現時点ではお控えください。<br>
-
-                今後どんどん行先表示や機能を増やす予定です。<br>
-
-                まだまだお問い合わせ欄など足りない機能などがありますので実装までお待ちください。<br>
-
-                <br>
-
-                <span class="welcome-description-large">
-                    画像使用についてのルール
-                </span><br>
-
-                現状当サイトで公開している画像を
-                <strong>
-                    無断で使用することは認められていません。
-                </strong><br>
-
-                もし画像をネット投稿目的で使用したい場合には、
-                お問い合わせシステム完成までお手数をお掛けしますが、
-                管理者Xまでご連絡ください。<br>
-
-                なお、幕再現に使いたい場合や、
-                <strong>
-                    ネットに公開しない使い方であれば
-                </strong>
-                ご自由にお使いください。<br>
-
-                一部画像幕再現をするには画質が悪い、
-                もしくは暗いなどがございますのでその場合は
-                ダウンロードして加工して再現してもらっても構いません。<br>
-
-                以上のルールを守っていただくようお願いいたします。
-
-            </p>
-
-        </div>
-
-
-        <a
-            href="company.html"
-            class="company-button"
-        >
-            会社から探す
-        </a>
-
-    </section>
-
-
-    <!-- ==================================================
-         更新履歴
-         ================================================== -->
-
-    <section class="update-history">
-
-        <h2 class="update-history-title">
-            更新履歴
-        </h2>
-
+    <div
+        class="announcement-window"
+        id="announcement-window"
+    >
 
         <div
-            id="update-history-list"
-            class="update-history-list"
+            class="announcement-track"
+            id="announcement-track"
         >
 
-            <div class="update-loading">
-                更新履歴を読み込んでいます...
-            </div>
+            <span id="announcement-text">
+                お知らせを読み込んでいます...
+            </span>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ようこそ
+     ================================================== -->
+
+<section class="welcome">
+
+    <h2>
+        行先表示の広場へようこそ
+    </h2>
+
+
+    <img
+        src="images/top.png"
+        class="welcome-image"
+        alt="行先表示の広場"
+    >
+
+
+    <div class="welcome-description-window">
+
+        <p class="welcome-description">
+
+            行先表示の広場へようこそ！<br>
+
+            このサイトではさまざまな鉄道車両の行先表示を見ることができます！<br>
+
+            このサイトに記載されている画像を幕再現に使用していただけるのは大歓迎です！<br>
+
+            <strong>
+                画像の使用などにつきましては下にありますルールをご覧ください。
+            </strong><br>
+
+            更新情報などは当サイト更新履歴と管理者Xにて情報を出しています。<br>
+
+            もし不具合などございましたら管理者までご連絡ください。<br>
+
+            ※リクエストなどのご連絡は現時点ではお控えください。<br>
+
+            今後どんどん行先表示や機能を増やす予定です。<br>
+
+            まだまだお問い合わせ欄など足りない機能などがありますので実装までお待ちください。<br>
+
+            <br>
+
+            <span class="welcome-description-large">
+                画像使用についてのルール
+            </span><br>
+
+            現状当サイトで公開している画像を
+
+            <strong>
+                無断で使用することは認められていません。
+            </strong><br>
+
+            もし画像をネット投稿目的で使用したい場合には、
+
+            お問い合わせシステム完成までお手数をお掛けしますが、
+
+            管理者Xまでご連絡ください。<br>
+
+            なお、幕再現に使いたい場合や、
+
+            <strong>
+                ネットに公開しない使い方であれば
+            </strong>
+
+            ご自由にお使いください。<br>
+
+            一部画像幕再現をするには画質が悪い、
+
+            もしくは暗いなどがございますのでその場合は
+
+            ダウンロードして加工して再現してもらっても構いません。<br>
+
+            以上のルールを守っていただくようお願いいたします。
+
+        </p>
+
+    </div>
+
+
+    <a
+        href="company.html"
+        class="company-button"
+    >
+        会社から探す
+    </a>
+
+</section>
+
+
+
+<!-- ==================================================
+     更新履歴
+     ================================================== -->
+
+<section class="update-history">
+
+    <h2 class="update-history-title">
+        更新履歴
+    </h2>
+
+
+    <div
+        id="update-history-list"
+        class="update-history-list"
+    >
+
+        <div class="update-loading">
+            更新履歴を読み込んでいます...
+        </div>
+
+    </div>
+
+</section>
 
 
 </main>
 
-
 <footer>
-
     2026 行先表示の広場
-
 </footer>
 
-
 <script>
-
-
-/* ==================================================
-   メンテナンス画面
-   ================================================== */
-
-(function () {
-
-    const maintenanceOverlay =
-        document.getElementById(
-            "maintenance-overlay"
-        );
-
-
-    if (!maintenanceOverlay) {
-        return;
-    }
-
-
-    /*
-     * 2026年9月5日 00:00:00
-     * 日本時間を基準にする
-     */
-
-    const maintenanceEnd =
-        new Date(
-            "2026-09-05T00:00:00+09:00"
-        );
-
-
-    const now =
-        new Date();
-
-
-    /*
-     * 9月5日になる前なら
-     * メンテナンス画面を表示
-     */
-
-    if (now < maintenanceEnd) {
-
-        maintenanceOverlay.style.display =
-            "flex";
-
-        document.body.style.overflow =
-            "hidden";
-
-    }
-
-
-    /*
-     * 9月5日になったら
-     * 自動的にメンテナンス画面を消す
-     */
-
-    function checkMaintenance() {
-
-        const currentTime =
-            new Date();
-
-
-        if (
-            currentTime >=
-            maintenanceEnd
-        ) {
-
-            maintenanceOverlay.style.display =
-                "none";
-
-            document.body.style.overflow =
-                "";
-
-            return;
-
-        }
-
-
-        /*
-         * まだメンテナンス中なら
-         * 画面を表示し続ける
-         */
-
-        maintenanceOverlay.style.display =
-            "flex";
-
-        document.body.style.overflow =
-            "hidden";
-
-    }
-
-
-    /*
-     * 1秒ごとに終了時刻を確認
-     */
-
-    setInterval(
-        checkMaintenance,
-        1000
-    );
-
-})();
 
 
 /* ==================================================
@@ -524,6 +320,7 @@ function showAnnouncement(text) {
 }
 
 
+
 /* ==================================================
    お知らせ取得
    ================================================== */
@@ -610,7 +407,6 @@ async function loadAnnouncement() {
         );
 
     }
-
     catch (error) {
 
         console.error(
@@ -628,6 +424,7 @@ async function loadAnnouncement() {
 }
 
 
+
 /* ==================================================
    更新履歴
    ================================================== */
@@ -636,6 +433,7 @@ const updateHistoryList =
     document.getElementById(
         "update-history-list"
     );
+
 
 
 /* ==================================================
@@ -659,6 +457,7 @@ function normalizeDate(date) {
         .replace(/\//g, "-");
 
 }
+
 
 
 /* ==================================================
@@ -695,6 +494,7 @@ function getMonthKey(date) {
 }
 
 
+
 /* ==================================================
    月表示
    ================================================== */
@@ -723,6 +523,7 @@ function formatMonth(monthKey) {
     );
 
 }
+
 
 
 /* ==================================================
@@ -758,6 +559,7 @@ function formatDate(date) {
     );
 
 }
+
 
 
 /* ==================================================
@@ -813,6 +615,7 @@ function formatTime(time) {
 }
 
 
+
 /* ==================================================
    日時を取得
    ================================================== */
@@ -857,6 +660,7 @@ function getUpdateDateTime(update) {
 }
 
 
+
 /* ==================================================
    詳細文章を取得
    ================================================== */
@@ -883,6 +687,7 @@ function getUpdateDetail(update) {
     return String(detail);
 
 }
+
 
 
 /* ==================================================
@@ -949,6 +754,7 @@ function renderUpdateHistory(updates) {
     );
 
 
+
     const months =
         Object.keys(monthlyUpdates)
             .sort(
@@ -976,6 +782,7 @@ function renderUpdateHistory(updates) {
 
                 }
             );
+
 
 
     months.forEach(
@@ -1016,6 +823,7 @@ function renderUpdateHistory(updates) {
                 '</span>';
 
 
+
             const updateItems =
                 document.createElement(
                     "div"
@@ -1024,6 +832,7 @@ function renderUpdateHistory(updates) {
 
             updateItems.className =
                 "update-items";
+
 
 
             monthlyUpdates[monthKey].sort(
@@ -1036,6 +845,7 @@ function renderUpdateHistory(updates) {
 
                 }
             );
+
 
 
             monthlyUpdates[monthKey].forEach(
@@ -1131,6 +941,7 @@ function renderUpdateHistory(updates) {
             );
 
 
+
             monthButton.addEventListener(
                 "click",
                 function() {
@@ -1141,6 +952,7 @@ function renderUpdateHistory(updates) {
 
                 }
             );
+
 
 
             monthBox.appendChild(
@@ -1163,6 +975,7 @@ function renderUpdateHistory(updates) {
 }
 
 
+
 /* ==================================================
    HTMLエスケープ
    ================================================== */
@@ -1180,33 +993,29 @@ function escapeHtml(text) {
 
 
     return String(text)
-
         .replace(
             /&/g,
             "&amp;"
         )
-
         .replace(
             /</g,
             "&lt;"
         )
-
         .replace(
             />/g,
             "&gt;"
         )
-
         .replace(
             /"/g,
             "&quot;"
         )
-
         .replace(
             /'/g,
             "&#039;"
         );
 
 }
+
 
 
 /* ==================================================
@@ -1438,6 +1247,7 @@ function showUpdateDetail(update) {
 }
 
 
+
 /* ==================================================
    updates.json読み込み
    ================================================== */
@@ -1487,7 +1297,6 @@ async function loadUpdateHistory() {
         );
 
     }
-
     catch (error) {
 
         console.error(
@@ -1504,6 +1313,7 @@ async function loadUpdateHistory() {
     }
 
 }
+
 
 
 /* ==================================================
@@ -1593,6 +1403,7 @@ function setupWelcomeDescription() {
 }
 
 
+
 /* ==================================================
    初回読み込み
    ================================================== */
@@ -1604,6 +1415,7 @@ loadUpdateHistory();
 setupWelcomeDescription();
 
 
+
 /* ==================================================
    15秒ごとにお知らせ更新
    ================================================== */
@@ -1612,6 +1424,7 @@ setInterval(
     loadAnnouncement,
     15000
 );
+
 
 
 /* ==================================================
@@ -1636,8 +1449,8 @@ window.addEventListener(
     }
 );
 
-</script>
 
+</script>
 
 </body>
 
