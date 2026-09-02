@@ -2186,6 +2186,36 @@
                     ]
                 }
             ]
+        },
+        {
+            "id":"Hokuso",
+            "name":"北総鉄道",
+            "color":"#00bfff",
+            "types":[
+                {
+                    "id":"Hokuso7300",
+                    "name":"7300形",
+                    "image":"",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"Hokuso7300",
+                            "name":"7300形",
+                            "color":"#00bfff",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "特急":"#ff0000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"特急印旛日本医大"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
