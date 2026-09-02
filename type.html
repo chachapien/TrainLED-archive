@@ -134,7 +134,10 @@ else {
    JSON読み込み
    ================================================== */
 
-fetch("data/displays.json")
+fetch(
+    "data/displays.json?v=" +
+    Date.now()
+)
 
 
 .then(function(response) {
