@@ -2218,6 +2218,32 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id":"Hokuso7500",
+                    "name":"7500形",
+                    "image":"images/Hokuso/7500/series.png",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"Hokuso7500",
+                            "name":"7500形",
+                            "color":"#00bfff",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通印旛日本医大",
+                                    "ledsize":"144×32",
+                                    "category":"普通",
+                                    "image":"images/Hokuso/7500/0839.png",
+                                    "station":"千葉ニュータウン中央駅"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
