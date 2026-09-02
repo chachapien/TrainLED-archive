@@ -2209,7 +2209,11 @@
                             },
                             "displays":[
                                 {
-                                    "name":"特急印旛日本医大"
+                                    "name":"特急印旛日本医大",
+                                    "ledsize":"144×32",
+                                    "category":"特急",
+                                    "image":"images/Hokuso/7300/0545.png",
+                                    "station":"羽田空港第1・第2ターミナル駅"
                                 }
                             ]
                         }
