@@ -2196,6 +2196,7 @@
                     "id":"Hokuso7300",
                     "name":"7300形",
                     "image":"images/Hokuso/7300/series.png",
+                    "color":"#00bfff",
                     "noSeriesSelect":true,
                     "series":[
                         {
@@ -2223,6 +2224,7 @@
                     "id":"Hokuso7500",
                     "name":"7500形",
                     "image":"images/Hokuso/7500/series.png",
+                    "color":"#00bfff",
                     "noSeriesSelect":true,
                     "series":[
                         {
