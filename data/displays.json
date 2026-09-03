@@ -1393,11 +1393,11 @@
                                     "ledsize":"128×32",
                                     "images":[
                                         {
-                                            "image":"images/e235/0JY/NJY28-1.png",
+                                            "image":"images/e235/0JY/NJY28-1(M).png",
                                             "station":"新橋駅"
                                         },
                                         {
-                                            "image":"images/e235/0JY/NJY28-2.png",
+                                            "image":"images/e235/0JY/NJY28-2(M).png",
                                             "station":"新橋駅"
                                         }
                                     ]
@@ -1408,11 +1408,11 @@
                                     "ledsize":"128×32",
                                     "images":[
                                         {
-                                            "image":"images/e235/0JY/NJY26-1.png",
+                                            "image":"images/e235/0JY/NJY26-1(Morio).png",
                                             "station":"田町駅"
                                         },
                                         {
-                                            "image":"images/e235/0JY/NJY26-2.png",
+                                            "image":"images/e235/0JY/NJY26-2(Morio).png",
                                             "station":"田町駅"
                                         }
                                     ]
