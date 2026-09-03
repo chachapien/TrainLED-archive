@@ -1321,55 +1321,90 @@
                             "name":"0番台",
                             "line":"山手線",
                             "color":"#7BAB4F",
-                            "image":"images/e235/0JY/images/e235/0/series.png",
+                            "image":"images/e235/0JY/e235/0/series.png",
                             "categoryColors":{
-                                "非営業":"#a9a9a9",
-                                "路線名":"#7BAB4F",
-                                "環状運転":"#7BAB4F",
-                                "行先":"#7BAB4F",
-                                "次駅表示":"#ffff00"
+                                "非営業(三菱製)":"#a9a9a9",
+                                "非営業(森尾製)":"#a9a9a9",
+                                "路線名(三菱製)":"#7BAB4F",
+                                "路線名(森尾製)":"#7BAB4F",
+                                "方面(三菱製)":"#7BAB4F",
+                                "方面(森尾製)":"#7BAB4F",
+                                "行先(三菱製)":"#7BAB4F",
+                                "行先(森尾製)":"#7BAB4F",
+                                "次駅表示(三菱製)":"#ffff00",
+                                "次駅表示(森尾製)":"ffff00"
                             },
                             "displays":[
                                 {
                                     "name":"山手線",
                                     "category":"路線名",
                                     "ledsize":"128×32",
-                                    "image":"images/e235/0JY/YamanoteLine.png",
+                                    "image":"images/e235/0JY/YamanoteLine(Morio).png",
                                     "station":"東京駅"
                                 },
                                 {
-                                    "name":"品川・渋谷方面 次は有楽町",
-                                    "category":"環状運転",
+                                    "name":"品川・渋谷方面 次はは品川",
+                                    "category":"方面(三菱製)",
                                     "ledsize":"128×32",
                                     "images":[
                                         {
-                                            "image":"images/e235/0JY/ForJY25,20NJY30-1.png",
+                                            "image":"images/e235/0JY/ForJY25,20NJY25-1(M).png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY25-2(M).png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"品川・渋谷方面 次は有楽町",
+                                    "category":"方面(森尾製)",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-1(Morio).png",
                                             "station":"東京駅"
                                         },
                                         {
-                                            "image":"images/e235/0JY/ForJY25,20NJY30-2.png",
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-2(Morio).png",
                                             "station":"東京駅"
                                         }
                                     ]
                                 },
                                 {
                                     "name":"次は品川",
-                                    "category":"次駅表示",
+                                    "category":"次駅表示(三菱製)",
                                     "ledsize":"128×32",
                                     "images":[
                                         {
-                                            "image":"images/e235/0JY/NJY25-1.png",
+                                            "image":"images/e235/0JY/ForJY25,20NJY25-1(M).png",
                                             "station":"高輪ゲートウェイ駅"
                                         },
                                         {
-                                            "image":"images/e235/0JY/NJY25-2.png",
+                                            "image":"images/e235/0JY/ForJY25,20NJY25-2(M).png",
                                             "station":"高輪ゲートウェイ駅"
                                         }
                                     ]
                                 },
                                 {
+                                    "name":"次は浜松町",
+                                    "category":"次駅表示(三菱製)",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/NJY28-1.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/NJY28-2.png",
+                                            "station":"新橋駅"
+                                        }
+                                    ]
+                                },
+                                {
                                     "name":"次は高輪ゲートウェイ",
-                                    "category":"次駅表示",
+                                    "category":"次駅表示(森尾製)",
                                     "ledsize":"128×32",
                                     "images":[
                                         {
@@ -1383,19 +1418,7 @@
                                     ]
                                 },
                                 {
-                                    "name":"次は浜松町",
-                                    "category":"次駅表示",
-                                    "ledsize":"128×32",
-                                    "images":[
-                                        {
-                                            "image":"images/e235/0JY/NJY28-1.png",
-                                            "station":"新橋駅"
-                                        },
-                                        {
-                                            "image":"images/e235/0JY/NJY28-2.png",
-                                            "station":"新橋駅"
-                                        }
-                                    ]
+
                                 }
                             ]
                         },
@@ -1406,16 +1429,19 @@
                             "color":"#0044cc",
                             "image":"images/e235/1000/series.png",
                             "categoryColors":{
-                                "非営業":"#a9a9a9",
-                                "普通":"#3cb371",
-                                "快速":"#ff4000"
+                                "非営業(三菱製)":"#a9a9a9",
+                                "非営業(森尾製)":"#a9a9a9",
+                                "普通(三菱製)":"#3cb371",
+                                "普通(森尾製)":"#3cb371",
+                                "快速(三菱製)":"#ff4000",
+                                "快速(森尾製)":"#ff4000"
                             },
                             "displays":[
                                 {
                                     "name":"回送",
-                                    "category":"非営業",
+                                    "category":"非営業(三菱製)",
                                     "ledsize":"128×32",
-                                    "image":"images/e235/1000/0100.png",
+                                    "image":"images/e235/1000/0100(M).png",
                                     "station":"大船駅"
                                 }
                             ]
