@@ -1332,12 +1332,12 @@
                                 "行先(三菱製)":"#7BAB4F",
                                 "行先(森尾製)":"#7BAB4F",
                                 "次駅表示(三菱製)":"#ffff00",
-                                "次駅表示(森尾製)":"ffff00"
+                                "次駅表示(森尾製)":"#ffff00"
                             },
                             "displays":[
                                 {
                                     "name":"山手線",
-                                    "category":"路線名",
+                                    "category":"路線名(森尾製)",
                                     "ledsize":"128×32",
                                     "image":"images/e235/0JY/YamanoteLine(Morio).png",
                                     "station":"東京駅"
@@ -1414,6 +1414,21 @@
                                         {
                                             "image":"images/e235/0JY/NJY26-2(Morio).png",
                                             "station":"田町駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は有楽町",
+                                    "category":"次駅表示(森尾製)",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-1(Morio).png",
+                                            "station":"東京駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-2(Morio).png",
+                                            "station":"東京駅"
                                         }
                                     ]
                                 }
@@ -2488,6 +2503,138 @@
                                     "category":"快速特急",
                                     "image":"images/Keisei/3700/0703.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"Keihan",
+            "name":"京阪電車",
+            "color":"#16504e",
+            "types":[
+                {
+                    "id":"2400",
+                    "name":"2400系",
+                    "image":"images/Keihan/2400/series.png",
+                    "color":"#16504e",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"2400",
+                            "name":"2400系",
+                            "image":"images/Keihan/2400/series.png",
+                            "color":"#16504e",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "区間急行":"#008000",
+                                "準急":"#0066cc",
+                                "通勤準急":"#0066cc",
+                                "急行":"#d2691e",
+                                "快速急行":"#3c0066",
+                                "通勤快急":"#3c0066",
+                                "特急":"#8b0000",
+                                "快速急行 洛楽":"#ff99a8"
+                            },
+                            "displays":[
+                                {
+                                    "name":"準急　出町柳",
+                                    "category":"準急",
+                                    "image":"images/Keihan/2400.Sub-ExpKH42.png",
+                                    "station":"京橋駅"
+                                },
+                                {
+                                    "name":"通勤準急　淀屋橋",
+                                    "category":"通勤準急",
+                                    "image":"images/Keihan/2400/ComSub-ExpKH01.png",
+                                    "station":"京橋駅"
+                                },
+                                {
+                                    "name":"快速急行　樟葉",
+                                    "category":"快速急行",
+                                    "image":"images/Keihan/2400/RapidExpKH21.png",
+                                    "station":"京橋駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"6000",
+                    "name":"6000系",
+                    "image":"images/Keihan/6000/series.png",
+                    "color":"#005840",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"6000",
+                            "name":"6000系",
+                            "image":"images/Keihan/6000/series.png",
+                            "color":"#005840",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "区間急行":"#008000",
+                                "準急":"#0066cc",
+                                "通勤準急":"#0066cc",
+                                "急行":"#d2691e",
+                                "快速急行":"#3c0066",
+                                "通勤快急":"#3c0066",
+                                "特急":"#8b0000",
+                                "快速急行 洛楽":"#ff99a8"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通枚方市",
+                                    "category":"普通",
+                                    "images":[
+                                        {
+                                            "image":"images/Keihan/6000/LocalKH21-1.png",
+                                            "station":"京橋駅"
+                                        },
+                                        {
+                                            "image":"images/Keihan/6000/LocalKH21-2.png",
+                                            "station":"京橋駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"7200",
+                    "name":"7200系",
+                    "image":"images/Keihan/7200/series.png",
+                    "color":"#005840",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"7200",
+                            "name":"7200系",
+                            "image":"images/Keihan/7200/series.png",
+                            "color":"#005840",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "区間急行":"#008000",
+                                "準急":"#0066cc",
+                                "通勤準急":"#0066cc",
+                                "急行":"#d2691e",
+                                "快速急行":"#3c0066",
+                                "通勤快急":"#3c0066",
+                                "特急":"#8b0000",
+                                "快速急行 洛楽":"#ff99a8"
+                            },
+                            "displays":[
+                                {
+                                    "name":"通勤準急　淀屋橋",
+                                    "category":"通勤準急",
+                                    "image":"images/Keihan/7200/ComSub-ExpKH01.png",
+                                    "station":"京橋駅"
                                 }
                             ]
                         }
