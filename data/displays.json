@@ -2192,6 +2192,7 @@
                         {
                             "id":"Keisei3700",
                             "name":"3700形",
+                            "image":"images/Kiesei/3700/series.png",
                             "color":"#0080ff",
                             "categoryColors":{
                                 "非営業":"#a9a9a9",
