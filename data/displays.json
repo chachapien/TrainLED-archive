@@ -2181,6 +2181,43 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id":"Keisei3700",
+                    "name":"3700形",
+                    "image":"images/Kiesei/3700/series.png",
+                    "color":"#0080ff",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"Keisei3700",
+                            "name":"3700形",
+                            "color":"#0080ff",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "急行":"#0055ff",
+                                "特急":"#ff0000",
+                                "快速特急":"#008000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"急行羽田空港",
+                                    "ledsize":"144×32",
+                                    "category":"急行",
+                                    "image":"images/Keisei/7300/0236.png",
+                                    "station":"羽田空港第1・第2ターミナル駅"
+                                },
+                                {
+                                    "name":"快速特急京成高砂",
+                                    "ledsize":"144×32",
+                                    "category":"快速特急",
+                                    "image":"images/Keisei/7300/0703.png",
+                                    "station":"羽田空港第1・第2ターミナル駅"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -2339,14 +2376,30 @@
                             "categoryColors":{
                                 "非営業":"#a9a9a9",
                                 "普通":"#a9a9a9",
-                                "特急":"#ff0000"
+                                "急行":"#0055ff",
+                                "特急":"#ff0000",
+                                "快速特急":"#008000"
                             },
                             "displays":[
+                                {
+                                    "name":"急行羽田空港",
+                                    "ledsize":"144×32",
+                                    "category":"急行",
+                                    "image":"images/Hokuso/7300/0236.png",
+                                    "station":"羽田空港第1・第2ターミナル駅"
+                                },
                                 {
                                     "name":"特急印旛日本医大",
                                     "ledsize":"144×32",
                                     "category":"特急",
                                     "image":"images/Hokuso/7300/0545.png",
+                                    "station":"羽田空港第1・第2ターミナル駅"
+                                },
+                                {
+                                    "name":"快速特急京成高砂",
+                                    "ledsize":"144×32",
+                                    "category":"快速特急",
+                                    "image":"images/Hokuso/7300/0703.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
                                 }
                             ]
