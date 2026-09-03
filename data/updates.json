@@ -24,9 +24,30 @@
         {
             "date":"2026-09-05",
             "time":"00:00",
+            "title":"E233系0番台側面幕画像追加",
+            "detail":"",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=0S"
+        },
+        {
+            "date":"2026-09-05",
+            "time":"00:00",
             "title":"E261系画像更新",
-            "detail":"画像の変更・追加を行いました。\n1 特急サフィール踊り子 指定席 伊豆急下田の画像を変更(号車6から1へ変更)\n次駅表示「次は熱海」を追加",
+            "detail":"画像の変更・追加を行いました。\n・1 特急サフィール踊り子 指定席 伊豆急下田の画像を変更(号車6から1へ変更)\n・次駅表示「次は熱海」を追加",
             "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e261"
+        },
+        {
+            "date":"2026-09-05",
+            "time":"00:00",
+            "title":"JR西日本103系新規追加",
+            "detail":"播但線103系3500番台ページを新しく追加しました。\n・ワンマン寺前\n・ワンマン快速寺前\n以上前面幕2種類を追加し、公開しました。",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRWest&type=103&series=3500"
+        },
+        {
+            "date":"2026-09-05",
+            "time":"00:00",
+            "title":"JR西日本227系1000番台新規追加",
+            "detail":"227系1000番台のページを新しく追加しました。\n・W普通御坊 3\n以上側面幕1種類を追加し、公開しました。",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRWest&type=227&series=1000"
         }
     ]
 }
