@@ -46,7 +46,7 @@
                         {
                             "id":"e217",
                             "name":"E217系",
-                            "line":"横須賀線･総武(快速)線･外房･内房･鹿島線",
+                            "line":"横須賀線･総武(快速)線･外房･内房･東金･鹿島線",
                             "color":"#0044cc",
                             "categoryColors":{
                                 "非営業":"#a9a9a9",
@@ -1305,7 +1305,98 @@
                         }
                     ]
                 },
-
+                {
+                    "id":"e235",
+                    "name":"E235系",
+                    "line":"山手線･横須賀線･総武(快速)線･外房･内房･東金･鹿島線",
+                    "image":"images/e235/type.png",
+                    "color":"#000080",
+                    "series":[
+                        {
+                            "id":"0",
+                            "name":"0番台",
+                            "line":"山手線",
+                            "color":"#7BAB4F",
+                            "image":"images/e235/0JY/images/e235/0/series.png",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "路線名":"#7BAB4F",
+                                "環状運転":"#7BAB4F",
+                                "行先":"#7BAB4F",
+                                "次駅表示":"#ffff00"
+                            },
+                            "displays":[
+                                {
+                                    "name":"山手線",
+                                    "category":"路線名",
+                                    "ledsize":"128×32",
+                                    "image":"images/e235/0JY/YamanoteLine.png",
+                                    "station":"東京駅"
+                                },
+                                {
+                                    "name":"品川・渋谷方面 次は有楽町",
+                                    "category":"環状運転",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-1.png",
+                                            "station":"東京駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/ForJY25,20NJY30-2.png",
+                                            "station":"東京駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は品川",
+                                    "category":"次駅表示",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/NJY25-1.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/NJY25-2.png",
+                                            "station":"高輪ゲートウェイ駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は高輪ゲートウェイ",
+                                    "category":"次駅表示",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/NJY26-1.png",
+                                            "station":"田町駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/NJY26-2.png",
+                                            "station":"田町駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"次は浜松町",
+                                    "category":"次駅表示",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e235/0JY/NJY28-1.png",
+                                            "station":"新橋駅"
+                                        },
+                                        {
+                                            "image":"images/e235/0JY/NJY28-2.png",
+                                            "station":"新橋駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
                 {
                     "id": "e261",
                     "name": "E261系",
