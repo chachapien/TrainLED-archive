@@ -2206,14 +2206,14 @@
                                     "name":"急行羽田空港",
                                     "ledsize":"144×32",
                                     "category":"急行",
-                                    "image":"images/Keisei/7300/0236.png",
+                                    "image":"images/Keisei/3700/0236.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
                                 },
                                 {
                                     "name":"快速特急京成高砂",
                                     "ledsize":"144×32",
                                     "category":"快速特急",
-                                    "image":"images/Keisei/7300/0703.png",
+                                    "image":"images/Keisei/3700/0703.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
                                 }
                             ]
