@@ -1394,6 +1394,27 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "id":"1000",
+                            "name":"1000番台",
+                            "line":"横須賀線･総武(快速)線･外房･内房･東金･鹿島線",
+                            "color":"#0044cc",
+                            "image":"images/e235/1000/series.png",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#3cb371",
+                                "快速":"#ff4000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"回送",
+                                    "category":"非営業",
+                                    "ledsize":"128×32",
+                                    "image":"images/e235/1000/0100.png",
+                                    "station":"大船駅"
+                                }
+                            ]
                         }
                     ]
                 },
