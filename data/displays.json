@@ -2563,6 +2563,49 @@
                     ]
                 },
                 {
+                    "id":"3000",
+                    "name":"3000系",
+                    "image":"images/Keihan/3000/series.png",
+                    "color":"#223670",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"3000",
+                            "name":"3000系",
+                            "image":"images/Keihan/3000/series.png",
+                            "color":"#223670",
+                            "categoryColors":{
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9",
+                                "区間急行":"#008000",
+                                "準急":"#0066cc",
+                                "通勤準急":"#0066cc",
+                                "急行":"#d2691e",
+                                "快速急行":"#6800b3",
+                                "通勤快急":"#6800b3",
+                                "特急":"#8b0000",
+                                "快速急行 洛楽":"#ff99a8"
+                            },
+                            "displays":[
+                                {
+                                    "name":"快速急行洛楽淀屋橋",
+                                    "category":"快速急行 洛楽",
+                                    "images":[
+                                        {
+                                            "image":"images/Keihan/3000/RLERAKURAKUKH01-1.png",
+                                            "station":"京橋駅"
+                                        },
+                                        {
+                                            "image":"images/Keihan/3000/RLERAKURAKUKH01-2.png",
+                                            "station":"京橋駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id":"6000",
                     "name":"6000系",
                     "image":"images/Keihan/6000/series.png",
@@ -2635,6 +2678,65 @@
                                     "category":"通勤準急",
                                     "image":"images/Keihan/7200/ComSub-ExpKH01.png",
                                     "station":"京橋駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"8000",
+                    "name":"8000系",
+                    "image":"images/Keihan/8000/series.png",
+                    "color":"#d7003a",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"8000",
+                            "name":"8000系",
+                            "image":"images/Keihan/8000/series.png",
+                            "color":"#d7003a",
+                            "categoryColors":{
+                                "非営業(幕式)":"#a9a9a9",
+                                "非営業(LED)":"#a9a9a9",
+                                "普通(幕式)":"#a9a9a9",
+                                "普通(LED)":"#a9a9a9",
+                                "区間急行(幕式)":"#008000",
+                                "区間急行(LED)":"#008000",
+                                "準急(幕式)":"#0066cc",
+                                "準急(LED)":"#0066cc",
+                                "通勤準急(幕式)":"#0066cc",
+                                "通勤準急(LED)":"#0066cc",
+                                "急行(幕式)":"#d2691e",
+                                "急行(LED)":"#d2691e",
+                                "快速急行(幕式)":"#6800b3",
+                                "快速急行(LED)":"#6800b3",
+                                "通勤快急(幕式)":"#6800b3",
+                                "通勤快急(LED)":"#6800b3",
+                                "特急(幕式)":"#8b0000",
+                                "特急(LED)":"#8b0000",
+                                "ライナー(幕式)":"#ff0000",
+                                "ライナー(LED)":"#ff0000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"特急淀屋橋",
+                                    "category":"特急(幕式)",
+                                    "image":"images/Keihan/8000/LimitedExpKH01.png",
+                                    "station":"京橋駅"
+                                },
+                                {
+                                    "name":"特急京都出町柳",
+                                    "category":"特急(LED)",
+                                    "images":[
+                                        {
+                                            "image":"images/Keihan/8000/LimitedExpKH42-1(LED).png",
+                                            "station":"京橋駅"
+                                        },
+                                        {
+                                            "image":"images/Keihan/8000/LimitedExpKH42-2(LED).png",
+                                            "station":"京橋駅"
+                                        }
+                                    ]
                                 }
                             ]
                         }
