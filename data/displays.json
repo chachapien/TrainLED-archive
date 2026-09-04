@@ -2881,6 +2881,38 @@
             ]
         },
         {
+            "id":"Semboku",
+            "name":"泉北高速鉄道",
+            "color":"",
+            "types":[
+                {
+                    "id":"7000",
+                    "name":"7000系",
+                    "image":"images/Semboku/7000/series.png",
+                    "color":"#004898",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "id":"7000",
+                            "name":"7000系",
+                            "color":"#004898",
+                            "categoryColors":{
+                                "区間急行":"#008000"
+                            },
+                            "displays":[
+                                {
+                                    "name":"区急和泉中央",
+                                    "category":"区間急行",
+                                    "image":"images/Semboku/7000/SubExpressSB06.png",
+                                    "station":"なんば駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+        {
             "id":"Hokuso",
             "name":"北総鉄道",
             "color":"#00bfff",
