@@ -2825,12 +2825,12 @@
                             "name":"1000形",
                             "color":"#ff8c00",
                             "categoryColors":{
-                                "普通":"#00bfff"
+                                "前面":"#a9a9a9"
                             },
                             "displays":[
                                 {
                                     "name":"普通新静岡-新清水",
-                                    "category":"普通",
+                                    "category":"前面",
                                     "image":"images/Shizuoka/1000/LocalS01-S15f.png",
                                     "station":"長沼駅"
                                 }
@@ -2851,7 +2851,7 @@
                             "color":"#00bfff",
                             "categoryColors":{
                                 "前面":"#a9a9a9",
-                                "普通":"#02bff"
+                                "普通":"#0000ff"
                             },
                             "displays":[
                                 {
@@ -2887,11 +2887,11 @@
                                     "category":"普通",
                                     "images":[
                                         {
-                                            "image":"images/Shizuoka/A3000/LocalS15-1.png",
+                                            "image":"images/Shizuoka/A3000/LocalS15-01.png",
                                             "station":"新静岡駅"
                                         },
                                         {
-                                            "image":"images/Shizuoka/A3000/LocalS15-2.png",
+                                            "image":"images/Shizuoka/A3000/LocalS15-02.png",
                                             "station":"新静岡駅"
                                         }
                                     ]
