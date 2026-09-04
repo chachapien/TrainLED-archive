@@ -2254,6 +2254,70 @@
             ]
         },
         {
+            "id":"Ainokaze",
+            "name":"あいの風とやま鉄道",
+            "color":"#00a556",
+            "types":[
+                {
+                    "id":"521",
+                    "name":"521系",
+                    "line":"あいの風とやま鉄道･日本海ひすいﾗｲﾝ･IRいしかわ鉄道",
+                    "image":"images/Ainokaze/521/type.png",
+                    "color":"#00aaff",
+                    "series":[
+                        {
+                            "id":"0",
+                            "name":"0番台",
+                            "line":"あいの風とやま鉄道･日本海ひすいﾗｲﾝ･IRいしかわ鉄道",
+                            "color":"#00aaff",
+                            "image":"images/Ainokaze/521/0/series.png",
+                            "categoryColors":{
+                                "側面種別・行先":"#a9a9a9",
+                                "側面種別":"#a9a9a9",
+                                "側面行先":"#ffa500"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通　4 泊",
+                                    "category":"側面種別・行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/Ainokaze/521/0/Local-4Tomari.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"普通　2 糸魚川",
+                                    "category":"側面種別・行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/Ainokaze/521/0/Local-2Itoigawa.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"普通",
+                                    "category":"側面種別",
+                                    "image":"images/Ainokaze/521/0/Local.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"4 泊",
+                                    "category":"側面行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/Ainokaze/521/0/4Tomari.png",
+                                    "station":"金沢駅"
+                                },
+                                {
+                                    "name":"2 糸魚川",
+                                    "category":"側面行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/Ainokaze/521/0/2Itoigawa.png",
+                                    "station":"金沢駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id":"Keio",
             "name":"京王電鉄",
             "color":"#C8006B",
