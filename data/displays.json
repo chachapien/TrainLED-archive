@@ -2276,6 +2276,42 @@
                                     "station":"大阪駅"
                                 }
                             ]
+                        },
+                        {
+                            "id":"5000",
+                            "name":"5000番台",
+                            "line":"瀬戸大橋線(宇野線･本四備讃線･予讃線)",
+                            "color":"#2eb8e6",
+                            "image":"images/JRWest/223/5000/series.png",
+                            "categoryColors":{
+                                "前面種別":"#a9a9a9",
+                                "前面行先":"#a9a9a9",
+                                "側面種別・行先":"#a9a9a9",
+                                "側面種別":"#a9a9a9",
+                                "側面行先":"#ffa500"
+                            },
+                            "displays":[
+                                {
+                                    "name":"快速マリンライナー　5 高松",
+                                    "category":"側面種別・行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/JRWest/223/5000/RapidMarineLiner-5Takamatsu.png",
+                                    "station":"岡山駅"
+                                },
+                                {
+                                    "name":"快速マリンライナー",
+                                    "category":"側面種別",
+                                    "image":"images/JRWest/223/5000/RapidMarineLiner.png",
+                                    "station":"岡山駅"
+                                },
+                                {
+                                    "name":"5 高松",
+                                    "category":"側面行先",
+                                    "ledsize":"号車16×16 行先96×32",
+                                    "image":"images/JRWest/223/5000/5Takamatsu.png",
+                                    "station":"岡山駅"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -3307,6 +3343,70 @@
                                     "category":"快速特急",
                                     "image":"images/Keisei/3700/D04.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"Keisei8800",
+                    "name":"8800形",
+                    "image":"images/Keisei/8800/series.png",
+                    "color":"#0080ff",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通 KS26 京成津田沼",
+                                    "category":"普通",
+                                    "ledsize":"112×32",
+                                    "image":"images/Keisei/8800/LocalKS26.png",
+                                    "station":"松戸駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"Keisei80000",
+                    "name":"80000形",
+                    "image":"images/Keisei/80000/series.png",
+                    "color":"#0080ff",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "普通":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通 KS26 京成津田沼",
+                                    "category":"普通",
+                                    "ledsize":"192×48",
+                                    "image":"images/Keisei/80000/LocalKS26.png",
+                                    "station":"松戸駅"
+                                },
+                                {
+                                    "name":"普通 KS66 新津田沼",
+                                    "category":"普通",
+                                    "ledsize":"192×48",
+                                    "image":"images/Keisei/80000/LocalKS66.png",
+                                    "station":"松戸駅"
+                                },
+                                {
+                                    "name":"普通 KS88 松戸",
+                                    "category":"普通",
+                                    "ledsize":"192×48",
+                                    "image":"images/Keisei/80000/LocalKS86.png",
+                                    "station":"京成津田沼駅"
                                 }
                             ]
                         }
