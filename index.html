@@ -627,18 +627,71 @@ function getUpdateDateTime(update) {
             update.date
         );
 
+    const dateMatch =
+        date.match(
+            /^(\d{4})-(\d{1,2})-(\d{1,2})/
+        );
 
-    const time =
-        update.time
-            ? String(update.time).trim()
-            : "00:00";
+    if (!dateMatch) {
+
+        return new Date(
+            0
+        );
+
+    }
+
+
+    const year =
+        Number(dateMatch[1]);
+
+    const month =
+        Number(dateMatch[2]);
+
+    const day =
+        Number(dateMatch[3]);
+
+
+    let hour = 0;
+    let minute = 0;
+    let second = 0;
+
+
+    if (update.time) {
+
+        const time =
+            String(update.time).trim();
+
+        const timeMatch =
+            time.match(
+                /^(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?/
+            );
+
+        if (timeMatch) {
+
+            hour =
+                Number(timeMatch[1]);
+
+            minute =
+                Number(timeMatch[2]);
+
+            second =
+                timeMatch[3]
+                    ? Number(timeMatch[3])
+                    : 0;
+
+        }
+
+    }
 
 
     const dateTime =
         new Date(
-            date +
-            "T" +
-            time
+            year,
+            month - 1,
+            day,
+            hour,
+            minute,
+            second
         );
 
 
@@ -649,7 +702,7 @@ function getUpdateDateTime(update) {
     ) {
 
         return new Date(
-            "9999-12-31T23:59:59"
+            0
         );
 
     }
