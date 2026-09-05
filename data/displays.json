@@ -2975,7 +2975,6 @@
                     "noSeriesSelect":true,
                     "series":[
                         {
-                            "id":"Keisei3100",
                             "categoryColors":{
                                 "前面":"#a9a9a9",
                                 "非営業":"#a9a9a9",
