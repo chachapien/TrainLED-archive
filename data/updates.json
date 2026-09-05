@@ -62,6 +62,13 @@
             "title":"JR西日本223系2500番台画像が表示されない問題を修正",
             "detail":"223系2500番台LED幕内にある「S関空快速」が表示されない問題を修正しました。",
             "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRWest&type=223&series=2500"
+        },
+        {
+            "date":"2026-09-05",
+            "time":"10:05",
+            "title":"京成3700形幕移行",
+            "detail":"幕の移行漏れがあったため、以下3枚の幕を移行しました。\n・普通西馬込\n・快速京成本線経由\n・快速羽田空港",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keisei&type=Keisei3700"
         }
     ]
 }

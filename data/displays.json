@@ -3105,23 +3105,45 @@
                             "categoryColors":{
                                 "非営業":"#a9a9a9",
                                 "普通":"#a9a9a9",
+                                "快速":"#ff33a0",
                                 "急行":"#0055ff",
                                 "特急":"#ff0000",
                                 "快速特急":"#008000"
                             },
                             "displays":[
                                 {
+                                    "name":"快速京成本線経由",
+                                    "category":"快速",
+                                    "ledsize":"144×32",
+                                    "image":"images/Keisei/3700/RapidViaKeiseiMain.png",
+                                    "station":"成田空港駅"
+                                },
+                                {
+                                    "name":"快速羽田空港",
+                                    "category":"快速",
+                                    "ledsize":"144×32",
+                                    "image":"images/Keisei/3700/633.png",
+                                    "station":"成田空港駅（成田第1ターミナル）"
+                                },
+                                {
                                     "name":"急行羽田空港",
                                     "ledsize":"144×32",
                                     "category":"急行",
-                                    "image":"images/Keisei/3700/0236.png",
+                                    "image":"images/Keisei/3700/733.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
+                                },
+                                {
+                                    "name":"普通西馬込",
+                                    "category":"普通",
+                                    "ledsize":"144×32",
+                                    "image":"images/Keisei/3700/827.png",
+                                    "station":"押上駅"
                                 },
                                 {
                                     "name":"快速特急京成高砂",
                                     "ledsize":"144×32",
                                     "category":"快速特急",
-                                    "image":"images/Keisei/3700/0703.png",
+                                    "image":"images/Keisei/3700/D04.png",
                                     "station":"羽田空港第1・第2ターミナル駅"
                                 }
                             ]
