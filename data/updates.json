@@ -69,6 +69,13 @@
             "title":"京成3700形幕移行",
             "detail":"幕の移行漏れがあったため、以下3枚の幕を移行しました。\n・普通西馬込\n・快速京成本線経由\n・快速羽田空港",
             "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keisei&type=Keisei3700"
+        },
+        {
+            "date":"2026-09-05",
+            "time":"13:54",
+            "title":"京成3000形幕追加",
+            "detail":"以下の幕を追加しました。\n前面\n・快速京成佐倉\n・普通京成臼井\n・快速特急羽田空港\n側面\n・通勤特急西馬込\n・快速京成本線経由\n・快速京成上野\n・快速成田空港\n・快速(東成田)芝山\n・快速羽田空港\n・急行印西牧の原\n・普通京成高砂\n・普通千葉中央\n・快速特急京成上野\n・快速特急(東成田)芝山",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keisei&type=Keisei3000"
         }
     ]
 }
