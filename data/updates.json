@@ -82,21 +82,21 @@
             "time":"15:10",
             "title":"JR東海213系方向幕移行",
             "detail":"213系方向幕のページを旧サイトから移行しました。\n記載幕について変更はありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRCentral&type=213"
         },
         {
             "date":"2026-09-06",
             "time":"15:10",
             "title":"JR東海311系方向幕移行",
             "detail":"311系方向幕のページを旧サイトから移行しました。\n記載幕について変更はありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRCentral&type=311"
         },
         {
             "date":"2026-09-06",
             "time":"15:10",
             "title":"JR西日本289系側面幕移行",
             "detail":"289系側面幕のページを旧サイトから移行しました。\n以下の幕を新たに追加しました。\n・ラクラクはりま　網干",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRWest&type=289"
         }
     ]
 }

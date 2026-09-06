@@ -2723,6 +2723,12 @@
                                     "station":"新大阪駅"
                                 },
                                 {
+                                    "name":"こうのとり　新大阪",
+                                    "category":"種別・行先",
+                                    "image":"images/JRWest/289/KONOTORI-A46.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
                                     "name":"きのさき　城崎温泉",
                                     "category":"種別・行先",
                                     "image":"images/JRWest/289/KINOSAKI-KINOSAKIONSEN.png",
@@ -2735,10 +2741,22 @@
                                     "station":"新大阪駅"
                                 },
                                 {
+                                    "name":"こうのとり",
+                                    "category":"種別",
+                                    "image":"images/JRWest/289/KOUNOTORI.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
                                     "name":"きのさき",
                                     "category":"種別",
                                     "image":"images/JRWest/289/KINOSAKI.png",
                                     "station":"京都駅"
+                                },
+                                {
+                                    "name":"新大阪",
+                                    "category":"行先",
+                                    "image":"images/JRWest/289/A46.png",
+                                    "station":"新大阪駅"
                                 },
                                 {
                                     "name":"網干",
