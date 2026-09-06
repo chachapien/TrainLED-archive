@@ -2063,17 +2063,111 @@
         {
             "id": "JRCentral",
             "name": "JR東海",
-            "color":"#ff8c00",
+            "color":"#ED6D00",
             "types": [
+                {
+                    "id":"213",
+                    "name":"213系",
+                    "line":"飯田線",
+                    "color":"#ED6D00",
+                    "image":"images/JRCentral/213/series.png",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "側面":"#a9a9a9"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通",
+                                    "category":"前面",
+                                    "image":"images/JRCentral/213/8-f.png",
+                                    "station":"岡谷駅"
+                                },
+                                {
+                                    "name":"平岡",
+                                    "category":"側面",
+                                    "image":"images/JRCentral/213/9.png",
+                                    "station":"岡谷駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id":"311",
+                    "name":"311系",
+                    "line":"東海道本線",
+                    "color":"#ED6D00",
+                    "image":"images/JRCentral/311/series.png",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "前面":"#a9a9a9",
+                                "非営業": "#a9a9a9",
+                                "普通": "#a9a9a9",
+                                "快速": "#002bff",
+                                "区間快速":"#00ff00",
+                                "新快速":"#ff8c00",
+                                "特別快速":"#ffff00"
+                            },
+                            "displays":[
+                                {
+                                    "name":"普通",
+                                    "category":"前面",
+                                    "image":"images/JRCentral/311/8-f.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"特別快速",
+                                    "category":"前面",
+                                    "image":"images/JRCentral/311/9-f.png",
+                                    "station":"大垣駅"
+                                },
+                                {
+                                    "name":"米原",
+                                    "category":"前面",
+                                    "image":"images/JRCentral/311/44-f-i.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"普通豊橋",
+                                    "category":"普通",
+                                    "image":"images/JRCentral/311/813.png",
+                                    "station":"名古屋駅"
+                                },
+                                {
+                                    "name":"普通大垣",
+                                    "category":"普通",
+                                    "image":"images/JRCentral/311/828.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"普通米原",
+                                    "category":"普通",
+                                    "image":"images/JRCentral/311/844.png",
+                                    "station":"米原駅"
+                                },
+                                {
+                                    "name":"特別快速大垣",
+                                    "category":"特別快速",
+                                    "image":"images/JRCentral/311/928.png",
+                                    "station":"大垣駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
                 {
                     "id": "313",
                     "name": "313系",
+                    "color":"#ED6D00",
+                    "image":"images/JRCentral/313/series.png",
                     "noSeriesSelect":true,
                     "series": [
                         {
-                            "id": "313",
-                            "name": "313系",
-                            "color": "#20b2aa",
                             "categoryColors": {
                                 "非営業": "#a9a9a9",
                                 "普通": "#a9a9a9",
@@ -2608,6 +2702,61 @@
                     ]
                 },
                 {
+                    "id":"289",
+                    "name":"289系",
+                    "line":"",
+                    "color":"#0080ff",
+                    "image":"images/JRWest/289/series.png",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "種別・行先":"#a9a9a9",
+                                "種別":"#a9a9a9",
+                                "行先":"#ffa500"
+                            },
+                            "displays":[
+                                {
+                                    "name":"ラクラクはりま　網干",
+                                    "category":"種別・行先",
+                                    "image":"images/JRWest/289/RAKURAKU-HARIMA-ABOSHI.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
+                                    "name":"きのさき　城崎温泉",
+                                    "category":"種別・行先",
+                                    "image":"images/JRWest/289/KINOSAKI-KINOSAKIONSEN.png",
+                                    "station":"京都駅"
+                                },
+                                {
+                                    "name":"ラクラクはりま",
+                                    "category":"種別",
+                                    "image":"images/JRWest/289/RAKURAKU-HARIMA.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
+                                    "name":"きのさき",
+                                    "category":"種別",
+                                    "image":"images/JRWest/289/KINOSAKI.png",
+                                    "station":"京都駅"
+                                },
+                                {
+                                    "name":"網干",
+                                    "category":"行先",
+                                    "image":"images/JRWest/289/ABOSHI-L.png",
+                                    "station":"新大阪駅"
+                                },
+                                {
+                                    "name":"城崎温泉",
+                                    "category":"行先",
+                                    "image":"images/JRWest/289/KINOSAKIONSEN-L.png",
+                                    "station":"京都駅"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id":"323",
                     "name":"323系",
                     "line":"大阪環状線",
@@ -2917,6 +3066,7 @@
                 {
                     "id":"2000",
                     "name":"2000系",
+                    "line":"京王線･京王相模原線･京王高尾線",
                     "image":"images/Keio/2000/type.png",
                     "color":"#C8006B",
                     "noSeriesSelect":true,
@@ -2965,6 +3115,7 @@
                 {
                     "id":"AE",
                     "name":"AE形",
+                    "line":"京成本線･北総線･成田スカイアクセス線",
                     "image":"images/Keisei/AE/type.png",
                     "color":"#000080",
                     "noSeriesSelect":true,
@@ -3006,6 +3157,7 @@
                 {
                     "id":"Keisei3000",
                     "name":"3000形",
+                    "line":"京成本線･京成押上線･京成千葉線･京成東成田線･芝山鉄道･北総線･都営浅草線･京急本線･京急空港線",
                     "image":"images/Keisei/3000/series.png",
                     "color":"#0080ff",
                     "noSeriesSelect":true,
@@ -3168,6 +3320,7 @@
                 {
                     "id":"Keisei3100",
                     "name":"3100形",
+                    "line":"京成本線･京成押上線･成田スカイアクセス線･北総線･都営浅草線･京急本線･京急空港線",
                     "image":"images/Keisei/3100/type.png",
                     "color":"#ff8000",
                     "noSeriesSelect":true,
@@ -3291,6 +3444,7 @@
                 {
                     "id":"Keisei3700",
                     "name":"3700形",
+                    "line":"京成本線･京成押上線･京成千葉線･京成東成田線･芝山鉄道･北総線･都営浅草線･京急本線･京急空港線",
                     "image":"images/Keisei/3700/series.png",
                     "color":"#0080ff",
                     "noSeriesSelect":true,
@@ -3351,6 +3505,7 @@
                 {
                     "id":"Keisei8800",
                     "name":"8800形",
+                    "line":"京成松戸線･京成千葉線",
                     "image":"images/Keisei/8800/series.png",
                     "color":"#0080ff",
                     "noSeriesSelect":true,
@@ -3376,6 +3531,7 @@
                 {
                     "id":"Keisei80000",
                     "name":"80000形",
+                    "line":"京成松戸線･京成千葉線",
                     "image":"images/Keisei/80000/series.png",
                     "color":"#0080ff",
                     "noSeriesSelect":true,
@@ -3750,6 +3906,7 @@
                 {
                     "id":"SR1",
                     "name":"SR1系",
+                    "line":"しなの鉄道線･信越本線･北しなの線",
                     "image":"images/Shinano/SR1/type.png",
                     "color":"#0000cd",
                     "series":[
