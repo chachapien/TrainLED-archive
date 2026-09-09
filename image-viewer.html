@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>画像 - 行先表示の広場</title>
+
+<link
+    rel="icon"
+    href="favicon.png"
+    type="image/png"
+>
+
+<style>
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #111111;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#viewer-image {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    cursor: zoom-in;
+    transition:
+        transform 0.1s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
+}
+
+#title {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform:
+        translateX(-50%);
+    color: white;
+    background:
+        rgba(0, 0, 0, 0.6);
+    padding:
+        8px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#station {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    background:
+        rgba(0, 0, 0, 0.6);
+    padding:
+        6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#help {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform:
+        translateX(-50%);
+    color: white;
+    background:
+        rgba(0, 0, 0, 0.6);
+    padding:
+        8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+
+    #title {
+        top: 10px;
+        font-size: 14px;
+        max-width: 80vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #station {
+        bottom: 10px;
+        right: 10px;
+        font-size: 11px;
+    }
+
+    #help {
+        bottom: 10px;
+        max-width: 75vw;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="title"></div>
+
+<img
+    id="viewer-image"
+    alt=""
+>
+
+<div id="station"></div>
+
+<div id="help">
+    クリック：拡大・縮小　｜　長押し＋ドラッグ：画像移動　｜　ホイール：ズーム
+</div>
+
+<script>
+
+/* ==================================================
+   URLパラメータ
+   ================================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const imageUrl =
+    params.get("image") ||
+    "";
+
+const imageName =
+    params.get("name") ||
+    "画像";
+
+const stationName =
+    params.get("station") ||
+    "";
+
+
+/* ==================================================
+   要素
+   ================================================== */
+
+const title =
+    document.getElementById(
+        "title"
+    );
+
+const image =
+    document.getElementById(
+        "viewer-image"
+    );
+
+const station =
+    document.getElementById(
+        "station"
+    );
+
+
+/* ==================================================
+   画像表示
+   ================================================== */
+
+if (!imageUrl) {
+
+    title.textContent =
+        "画像が指定されていません";
+
+    image.style.display =
+        "none";
+
+    station.style.display =
+        "none";
+
+}
+
+else {
+
+    document.title =
+        imageName +
+        " - 行先表示の広場";
+
+    title.textContent =
+        imageName;
+
+    image.src =
+        imageUrl;
+
+    image.alt =
+        imageName;
+
+
+    if (stationName) {
+
+        station.textContent =
+            "撮影：" +
+            stationName;
+
+    }
+
+    else {
+
+        station.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* ==================================================
+   画像エラー
+   ================================================== */
+
+image.onerror =
+    function() {
+
+        title.textContent =
+            "画像を読み込めませんでした";
+
+    };
+
+
+/* ==================================================
+   ズーム・移動
+   ================================================== */
+
+let zoom = 1;
+
+let positionX = 0;
+
+let positionY = 0;
+
+let isDragging = false;
+
+let startX = 0;
+
+let startY = 0;
+
+let moved = false;
+
+
+/* ==================================================
+   画像更新
+   ================================================== */
+
+function updateImage() {
+
+    image.style.transform =
+        "translate(" +
+        positionX +
+        "px, " +
+        positionY +
+        "px) scale(" +
+        zoom +
+        ")";
+
+}
+
+
+/* ==================================================
+   クリックズーム
+   ================================================== */
+
+image.addEventListener(
+    "click",
+    function() {
+
+        if (
+            moved
+        ) {
+
+            moved = false;
+
+            return;
+
+        }
+
+
+        if (
+            zoom === 1
+        ) {
+
+            zoom = 1.5;
+
+        }
+
+        else if (
+            zoom === 1.5
+        ) {
+
+            zoom = 2;
+
+        }
+
+        else if (
+            zoom === 2
+        ) {
+
+            zoom = 3;
+
+        }
+
+        else {
+
+            zoom = 1;
+
+            positionX = 0;
+
+            positionY = 0;
+
+        }
+
+
+        updateImage();
+
+
+        image.style.cursor =
+            zoom === 1
+                ? "zoom-in"
+                : "grab";
+
+    }
+);
+
+
+/* ==================================================
+   ドラッグ開始
+   ================================================== */
+
+image.addEventListener(
+    "mousedown",
+    function(event) {
+
+        if (
+            event.button !== 0
+        ) {
+
+            return;
+
+        }
+
+
+        isDragging = true;
+
+        moved = false;
+
+
+        startX =
+            event.clientX -
+            positionX;
+
+        startY =
+            event.clientY -
+            positionY;
+
+
+        image.style.cursor =
+            "grabbing";
+
+
+        event.preventDefault();
+
+    }
+);
+
+
+/* ==================================================
+   ドラッグ
+   ================================================== */
+
+document.addEventListener(
+    "mousemove",
+    function(event) {
+
+        if (
+            !isDragging
+        ) {
+
+            return;
+
+        }
+
+
+        const newX =
+            event.clientX -
+            startX;
+
+        const newY =
+            event.clientY -
+            startY;
+
+
+        if (
+            Math.abs(
+                newX -
+                positionX
+            ) > 3 ||
+            Math.abs(
+                newY -
+                positionY
+            ) > 3
+        ) {
+
+            moved = true;
+
+        }
+
+
+        positionX =
+            newX;
+
+        positionY =
+            newY;
+
+
+        updateImage();
+
+    }
+);
+
+
+/* ==================================================
+   ドラッグ終了
+   ================================================== */
+
+document.addEventListener(
+    "mouseup",
+    function() {
+
+        if (
+            !isDragging
+        ) {
+
+            return;
+
+        }
+
+
+        isDragging = false;
+
+
+        image.style.cursor =
+            zoom === 1
+                ? "zoom-in"
+                : "grab";
+
+    }
+);
+
+
+/* ==================================================
+   ホイールズーム
+   ================================================== */
+
+image.addEventListener(
+    "wheel",
+    function(event) {
+
+        event.preventDefault();
+
+
+        if (
+            event.deltaY < 0
+        ) {
+
+            zoom += 0.25;
+
+        }
+
+        else {
+
+            zoom -= 0.25;
+
+        }
+
+
+        if (
+            zoom < 0.5
+        ) {
+
+            zoom = 0.5;
+
+        }
+
+
+        if (
+            zoom > 5
+        ) {
+
+            zoom = 5;
+
+        }
+
+
+        if (
+            zoom === 1
+        ) {
+
+            positionX = 0;
+
+            positionY = 0;
+
+        }
+
+
+        updateImage();
+
+
+        image.style.cursor =
+            zoom > 1
+                ? "grab"
+                : "zoom-in";
+
+    },
+    {
+        passive: false
+    }
+);
+
+</script>
+
+</body>
+
+</html>

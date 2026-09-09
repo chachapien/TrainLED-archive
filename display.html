@@ -177,6 +177,9 @@ main {
     top: 20px;
     align-self: flex-start;
     z-index: 20;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 
@@ -596,6 +599,7 @@ footer {
     .category-sidebar {
         width: 50%;
         min-width: 0;
+        max-height: calc(100vh - 20px);
         padding: 10px;
         background-color: white;
         border:
@@ -606,6 +610,8 @@ footer {
             rgba(0, 0, 0, 0.08);
         position: sticky;
         top: 10px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
 
@@ -1975,496 +1981,27 @@ function openImageViewer(
     stationName
 ) {
 
+    const viewerUrl =
+        "image-viewer.html?image=" +
+        encodeURIComponent(imageUrl) +
+        "&name=" +
+        encodeURIComponent(imageName || "") +
+        "&station=" +
+        encodeURIComponent(stationName || "");
+
     const newWindow =
         window.open(
-            "",
+            viewerUrl,
             "_blank"
         );
 
-
     if (!newWindow) {
-
         alert(
             "新しいタブを開けませんでした。"
         );
-
-        return;
-
     }
-
-
-    newWindow.document.title =
-        imageName +
-        " - 行先表示の広場";
-
-
-    const style =
-        newWindow.document.createElement(
-            "style"
-        );
-
-
-    style.textContent = `
-
-        html,
-        body {
-
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: #111111;
-
-        }
-
-        body {
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-
-        }
-
-        #viewer-image {
-
-            max-width: 95vw;
-            max-height: 95vh;
-            width: auto;
-            height: auto;
-            cursor: zoom-in;
-            transition:
-                transform 0.1s ease;
-            user-select: none;
-            -webkit-user-drag: none;
-
-        }
-
-        #title {
-
-            position: fixed;
-            top: 15px;
-            left: 50%;
-            transform:
-                translateX(-50%);
-            color: white;
-            background:
-                rgba(0, 0, 0, 0.6);
-            padding:
-                8px 15px;
-            border-radius: 6px;
-            font-size: 16px;
-            z-index: 10;
-            pointer-events: none;
-
-        }
-
-        #station {
-
-            position: fixed;
-            bottom: 15px;
-            right: 15px;
-            color: white;
-            background:
-                rgba(0, 0, 0, 0.6);
-            padding:
-                6px 10px;
-            border-radius: 6px;
-            font-size: 13px;
-            z-index: 10;
-            pointer-events: none;
-
-        }
-
-        #help {
-
-            position: fixed;
-            bottom: 15px;
-            left: 50%;
-            transform:
-                translateX(-50%);
-            color: white;
-            background:
-                rgba(0, 0, 0, 0.6);
-            padding:
-                8px 15px;
-            border-radius: 6px;
-            font-size: 14px;
-            z-index: 10;
-            pointer-events: none;
-
-        }
-
-    `;
-
-
-    newWindow.document.head.appendChild(
-        style
-    );
-
-
-    const title =
-        newWindow.document.createElement(
-            "div"
-        );
-
-    title.id =
-        "title";
-
-    title.textContent =
-        imageName;
-
-
-    const image =
-        newWindow.document.createElement(
-            "img"
-        );
-
-    image.id =
-        "viewer-image";
-
-    image.src =
-        imageUrl;
-
-    image.alt =
-        imageName;
-
-
-    const station =
-        newWindow.document.createElement(
-            "div"
-        );
-
-    station.id =
-        "station";
-
-    station.textContent =
-        stationName
-            ? "撮影：" + stationName
-            : "";
-
-
-    const help =
-        newWindow.document.createElement(
-            "div"
-        );
-
-    help.id =
-        "help";
-
-    help.textContent =
-        "クリック：拡大・縮小　｜　長押し＋ドラッグ：画像移動　｜　ホイール：ズーム";
-
-
-    newWindow.document.body.appendChild(
-        title
-    );
-
-    newWindow.document.body.appendChild(
-        image
-    );
-
-
-    if (
-        stationName
-    ) {
-
-        newWindow.document.body.appendChild(
-            station
-        );
-
-    }
-
-
-    newWindow.document.body.appendChild(
-        help
-    );
-
-
-    /* ==================================================
-       ズーム
-       ================================================== */
-
-    let zoom = 1;
-    let positionX = 0;
-    let positionY = 0;
-    let isDragging = false;
-    let startX = 0;
-    let startY = 0;
-    let moved = false;
-
-
-    function updateImage() {
-
-        image.style.transform =
-            "translate(" +
-            positionX +
-            "px, " +
-            positionY +
-            "px) scale(" +
-            zoom +
-            ")";
-
-    }
-
-
-    /* ==================================================
-       クリックズーム
-       ================================================== */
-
-    image.addEventListener(
-        "click",
-        function() {
-
-            if (
-                moved
-            ) {
-
-                moved = false;
-
-                return;
-
-            }
-
-
-            if (
-                zoom === 1
-            ) {
-
-                zoom = 1.5;
-
-            }
-
-            else if (
-                zoom === 1.5
-            ) {
-
-                zoom = 2;
-
-            }
-
-            else if (
-                zoom === 2
-            ) {
-
-                zoom = 3;
-
-            }
-
-            else {
-
-                zoom = 1;
-                positionX = 0;
-                positionY = 0;
-
-            }
-
-
-            updateImage();
-
-
-            image.style.cursor =
-                zoom === 1
-                    ? "zoom-in"
-                    : "grab";
-
-        }
-    );
-
-
-    /* ==================================================
-       ドラッグ開始
-       ================================================== */
-
-    image.addEventListener(
-        "mousedown",
-        function(event) {
-
-            if (
-                event.button !== 0
-            ) {
-
-                return;
-
-            }
-
-
-            isDragging = true;
-            moved = false;
-
-
-            startX =
-                event.clientX -
-                positionX;
-
-            startY =
-                event.clientY -
-                positionY;
-
-
-            image.style.cursor =
-                "grabbing";
-
-
-            event.preventDefault();
-
-        }
-    );
-
-
-    /* ==================================================
-       ドラッグ
-       ================================================== */
-
-    newWindow.document.addEventListener(
-        "mousemove",
-        function(event) {
-
-            if (
-                !isDragging
-            ) {
-
-                return;
-
-            }
-
-
-            const newX =
-                event.clientX -
-                startX;
-
-            const newY =
-                event.clientY -
-                startY;
-
-
-            if (
-                Math.abs(
-                    newX -
-                    positionX
-                ) > 3 ||
-                Math.abs(
-                    newY -
-                    positionY
-                ) > 3
-            ) {
-
-                moved = true;
-
-            }
-
-
-            positionX =
-                newX;
-
-            positionY =
-                newY;
-
-
-            updateImage();
-
-        }
-    );
-
-
-    /* ==================================================
-       ドラッグ終了
-       ================================================== */
-
-    newWindow.document.addEventListener(
-        "mouseup",
-        function() {
-
-            if (
-                !isDragging
-            ) {
-
-                return;
-
-            }
-
-
-            isDragging = false;
-
-
-            image.style.cursor =
-                zoom === 1
-                    ? "zoom-in"
-                    : "grab";
-
-        }
-    );
-
-
-    /* ==================================================
-       ホイールズーム
-       ================================================== */
-
-    image.addEventListener(
-        "wheel",
-        function(event) {
-
-            event.preventDefault();
-
-
-            if (
-                event.deltaY < 0
-            ) {
-
-                zoom += 0.25;
-
-            }
-
-            else {
-
-                zoom -= 0.25;
-
-            }
-
-
-            if (
-                zoom < 0.5
-            ) {
-
-                zoom = 0.5;
-
-            }
-
-
-            if (
-                zoom > 5
-            ) {
-
-                zoom = 5;
-
-            }
-
-
-            if (
-                zoom === 1
-            ) {
-
-                positionX = 0;
-                positionY = 0;
-
-            }
-
-
-            updateImage();
-
-
-            image.style.cursor =
-                zoom > 1
-                    ? "grab"
-                    : "zoom-in";
-
-        },
-        {
-            passive: false
-        }
-    );
-
 }
+
 
 </script>
 
