@@ -117,7 +117,28 @@
             "time":"16:51",
             "title":"JR東日本E233系2000番台幕移行・追加",
             "detail":"E233系2000番台の幕ページを旧サイトから移行しました。\n以下の幕を追加しました。\n列車番号表示器\n・1704K\n前面幕\n・各駅停車霞ヶ関\n側面\n・各駅停車霞ヶ関\n・各駅停車霞ヶ関行 次は北柏",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=2000"
+        },
+        {
+            "date":"2026-09-11",
+            "time":"21:10",
+            "title":"東急2020系LED幕ページを追加",
+            "detail":"東急2020系LED幕のページを新たに追加しました。\n追加幕側面\n・各停渋谷･押上方面\n・各停TI02 久喜 次は高津\n・準急半蔵門線直通\n・準急Z01 渋谷 次は曳舟\n・急行渋谷･大手町方面\n・急行Z14 押上 次は二子玉川",
             "url":""
+        },
+        {
+            "date":"2026-09-11",
+            "time":"21:10",
+            "title":"JR東日本209系1000番台ページ移行",
+            "detail":"209系1000番台の幕ページを旧サイトから移行しました。\n移行以外の変更点はありません。",
+            "url":""
+        },
+        {
+            "date":"2026-09-11",
+            "time":"21:10",
+            "title":"JR東日本E233系2000番台幕ページ画像修正",
+            "detail":"以下の幕の画像日/英の英語表示の方が日本語画像になってたものを修正しました。\n該当画像\n・次は我孫子",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=2000"
         }
     ]
 }
