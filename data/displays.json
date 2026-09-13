@@ -5409,7 +5409,7 @@
                 {
                     "id":"2000",
                     "name":"2000形",
-                    "line":"小田急小田原線･小田急多摩線･小田急江ノ島線",
+                    "line":"小田急小田原線",
                     "color":"#3399ff",
                     "image":"images/Odakyu/2000/series.png",
                     "noSeriesSelect":true,
