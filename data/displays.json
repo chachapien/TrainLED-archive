@@ -5404,7 +5404,7 @@
         {
             "id":"Odakyu",
             "name":"小田急電鉄",
-            "color":"#06559D",
+            "color":"#3399ff",
             "types":[
                 {
                     "id":"2000",
@@ -5434,7 +5434,7 @@
                                     "category":"各駅停車",
                                     "ledsize":"確認中",
                                     "image":"images/Odakyu/2000/LocalOH36.png",
-                                    "station":"向ヶ丘遊園駅"
+                                    "station":"下北沢駅"
                                 }
                             ]
                         }
