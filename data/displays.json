@@ -8,12 +8,15 @@
                 {
                     "id": "209",
                     "name": "209系",
+                    "line":"京葉線･武蔵野線･中央･青梅線･房総地区･八高線･川越線",
+                    "color":"#008000",
+                    "image":"images/209/type.png",
                     "series": [
                         {
                             "id": "0",
                             "name": "500番台",
                             "image": "images/209/500JE/series.png",
-                            "color": "#20b2aa",
+                            "color": "#008000",
                             "categoryColors": {
                                 "普通": "#20b2aa",
                                 "快速": "#ff9800",
@@ -26,7 +29,7 @@
                             "id": "500",
                             "name": "500番台",
                             "image": "images/209/500JM/series.png",
-                            "color": "#4682b4",
+                            "color": "#008000",
                             "categoryColors": {
                                 "普通": "#20b2aa",
                                 "快速": "#ff9800",
@@ -382,18 +385,88 @@
                 {
                     "id": "e231",
                     "name": "E231系",
+                    "line":"常磐快速線･成田線(我孫子支線)･武蔵野線･京葉線･中央線(各駅停車･快速)･総武線(各駅停車)･上野東京ﾗｲﾝ･湘南新宿ﾗｲﾝ系統(東海道･宇都宮･高崎･両毛･上越･伊東線)･八高･川越線･東京ﾒﾄﾛ東西線",
+                    "color":"#008000",
+                    "image":"images/e231/type.png",
                     "series": [
                         {
                             "id": "0",
                             "name": "0番台",
-                            "image": "images/e231/0/series.png",
-                            "color": "#20b2aa",
+                            "line":"武蔵野線･京葉線･中央線",
+                            "color": "#ff661a",
+                            "image": "images/e231/0Musashino/series.png",
                             "categoryColors": {
-                                "普通": "#20b2aa",
-                                "快速": "#ff9800",
-                                "特急": "#e53935"
+                                "非営業(前面)":"#a9a9a9",
+                                "行先(前面)":"#a9a9a9",
+                                "快速(前面)":"#ff0000",
+                                "路線名(前面)":"#a9a9a9",
+                                "しもうさ号(前面)":"#ed5fed",
+                                "むさしの号(前面)":"#6b9fff",
+                                "非営業(側面)":"#a9a9a9",
+                                "行先(側面)":"#a9a9a9",
+                                "快速(側面)":"#ff0000",
+                                "路線名(側面)":"#a9a9a9",
+                                "しもうさ号(側面)":"#ed5fed",
+                                "むさしの号(側面)":"#6b9fff"
                             },
-                            "displays": []
+                            "displays": [
+                                {
+                                    "name":"[13]東所沢",
+                                    "category":"行先(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/13.png",
+                                    "station":"南流山駅"
+                                },
+                                {
+                                    "name":"[19]南越谷",
+                                    "category":"行先(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/19.png",
+                                    "station":"南浦和駅"
+                                },
+                                {
+                                    "name":"[22]新習志野",
+                                    "category":"行先(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/22.png",
+                                    "station":"西船橋駅"
+                                },
+                                {
+                                    "name":"[23]海浜幕張",
+                                    "category":"行先(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/23.png",
+                                    "station":"西船橋駅"
+                                },
+                                {
+                                    "name":"[24]武蔵野線",
+                                    "category":"路線名(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/24.png",
+                                    "station":"西船橋駅"
+                                },
+                                {
+                                    "name":"[26]しもうさ号新習志野",
+                                    "category":"しもうさ号(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/26.png",
+                                    "station":"大宮駅"
+                                },
+                                {
+                                    "name":"[30]むさしの号八王子",
+                                    "category":"むさしの号(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/30.png",
+                                    "station":"国立駅"
+                                },
+                                {
+                                    "name":"[33]むさしの号大宮",
+                                    "category":"むさしの号(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e231/0Musashino/33.png",
+                                    "station":"八王子駅"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -404,6 +477,71 @@
                     "color":"#008000",
                     "image":"",
                     "series":[
+                        {
+                            "id":"600",
+                            "name":"600番台",
+                            "line":"宇都宮線(東北本線)･日光線",
+                            "image":"images/e131/600/series.png",
+                            "color":"#663614",
+                            "categoryColors":{
+                                "ワンマン(前面)":"#00994d",
+                                "非営業":"#a9a9a9",
+                                "ワンマン(側面)":"#00994d"
+                            },
+                            "displays":[
+                                {
+                                    "name":"ワンマン宇都宮線",
+                                    "category":"ワンマン(前面)",
+                                    "ledsize":"96×32",
+                                    "image":"images/e131/600/OneManUtsunomiyaLine.png",
+                                    "station":"宇都宮駅"
+                                },
+                                {
+                                    "name":"ワンマン宇都宮",
+                                    "category":"ワンマン(前面)",
+                                    "ledsize":"96×32",
+                                    "image":"images/e131/600/22-f.png",
+                                    "station":"宝積寺駅"
+                                },
+                                {
+                                    "name":"ワンマン宇都宮線 次は那須塩原",
+                                    "category":"ワンマン(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/e131/600/OneManUtsunomiyaLineNNasushiobara.png",
+                                    "station":"黒磯駅"
+                                },
+                                {
+                                    "name":"ワンマン宇都宮行 次は那須塩原",
+                                    "category":"ワンマン(側面)",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e131/600/18-2.png",
+                                            "station":"黒磯駅"
+                                        },
+                                        {
+                                            "image":"images/e131/600/18-3.png",
+                                            "station":"黒磯駅"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name":"ワンマン黒磯行 次は岡本",
+                                    "category":"ワンマン(側面)",
+                                    "ledsize":"128×32",
+                                    "images":[
+                                        {
+                                            "image":"images/e131/600/22-2.png",
+                                            "station":"宇都宮駅"
+                                        },
+                                        {
+                                            "image":"images/e131/600/22-3.png",
+                                            "station":"宇都宮駅"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
                         {
                             "id":"800",
                             "name":"800番台",
@@ -5256,6 +5394,47 @@
                                     "ledsize":"号車16×16 行先96×32",
                                     "image":"images/Ainokaze/521/0/2Itoigawa.png",
                                     "station":"金沢駅"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"Odakyu",
+            "name":"小田急電鉄",
+            "color":"#06559D",
+            "types":[
+                {
+                    "id":"2000",
+                    "name":"2000形",
+                    "line":"小田急小田原線･小田急多摩線･小田急江ノ島線",
+                    "color":"#3399ff",
+                    "image":"images/Odakyu/2000/series.png",
+                    "noSeriesSelect":true,
+                    "series":[
+                        {
+                            "categoryColors":{
+                                "前面種別":"#a9a9a9",
+                                "前面行先":"#a9a9a9",
+                                "非営業":"#a9a9a9",
+                                "各駅停車":"#0000ff"
+                            },
+                            "displays":[
+                                {
+                                    "name":"各駅停車本厚木",
+                                    "category":"各駅停車",
+                                    "ledsize":"確認中",
+                                    "image":"images/Odakyu/2000/LocalOH34.png",
+                                    "station":"向ヶ丘遊園駅"
+                                },
+                                {
+                                    "name":"各駅停車伊勢原",
+                                    "category":"各駅停車",
+                                    "ledsize":"確認中",
+                                    "image":"images/Odakyu/2000/LocalOH36.png",
+                                    "station":"向ヶ丘遊園駅"
                                 }
                             ]
                         }

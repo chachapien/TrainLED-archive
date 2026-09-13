@@ -124,14 +124,14 @@
             "time":"21:10",
             "title":"東急2020系LED幕ページを追加",
             "detail":"東急2020系LED幕のページを新たに追加しました。\n追加幕側面\n・各停渋谷･押上方面\n・各停TI02 久喜 次は高津\n・準急半蔵門線直通\n・準急Z01 渋谷 次は曳舟\n・急行渋谷･大手町方面\n・急行Z14 押上 次は二子玉川",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Tokyu&type=Tokyu2020"
         },
         {
             "date":"2026-09-11",
             "time":"21:10",
             "title":"JR東日本209系1000番台ページ移行",
             "detail":"209系1000番台の幕ページを旧サイトから移行しました。\n移行以外の変更点はありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=209&series=1000"
         },
         {
             "date":"2026-09-11",
@@ -139,6 +139,27 @@
             "title":"JR東日本E233系2000番台幕ページ画像修正",
             "detail":"以下の幕の画像日/英の英語表示の方が日本語画像になってたものを修正しました。\n該当画像\n・次は我孫子",
             "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=2000"
+        },
+        {
+            "date":"2026-09-13",
+            "time":"23:05",
+            "title":"JR東日本E131系600番台LED幕ページを追加",
+            "detail":"JR東日本E131系600番台(宇都宮・日光線)のページを新たに追加しました。\n追加幕は以下の通りです。\n前面\n・ワンマン宇都宮線\n・ワンマン黒磯\n側面\n・ワンマン宇都宮線 次は那須塩原\n・ワンマン宇都宮行 次は那須塩原\n・ワンマン黒磯行 次は岡本",
+            "url":""
+        },
+        {
+            "date":"2026-09-13",
+            "time":"23:05",
+            "title":"JR東日本武蔵野線E231系0番台LED幕ページ移行・幕追加",
+            "detail":"JR東日本武蔵野線E231系0番台のページを旧サイトから新サイトへ移行しました。以下の幕を追加しました。\n側面\n・南越谷",
+            "url":""
+        },
+        {
+            "date":"2026-09-13",
+            "time":"23:05",
+            "title":"小田急2000形LED幕ページ移行・幕追加",
+            "detail":"小田急2000形LED幕ページを旧サイトから新サイトへ移行しました。以下の幕を追加しました。\n側面\n・各駅停車伊勢原",
+            "url":""
         }
     ]
 }
