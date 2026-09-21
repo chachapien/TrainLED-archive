@@ -13,7 +13,7 @@
                     "image":"images/209/type.png",
                     "series": [
                         {
-                            "id": "0",
+                            "id": "500Keiyo",
                             "name": "500番台",
                             "line":"京葉線･武蔵野線･外房線･内房線",
                             "color":"#ff0000",
@@ -90,7 +90,7 @@
                             ]
                         },
                         {
-                            "id": "500",
+                            "id": "500Musashino",
                             "name": "500番台",
                             "line":"武蔵野線･京葉線･中央線",
                             "color":"#ff661a",
