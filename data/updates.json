@@ -208,7 +208,7 @@
             "time":"21:45",
             "title":"京成8800形幕ページを更新しました。",
             "detail":"京成8800形前面,側面幕を複数追加しました。\n追加した幕は以下の通りです。\n前面\n・普通 KS60 千葉中央\n側面\n・普通 KS60 千葉中央\n・普通 KS88 松戸",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keisei&type=Keisei8800"
         },
         {
             "date":"2026-09-21",
@@ -222,7 +222,7 @@
             "time":"21:45",
             "title":"京成80000形幕ページを更新しました。",
             "detail":"京成80000形の側面幕の画像を一部を変更しました。\n・普通KS26京成津田沼\n以上の幕の画像を変更しました。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keisei&type=Keisei80000"
         }
     ]
 }
