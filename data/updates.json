@@ -229,56 +229,56 @@
             "time":"23:00",
             "title":"JR東日本東北地区701系幕ページを追加",
             "detail":"JR東日本701系100/1000/1500番台のページを新たに追加しました。\n追加した幕は以下の通りです。\n側面\n・白石\n・仙台\n・利府\n・小牛田\n・新白河\n・新地",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=701&series=Sendai"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR東日本E233系2000番台幕ページを更新",
             "detail":"JR東日本E233系2000番台の幕ページに画像を追加しました。\n追加した幕は以下の通りです。\n側面(次駅表示)\n・次は南柏",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=2000"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR東日本E233系3000番台幕ページを移行･画像追加･変更",
             "detail":"JR東日本E233系3000番台の幕ページを旧サイトから移行･画像を追加･変更しました。\n追加･変更した内容は以下の通りです。\n前面列番\n・9429M\n前面幕\n・普通東海道伊東線\n・普通伊東\n側面\n・普通東海道線(変更)\n・普通東海道線 次は新橋(変更)\n・普通東海道伊東線(変更)\n・普通東海道伊東線 次は新橋(変更)\n・普通東京行 次は新橋(変更)\n・普通平塚行 次は川崎\n・普通国府津行 次は新橋(変更)\n・普通伊東(変更)\n・普通伊東行 次は新橋(変更)\n・普通逗子行 次は保土ヶ谷(白字)\n・普通大宮行 次は上野\n・普通湘南新宿ライン\n・普通湘南新宿ライン 横須賀線直通(変更)\n・普通逗子行 次は渋谷\n・普通新宿行 次は渋谷\n・特別快速湘南新宿ライン\n・特別快速東海道線直通\n・新宿経由特別快速湘南新宿ライン 東海道線直通(変更)\n・新宿経由特別快速小田原",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=3000"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR東日本E233系5000番台幕ページを移行･画像追加･変更",
             "detail":"JR東日本E233系5000番台の幕ページを旧サイトから移行･画像を追加･変更しました。\n追加･変更した内容は以下の通りです。\n前面\n・快速外房線内各駅停車\n・快速誉田\n側面\n・京葉線各駅停車東京行 次は幕張豊砂→次は新木場(画像次駅部分変更)\n・京葉線快速外房線内各駅停車 次は千葉みなと→次は検見川浜(画像次駅部分変更)\n・京葉線快速東京(変更)\n・京葉線快速蘇我\n・京葉線快速誉田行 次は検見川浜\n・普通千葉\n・普通誉田\n次駅表示(追加･変更)\n・次は新木場\n・次は舞浜\n・次は検見川浜\n・次は鎌取(変更)",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e233&series=5000"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR東日本E653系1000番台(関東)側面幕ページを新規追加",
             "detail":"JR東日本E653系1000番台(関東)側面幕ページを新たに追加しました。\n追加した幕は以下の通りです。\n・4 特急",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e653&series=K1000"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR東海313系幕ページを移行･画像追加･変更",
             "detail":"JR東海313系幕ページを旧サイトから移行･画像追加･変更しました。\n追加･変更した幕は以下の通りです。\n側面\n・普通中津川(変更)\n・普通松本\n・ワンマン普通中津川\n・ワンマン普通名古屋\n・特別快速大垣",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRCentral&type=313"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR四国5000系幕ページを移行",
             "detail":"JR四国5000系幕ページを旧サイトから移行しました。\n内容の追加･変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRShikoku&type=5000"
         },
         {
             "date":"2026-10-11",
             "time":"23:00",
             "title":"JR四国7200系幕ページを移行",
             "detail":"JR四国7200系幕ページを旧サイトから移行しました。\n内容の追加･変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRShikoku&type=7200"
         }
     ]
 }
