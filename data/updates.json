@@ -285,175 +285,175 @@
             "time":"11:00",
             "title":"JR東日本185系幕ページ移行･画像追加",
             "detail":"JR東日本185系幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n前面\n・団体\n側面\n・団体",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=185"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"JR東日本E131系1000番台幕ページ移行･次駅表示追加",
             "detail":"JR東日本鶴見線E131系1000番台の幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n側面(次駅表示)\n・次は安善\n・次は新芝浦",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e131&series=1000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"JR東日本常磐線E231系0番台幕ページ移行･画像追加･変更",
             "detail":"JR東日本常磐線E231系0番台の表示ページを旧サイトから移行･画像追加･変更しました。\n追加した表示は以下の通りです。\n前面(列車番号表示器)\n・870M\n前面\n・成田線\n・我孫子\n側面\n・我孫子\n画像変更\n側面\n・常磐線\n・成田線",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e231&series=0JJ"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"JR東日本HB-E210系幕ページを移行",
             "detail":"JR東日本仙石東北ラインHB-E210系の幕ページを旧サイトから移行しました。\n内容の追加･変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=HB-E210"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"JR九州新幹線N700系幕ページ新規追加",
             "detail":"JR九州山陽･九州新幹線N700系側面LED幕ページを新たに追加しました。\n追加した幕は以下の通りです。\n・さくら鹿児島中央(停車駅)\n・さくら567鹿児島中央 指定席",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=JRKyushu&type=N700"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"アルピコ交通20100形幕ページ新規追加",
             "detail":"アルピコ交通上高地線20100形の幕ページを新たに追加しました。\n追加した幕は以下の通りです。\n前面\n・ワンマン普通上高地線\n・松本\n側面\n・ワンマン普通上高地線\n・松本\n・新島々",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Alpico&type=20100"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"京王9000系幕ページ移行",
             "detail":"京王9000系の幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Keio&type=9000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"新京成電鉄8800形幕ページ移行",
             "detail":"新京成電鉄8800形の幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=ShinKeisei&type=SK8800"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"新京成電鉄8900形幕ページ移行",
             "detail":"新京成電鉄8900形の幕ページを旧サイトから移行しました。\n内容の追加･変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=ShinKeisei&type=SK8900"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"新京成電鉄N800形幕ページ移行",
             "detail":"新京成電鉄N800形の幕ページを旧サイトから移行しました。\n内容の追加･変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=ShinKeisei&type=SKN800"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"新京成電鉄80000形幕ページ移行",
             "detail":"新京成電鉄80000形の幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=ShinKeisei&type=SK80000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道001系幕ページ移行",
             "detail":"西武鉄道001系の幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu001"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道2000系幕ページ移行･画像追加",
             "detail":"西武鉄道2000系の幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n側面(フルカラー)\n・普通東村山",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu2000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道4000系幕ページ移行",
             "detail":"西武鉄道4000系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu4000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道6000系幕ページ移行･画像追加",
             "detail":"西武鉄道6000系幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n側面\n・渋谷･横浜方面\n・通準池袋\n・快速元町･中華街",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu6000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道20000系幕ページ移行",
             "detail":"西武鉄道20000系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu20000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道30000系幕ページ移行",
             "detail":"西武鉄道30000系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu30000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"西武鉄道40000系幕ページ移行･画像追加",
             "detail":"西武鉄道40000系幕ページを旧サイトから移行･画像追加･変更しました。\n追加した幕は以下の通りです。\n側面\n・準急小手指\n画像変更した幕は以下の通りです。\n側面\n・8号車",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Seibu&type=Seibu40000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"仙台空港鉄道SAT721系幕ページ移行",
             "detail":"仙台空港鉄道SAT721系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=SendaiAir&type=SAT721"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"千葉ﾆｭｰﾀｳﾝ鉄道9100形幕ページ移行",
             "detail":"千葉ﾆｭｰﾀｳﾝ鉄道9100形幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=CNTR&type=9100"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"東京メトロ8000系幕ページ移行",
             "detail":"東京メトロ半蔵門線8000系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=TokyoM&type=TM8000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"東京メトロ18000系幕ページ移行･画像追加･変更",
             "detail":"東京メトロ半蔵門線18000系幕ページを旧サイトから移行･画像追加･変更しました。\n追加した幕は以下の通りです。\n側面\n・2号車\n・9号車\n・Z半蔵門線直通\n・急行 TN01 南栗橋\n・急行 Z01 渋谷\n・各停 DT27 中央林間\n・準急 Z14 押上\n以下の幕の画像を変更しました。\n側面\n・4号車",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=TokyoM&type=TM18000"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"東京臨海高速鉄道70-000形幕ページ移行･画像追加",
             "detail":"東京臨海高速鉄道りんかい線70-000形幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n側面\n・通勤快速新宿",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=TWR&type=TWR70"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"東京臨海高速鉄道71-000形幕ページ移行･画像追加･変更",
             "detail":"東京臨海高速鉄道りんかい線71-000形幕ページを旧サイトから移行･画像追加･変更しました。\n追加した幕は以下の通りです。\n側面\n・各駅停車埼京線(マクロン無し)\n・各駅停車新木場\n・各駅停車新木場行 次は北与野\n・各駅停車武蔵浦和行 次は池袋\n・各駅停車大宮行 次は恵比寿(マクロン無し)\n以下の幕の画像を変更しました。\n側面\n・快速川越行 次は恵比寿(旧:次は板橋)\n側面(次駅表示)\n・次は北戸田",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=TWR&type=TWR71"
         },
         {
             "date":"2026-11-01",
             "time":"11:00",
             "title":"阪神5700系幕ページ移行",
             "detail":"阪神5700系幕ページを旧サイトから移行しました。\n内容の追加・変更などはありません。",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=Hanshin&type=Hanshin5700"
         }
     ]
 }
