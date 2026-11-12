@@ -538,6 +538,13 @@
             "title":"名古屋鉄道9500系幕ページ移行･画像追加",
             "detail":"名古屋鉄道9500系の幕ページを旧サイトから移行･画像追加しました。\n追加した幕は以下の通りです。\n側面\n・急行豊橋",
             "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=NagoyaRail&type=9500"
+        },
+        {
+            "date":"2026-11-12",
+            "time":"16:12",
+            "title":"JR東日本武蔵野線209系500番台幕追加",
+            "detail":"JR東日本武蔵野線209系500番台のページに幕を追加しました。\n追加した幕は以下の通りです。\n側面\n・南船橋",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=209&series=500Musashino"
         }
     ]
 }
