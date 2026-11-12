@@ -180,6 +180,13 @@
                                     "station":"吉川美南駅"
                                 },
                                 {
+                                    "name":"[36]南船橋",
+                                    "category":"行先(側面)",
+                                    "ledsize":"128×32",
+                                    "image":"images/209/500Musashino/36.png",
+                                    "station":"南流山駅"
+                                }
+                                {
                                     "name":"[45]しもうさ号海浜幕張",
                                     "category":"しもうさ号(側面)",
                                     "ledsize":"128×32",
