@@ -551,21 +551,21 @@
             "time":"21:03",
             "title":"JR東日本E131系0番台幕ページ移行･画像追加･削除",
             "detail":"JR東日本E131系0番台の幕ページを旧サイトから移行･画像追加･削除しました。\n追加した表示は以下の通りです。\n列車番号表示器\n･9999\n前面\n･ワンマン千倉 館山方面\n側面\n･ワンマン千倉\n･ワンマン千倉行 館山方面\n･ワンマン千倉行 次は君津\n次駅表示\n･次は青堀\n削除した画像は以下の通りです。\n側面\n･ワンマン上総一ノ宮行 次は君津",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=jreast&type=e131&series=0"
         },
         {
             "date":"2026-11-13",
             "time":"21:03",
             "title":"首都圏新都市鉄道TX-1000･TX-2000系幕ページ移行･画像追加･変更･削除",
             "detail":"首都圏新都市鉄道TX-1000･TX-2000系の幕ページを旧サイトから移行･画像追加･変更･削除しました。\n追加した幕は以下の通りです。\n列車番号表示器\n･6100\n側面\n･無表示\n･普通秋葉原\n･快速秋葉原(3色LED)\n･快速秋葉原\n画像を変更した幕は以下の通りです。\n側面\n･つくばエクスプレス\n･普通守谷\n削除した幕は以下の通りです。\n前面\n･快速浅草\n側面\n･通快つくば",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=MIR&type=TX1000"
         },
         {
             "date":"2026-11-13",
             "time":"21:03",
             "title":"首都圏新都市鉄道TX-3000系幕ページ移行･画像追加",
             "detail":"首都圏新都市鉄道TX-3000系の幕ページを旧サイトから移行･画像追加しました。\n追加した画像は以下の通りです。\n列車番号表示器\n･2\n前面\n･普通(最終)つくば\n･区快新御徒町\n･区快青井",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=MIR&type=TX3000"
         }
     ]
 }
