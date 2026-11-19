@@ -10742,7 +10742,7 @@
                                     "name":"通快南千住",
                                     "category":"通勤快速(前面･フルカラー)",
                                     "ledsize":"128×32",
-                                    "image":"Images/MIR/TX1000TX2000/ComRapidTX04-f.png",
+                                    "image":"images/MIR/TX1000TX2000/ComRapidTX04-f.png",
                                     "station":"つくばエクスプレス総合基地"
                                 },
                                 {
@@ -10833,7 +10833,7 @@
                                     "name":"快速南流山",
                                     "category":"快速(前面･フルカラー)",
                                     "ledsize":"128×32",
-                                    "image":"Images/MIR/TX1000TX2000/RapidTX10-f.png",
+                                    "image":"images/MIR/TX1000TX2000/RapidTX10-f.png",
                                     "station":"つくばエクスプレス総合基地"
                                 },
                                 {
