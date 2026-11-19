@@ -592,7 +592,14 @@
             "time":"18:27",
             "title":"東京メトロ16000系幕ページ移行･画像追加･変更･削除",
             "detail":"東京メトロ16000系の幕ページを旧サイトから移行し、一部画像を追加･変更･削除しました。\n追加した内容は以下の通りです。\n前面行先(1次車)\n･千代田線直通\n･代々木上原\n側面\n･各駅停車松戸(JR)\n･各駅停車取手(JR)\n各駅停車成城学園前(JR)\n･急行本厚木\n以下の画像を変更しました。\n側面\n･回送\n･千代田線直通\n･各駅停車我孫子(JR)\n以下の画像を削除しました。\n側面\n･各駅停車本厚木(JR)",
-            "url":""
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=TokyoM&type=TM16000"
+        },
+        {
+            "date":"2026-11-19",
+            "time":"18:40",
+            "title":"首都圏新都市鉄道TX-1000･TX-2000系のページを再公開",
+            "detail":"首都圏新都市鉄道TX-1000系/TX-2000系のページで一部画像が読み込まれなかった問題を修正し、再公開しました。\n暫定処置として公開していた旧サイトは公開を終了します。",
+            "url":"https://chachapien.github.io/TrainLED-archive/display.html?company=MIR&type=TX1000"
         }
     ]
 }

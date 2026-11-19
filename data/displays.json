@@ -10707,7 +10707,7 @@
                                     "name":"区快万博記念公園",
                                     "category":"区間快速(前面･フルカラー)",
                                     "ledsize":"128×32",
-                                    "image":"Images/MIR/TX1000TX2000/SemiRapidTX18-f.png",
+                                    "image":"images/MIR/TX1000TX2000/SemiRapidTX18-f.png",
                                     "station":"つくばエクスプレス総合基地"
                                 },
                                 {
@@ -10756,14 +10756,14 @@
                                     "name":"通快南流山",
                                     "category":"通勤快速(前面･フルカラー)",
                                     "ledsize":"128×32",
-                                    "image":"Images/MIR/TX1000TX2000/ComRapidTX10-f.png",
+                                    "image":"images/MIR/TX1000TX2000/ComRapidTX10-f.png",
                                     "station":"つくばエクスプレス総合基地"
                                 },
                                 {
                                     "name":"通快流山おおたかの森",
                                     "category":"通勤快速(前面･フルカラー)",
                                     "ledsize":"128×32",
-                                    "image":"Images/MIR/TX1000TX2000/ComRapidTX12-f.png",
+                                    "image":"images/MIR/TX1000TX2000/ComRapidTX12-f.png",
                                     "station":"つくばエクスプレス総合基地"
                                 },
                                 {
